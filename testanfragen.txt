@@ -1,0 +1,10 @@
+{
+    "name": "League of Legends",
+    "price": "30",
+    "platforms": [
+        "PC"
+    ]
+}
+[
+	{ "propName": "name", "value": "League of Legends" }
+]
