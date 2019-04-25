@@ -70,8 +70,28 @@ class UserRouter {
         });
     }
     ;
+    del(req, res, next) {
+        return __awaiter(this, void 0, void 0, function* () {
+            user_1.default.remove({ _id: req.params.uid })
+                .exec()
+                .then(result => {
+                res.status(200).json({
+                    message: "User deleted"
+                });
+            })
+                .catch(err => {
+                console.log(err);
+                res.status(500).json({
+                    error: err,
+                    message: "Delete was not succesful"
+                });
+            });
+        });
+    }
+    ;
     init() {
         this.router.post('/signup', this.signup);
+        this.router.delete('/uid', this.del);
     }
 }
 exports.UserRouter = UserRouter;
