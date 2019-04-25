@@ -39,9 +39,10 @@ class App {
         this.express.use('/sellers', seller_1.default);
         this.express.use('/general', general_1.default);
     }
-    //mongodb+srv://test:qwertz@noderest-i2sjw.mongodb.net/test?retryWrites=true
+    //mongodb://localhost:27017/testdb
     connect() {
-        mongoose.connect('mongodb://localhost:27017/testdb', { useNewUrlParser: true });
+        mongoose.connect('mongodb+srv://test:qwertz@noderest-i2sjw.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
+        mongoose.connection.on('connected', () => console.log("database connected"));
     }
     ;
     errorNF() {

@@ -18,7 +18,7 @@ export class SellerRouter{
         .then(docs => {
             const response = {
                     count: docs.length,
-                    products: docs.map(doc => {
+                    sellers: docs.map(doc => {
                         return {
                             label: doc.label,
                             locations: doc.locations,
