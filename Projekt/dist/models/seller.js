@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const sellerSchema = new mongoose.Schema({
     label: {
         type: String,

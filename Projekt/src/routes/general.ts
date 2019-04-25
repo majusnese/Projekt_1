@@ -1,6 +1,6 @@
 import {Router, Request, Response, NextFunction} from 'express';
 import Game from '../models/games';
-const mongoose = require('mongoose');
+import mongoose = require('mongoose');
 import Seller from '../models/seller';
 
 export class GeneralRouter{

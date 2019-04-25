@@ -1,5 +1,5 @@
 import {Router, Request, Response, NextFunction} from 'express';
-const mongoose = require('mongoose');
+import mongoose = require('mongoose');
 import Seller from '../models/seller';
 import Game from '../models/games';
 

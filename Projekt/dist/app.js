@@ -6,7 +6,7 @@ const seller_1 = require("./routes/seller");
 const general_1 = require("./routes/general");
 const logger = require("morgan");
 const bodyParser = require("body-parser");
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 class App {
     constructor() {
         this.express = express();

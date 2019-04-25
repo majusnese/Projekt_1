@@ -4,7 +4,7 @@ import SellerRouter from './routes/seller';
 import GeneralRouter from './routes/general';
 import * as logger from 'morgan';
 import * as bodyParser from 'body-parser';
-const mongoose = require('mongoose');
+import mongoose = require('mongoose');
 
 class App {
     public express: express.Application;
