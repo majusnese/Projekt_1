@@ -48,6 +48,9 @@ class App {
         mongoose.connect('mongodb+srv://test:qwertz@noderest-i2sjw.mongodb.net/test?retryWrites=true', 
         {useNewUrlParser: true});
         mongoose.connection.on('connected', () => console.log("database connected"));
+        mongoose.connection.on('error', function(error) {
+            console.error('Database connection error: ', error);
+        });
     };
 
     private errorNF(): void{
