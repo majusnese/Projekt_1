@@ -30,22 +30,6 @@ describe('GET /games', () => {
             expect(array_body).to.have.lengthOf(count);
         });
     }));
-    /*
-    it('should include Call of Duty', async () => {
-      const res = await chai.request(app).get('/api/v1/games');
-      let callofduty = res.body.find((game: {
-        name: string;
-      }) => game.name === 'Call of Duty');
-      expect(callofduty).to.exist;
-      expect(callofduty).to.have.all.keys([
-        'id',
-        'name',
-        'platforms',
-        'price',
-        'genre'
-      ]);
-    });
-    */
 });
 describe('POST /games/', () => {
     it('POST working as intended', () => {
@@ -84,7 +68,7 @@ describe('GET /games/:id', () => {
             expect(res.status).to.equal(200);
             expect(res).to.be.json;
             expect(res.body).to.contain.keys("price", "name", "platforms", "delete_request", "id");
-            expect(res.body.id).to.be.equalTo(game);
+            expect(res.body.id).to.equal(game);
         });
     }));
 });
