@@ -21,6 +21,7 @@ class SellerRouter {
         return __awaiter(this, void 0, void 0, function* () {
             seller_1.default.find()
                 .select('label locations _id headquarter game')
+                .populate('game')
                 .exec()
                 .then(docs => {
                 const response = {
@@ -33,7 +34,7 @@ class SellerRouter {
                             game: doc.game,
                             request: {
                                 type: 'GET',
-                                description: 'The link matching the request',
+                                description: 'The link to look at this seller individually',
                                 url: 'http://localhost:3000/sellers/' + doc._id
                             }
                         };
@@ -114,6 +115,7 @@ class SellerRouter {
             const id = req.params.id;
             seller_1.default.findById(id)
                 .select('label locations headquarter _id game')
+                .populate('game')
                 .exec()
                 .then(doc => {
                 if (doc) {

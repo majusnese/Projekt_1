@@ -7,6 +7,7 @@ const general_1 = require("./routes/general");
 const logger = require("morgan");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const user_1 = require("./routes/user");
 class App {
     constructor() {
         this.express = express();
@@ -38,11 +39,15 @@ class App {
         this.express.use('/games', games_1.default);
         this.express.use('/sellers', seller_1.default);
         this.express.use('/general', general_1.default);
+        this.express.use('/user', user_1.default);
     }
     //mongodb://localhost:27017/testdb
     connect() {
         mongoose.connect('mongodb+srv://test:qwertz@noderest-i2sjw.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
         mongoose.connection.on('connected', () => console.log("database connected"));
+        mongoose.connection.on('error', function (error) {
+            console.error('Database connection error: ', error);
+        });
     }
     ;
     errorNF() {

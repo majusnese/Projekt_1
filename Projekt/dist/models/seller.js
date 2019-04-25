@@ -21,5 +21,5 @@ const sellerSchema = new mongoose.Schema({
         required: true
     }
 });
-const spiel = mongoose.model('Seller', sellerSchema);
-exports.default = spiel;
+const seller = mongoose.model('Seller', sellerSchema);
+exports.default = seller;

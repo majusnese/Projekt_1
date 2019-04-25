@@ -14,6 +14,7 @@ export class SellerRouter{
     public async find(req: Request, res: Response, next: NextFunction) {
         Seller.find()
         .select('label locations _id headquarter game')
+        .populate('game')
         .exec()
         .then(docs => {
             const response = {
@@ -26,7 +27,7 @@ export class SellerRouter{
                             game: doc.game,
                             request: {
                                 type: 'GET',
-                                description: 'The link matching the request',
+                                description: 'The link to look at this seller individually',
                                 url: 'http://localhost:3000/sellers/' + doc._id
                             }
                         }
@@ -102,6 +103,7 @@ export class SellerRouter{
         const id = req.params.id;
         Seller.findById(id)
             .select('label locations headquarter _id game')
+            .populate('game')
             .exec()
             .then(doc => {
                 if(doc) {

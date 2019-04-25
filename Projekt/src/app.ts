@@ -5,6 +5,7 @@ import GeneralRouter from './routes/general';
 import * as logger from 'morgan';
 import * as bodyParser from 'body-parser';
 import mongoose = require('mongoose');
+import UserRouter from './routes/user';
 
 class App {
     public express: express.Application;
@@ -41,6 +42,7 @@ class App {
         this.express.use('/games', GameRouter);
         this.express.use('/sellers', SellerRouter);
         this.express.use('/general', GeneralRouter);
+        this.express.use('/user', UserRouter);
     }
 
     //mongodb://localhost:27017/testdb

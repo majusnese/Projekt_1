@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha --require ts-node/register --exit 'src/**/*.test.ts'",
     "build": "npx tsc",
-    "start": "nodemon dist/server.js"
+    "start": "npm run build && nodemon dist/server.js"
   },
   "keywords": [
     "node",

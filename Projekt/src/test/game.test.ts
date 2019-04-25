@@ -3,7 +3,6 @@ import * as chai from 'chai';
 import chaiHttp = require('chai-http');
 import * as spiel_neu from './spiel_neu1.json'
 import app from '../App';
-import { request } from 'http';
 import asserArrays = require('chai-arrays');
 
 chai.use(asserArrays);
