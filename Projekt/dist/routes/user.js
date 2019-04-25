@@ -19,38 +19,57 @@ class UserRouter {
     }
     signup(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
-            bcrypt.hash(req.body.password, 10, (err, hash) => {
-                if (err) {
-                    return res.status(500).json({
-                        error: err,
-                        message: "Error occurred."
+            user_1.default.find({ email: req.body.email })
+                .exec()
+                .then(user => {
+                if (user.length >= 1) {
+                    return res.status(422).json({
+                        message: "Mail already in use"
                     });
                 }
                 else {
-                    const user = new user_1.default({
-                        _id: new mongoose.Types.ObjectId(),
-                        email: req.body.email,
-                        password: hash
-                    });
-                    user
-                        .save()
-                        .then(result => {
-                        console.log(result);
-                        res.status(201).json({
-                            message: "user created"
-                        });
-                    })
-                        .catch(err => {
-                        console.log(err);
-                        res.status(500).json({
-                            error: err,
-                            mesage: "An error occurred after the password was hashed"
-                        });
+                    bcrypt.hash(req.body.password, 10, (err, hash) => {
+                        if (err) {
+                            return res.status(500).json({
+                                error: err,
+                                message: "Error occurred."
+                            });
+                        }
+                        else {
+                            const user = new user_1.default({
+                                _id: new mongoose.Types.ObjectId(),
+                                email: req.body.email,
+                                password: hash
+                            });
+                            user
+                                .save()
+                                .then(result => {
+                                console.log(result);
+                                res.status(201).json({
+                                    message: "user created"
+                                });
+                            })
+                                .catch(err => {
+                                console.log(err);
+                                res.status(500).json({
+                                    error: err,
+                                    mesage: "An error occurred after the password was hashed"
+                                });
+                            });
+                        }
                     });
                 }
+            })
+                .catch(err => {
+                console.log(err);
+                res.status(500).json({
+                    error: err,
+                    mesage: "An error occurred while searching for a duplicate email"
+                });
             });
         });
     }
+    ;
     init() {
         this.router.post('/signup', this.signup);
     }
