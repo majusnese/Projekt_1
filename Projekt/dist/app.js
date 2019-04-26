@@ -48,9 +48,6 @@ class App {
         mongoose.connection.on('error', function (error) {
             console.error('Database connection error: ', error);
         });
-        let admin = mongoose.connection.db.admin();
-        let { version } = admin.serverInfo();
-        console.log(`mongodb: ${version}`);
     }
     ;
     errorNF() {

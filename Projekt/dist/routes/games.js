@@ -97,6 +97,72 @@ class GameRouter {
         });
     }
     ;
+    findbyanything(req, res, next) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (!req.params.anything) {
+                res.status(422).json({
+                    message: "Please give an argument!"
+                });
+            }
+            let isNumber;
+            try {
+                parseInt(req.params.anything);
+                isNumber = true;
+            }
+            catch (_a) {
+                console.log("Parse to int did not work!");
+                isNumber = false;
+            }
+            let isObjectId;
+            try {
+                mongoose.Types.ObjectId(req.params.anything);
+                isObjectId = true;
+            }
+            catch (_b) {
+                console.log("Parse to ObjectId did not work!");
+                isObjectId = false;
+            }
+            let isPlatform;
+            if (["PC", "XBOX", "PS4"].includes(req.body.params)) {
+                isPlatform = true;
+            }
+            else {
+                isPlatform = false;
+            }
+            console.log(isObjectId);
+            console.log(isNumber);
+            console.log(isPlatform);
+            games_1.default.find({ $expr: {
+                    $cond: { if: { isObjectId }, then: { _id: req.params.anything }, else: { $cond: { if: { isNumber }, then: { price: req.params.anything }, else: { $cond: { if: { isPlatform }, then: { platforms: req.body.anything }, else: { name: req.params.anything } } } } } }
+                }
+            })
+                .select('-__v')
+                .exec()
+                .then(doc => {
+                if (doc && doc._id != undefined) {
+                    res.status(200).json({
+                        id: doc._id,
+                        name: doc.name,
+                        price: doc.price,
+                        platforms: doc.platforms,
+                        delete_request: {
+                            type: 'DELETE',
+                            description: 'Delete the game',
+                            url: 'http://localhost:3000/games/' + doc._id
+                        }
+                    });
+                }
+                else {
+                    res.status(404).json({ message: 'No Object found' });
+                }
+            })
+                .catch(err => {
+                console.log(err);
+                res.status(500).json({ error: err });
+            });
+        });
+    }
+    ;
     findbyid(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
             const id = req.params.id;
@@ -181,6 +247,7 @@ class GameRouter {
         this.router.get('/:id', this.findbyid);
         this.router.patch('/:id', this.patch);
         this.router.delete('/:id', this.del);
+        this.router.get('/findbyanything/:anything', this.findbyanything);
     }
 }
 exports.GameRouter = GameRouter;
