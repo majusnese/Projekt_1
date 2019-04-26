@@ -138,6 +138,7 @@ export class GameRouter{
                             name: doc.name,
                             price: doc.price,
                             _id: doc._id,
+                            platforms: doc.platforms,
                             request: {
                                 type: 'GET',
                                 description: 'The link matching the request',
