@@ -1,6 +1,7 @@
 import {Router, Request, Response, NextFunction} from 'express';
 import Game from '../models/games';
 import mongoose = require('mongoose');
+import {isGame} from '../utils/Validator'
 
 export class GameRouter{
     router: Router
@@ -53,6 +54,11 @@ export class GameRouter{
             platforms: req.body.platforms,
             price: req.body.price
         });
+        if(isGame(game)){
+            res.status(409).json({
+                message: "please provide proper data"
+            });
+        }
         game.save()
         .then(result => {
             res.status(201).json({
