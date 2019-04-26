@@ -41,9 +41,9 @@ class App {
         this.express.use('/general', general_1.default);
         this.express.use('/user', user_1.default);
     }
-    //mongodb://localhost:27017/testdb
+    //mongodb+srv://test:qwertz@noderest-i2sjw.mongodb.net/test?retryWrites=true
     connect() {
-        mongoose.connect('mongodb+srv://test:qwertz@noderest-i2sjw.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
+        mongoose.connect('mongodb://localhost:27017/testdb', { useNewUrlParser: true });
         mongoose.connection.on('connected', () => console.log("database connected"));
         mongoose.connection.on('error', function (error) {
             console.error('Database connection error: ', error);

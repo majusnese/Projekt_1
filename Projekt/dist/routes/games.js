@@ -104,56 +104,63 @@ class GameRouter {
                     message: "Please give an argument!"
                 });
             }
-            let isNumber;
-            try {
-                parseInt(req.params.anything);
-                isNumber = true;
-            }
-            catch (_a) {
-                console.log("Parse to int did not work!");
-                isNumber = false;
-            }
-            let isObjectId;
-            try {
-                mongoose.Types.ObjectId(req.params.anything);
+            const param = req.params.anything;
+            console.log(param);
+            let objid = "123456789012";
+            let isObjectId = false;
+            if (mongoose.Types.ObjectId.isValid(param)) {
+                objid = mongoose.Types.ObjectId(param);
                 isObjectId = true;
             }
-            catch (_b) {
-                console.log("Parse to ObjectId did not work!");
-                isObjectId = false;
+            console.log(isObjectId);
+            console.log(objid);
+            let isNumber = false;
+            let number_t = 1234567890;
+            if (!isNaN(param) && !isObjectId) {
+                number_t = Number(param);
+                isNumber = true;
             }
-            let isPlatform;
-            if (["PC", "XBOX", "PS4"].includes(req.body.params)) {
+            console.log(isNumber);
+            console.log(number_t);
+            let isPlatform = false;
+            let platform_t = "AAAAA";
+            if (["PC", "XBOX", "PS4"].includes(param)) {
+                platform_t = param;
                 isPlatform = true;
             }
-            else {
-                isPlatform = false;
-            }
-            console.log(isObjectId);
-            console.log(isNumber);
             console.log(isPlatform);
-            games_1.default.find({ $expr: {
-                    $cond: { if: { isObjectId }, then: { _id: req.params.anything }, else: { $cond: { if: { isNumber }, then: { price: req.params.anything }, else: { $cond: { if: { isPlatform }, then: { platforms: req.body.anything }, else: { name: req.params.anything } } } } } }
-                }
-            })
-                .select('-__v')
+            console.log(platform_t);
+            games_1.default.find()
+                .or([
+                { '_id': objid },
+                { 'name': param },
+                { 'price': number_t },
+                { 'platforms': platform_t }
+            ])
                 .exec()
-                .then(doc => {
-                if (doc && doc._id != undefined) {
-                    res.status(200).json({
-                        id: doc._id,
-                        name: doc.name,
-                        price: doc.price,
-                        platforms: doc.platforms,
-                        delete_request: {
-                            type: 'DELETE',
-                            description: 'Delete the game',
-                            url: 'http://localhost:3000/games/' + doc._id
-                        }
-                    });
+                .then(docs => {
+                const response = {
+                    count: docs.length,
+                    games: docs.map(doc => {
+                        return {
+                            name: doc.name,
+                            price: doc.price,
+                            _id: doc._id,
+                            request: {
+                                type: 'GET',
+                                description: 'The link matching the request',
+                                url: 'http://localhost:3000/games/' + doc._id
+                            }
+                        };
+                    })
+                };
+                if (docs.length > 0) {
+                    res.status(200).json(response);
                 }
                 else {
-                    res.status(404).json({ message: 'No Object found' });
+                    res.status(400).json({
+                        message: 'There are no entries'
+                    });
                 }
             })
                 .catch(err => {

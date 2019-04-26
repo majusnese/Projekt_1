@@ -45,9 +45,9 @@ class App {
         this.express.use('/user', UserRouter);
     }
 
-    //mongodb://localhost:27017/testdb
+    //mongodb+srv://test:qwertz@noderest-i2sjw.mongodb.net/test?retryWrites=true
     private connect(): void {
-        mongoose.connect('mongodb+srv://test:qwertz@noderest-i2sjw.mongodb.net/test?retryWrites=true', 
+        mongoose.connect('mongodb://localhost:27017/testdb', 
         {useNewUrlParser: true});
         mongoose.connection.on('connected', () => console.log("database connected"));
         mongoose.connection.on('error', function(error) {
