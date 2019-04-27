@@ -16,9 +16,11 @@ const asserArrays = require("chai-arrays");
 chai.use(asserArrays);
 chai.use(chaiHttp);
 const expect = chai.expect;
-describe('GET /games', () => {
-    it('responds with JSON and contains an array with at least one entry', () => __awaiter(this, void 0, void 0, function* () {
-        return chai.request(App_1.default).get('/games')
+describe("GET /games", () => {
+    it("responds with JSON and contains an array with at least one entry", () => __awaiter(this, void 0, void 0, function* () {
+        return chai
+            .request(App_1.default)
+            .get("/games")
             .then(res => {
             expect(res.status).to.equal(200);
             expect(res).to.be.json;
@@ -31,9 +33,11 @@ describe('GET /games', () => {
         });
     }));
 });
-describe('POST /games/', () => {
-    it('POST working as intended', () => {
-        return chai.request(App_1.default).post('/games/')
+describe("POST /games/", () => {
+    it("POST working as intended", () => {
+        return chai
+            .request(App_1.default)
+            .post("/games/")
             .send(spiel_neu)
             .then(res => {
             expect(res.status).to.equal(201);
@@ -42,14 +46,18 @@ describe('POST /games/', () => {
         });
     });
 });
-describe('DELETE /games/:id', () => {
-    it('DELETE working as intended', () => __awaiter(this, void 0, void 0, function* () {
-        let game = yield chai.request(App_1.default).post('/games/')
+describe("DELETE /games/:id", () => {
+    it("DELETE working as intended", () => __awaiter(this, void 0, void 0, function* () {
+        let game = yield chai
+            .request(App_1.default)
+            .post("/games/")
             .send(spiel_neu)
             .then(res => {
             return res.body.createdGame._id;
         });
-        return chai.request(App_1.default).del('/games/' + game)
+        return chai
+            .request(App_1.default)
+            .del("/games/" + game)
             .then(res => {
             expect(res.status).to.equal(200);
             expect(res).to.be.json;
@@ -57,13 +65,17 @@ describe('DELETE /games/:id', () => {
         });
     }));
 });
-describe('GET /games/:id', () => {
-    it('findbyid working as intended', () => __awaiter(this, void 0, void 0, function* () {
-        let game = yield chai.request(App_1.default).get('/games/')
+describe("GET /games/:id", () => {
+    it("findbyid working as intended", () => __awaiter(this, void 0, void 0, function* () {
+        let game = yield chai
+            .request(App_1.default)
+            .get("/games/")
             .then(res => {
             return res.body.games[0]._id;
         });
-        return chai.request(App_1.default).get('/games/' + game)
+        return chai
+            .request(App_1.default)
+            .get("/games/" + game)
             .then(res => {
             expect(res.status).to.equal(200);
             expect(res).to.be.json;

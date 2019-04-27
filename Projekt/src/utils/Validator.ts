@@ -13,13 +13,13 @@ export function isGame(game) {
   ) {
     return false;
   }
-  let check;
-  game.platform.forEach(element => {
+  let check = true;
+  game.platforms.forEach(element => {
     if (!["PC", "XBOX", "PS4"].includes(element)) {
-      check = true;
+      check = false;
     }
   });
-  if (check) {
+  if (!check) {
     return false;
   }
   return true;

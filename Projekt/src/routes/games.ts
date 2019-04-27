@@ -2,6 +2,7 @@ import { Router, Request, Response, NextFunction } from "express";
 import Game from "../models/games";
 import mongoose = require("mongoose");
 import { isGame } from "../utils/Validator";
+const checkAuth = require('../utils/check-auth');
 
 export class GameRouter {
   router: Router;
@@ -54,7 +55,7 @@ export class GameRouter {
       platforms: req.body.platforms,
       price: req.body.price
     });
-    if (isGame(game)) {
+    if (!isGame(game)) {
       res.status(409).json({
         message: "please provide proper data"
       });
@@ -241,7 +242,7 @@ export class GameRouter {
 
   init() {
     this.router.get("/", this.find);
-    this.router.post("/", this.create);
+    this.router.post("/", checkAuth, this.create);
     this.router.get("/:id", this.findbyid);
     this.router.patch("/:id", this.patch);
     this.router.delete("/:id", this.del);

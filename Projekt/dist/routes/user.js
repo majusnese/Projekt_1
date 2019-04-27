@@ -12,6 +12,7 @@ const express_1 = require("express");
 const mongoose = require("mongoose");
 const user_1 = require("../models/user");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 class UserRouter {
     constructor() {
         this.router = express_1.Router();
@@ -69,7 +70,47 @@ class UserRouter {
             });
         });
     }
-    ;
+    login(req, res, next) {
+        return __awaiter(this, void 0, void 0, function* () {
+            user_1.default.find({ email: req.body.email })
+                .exec()
+                .then(user => {
+                if (user.length < 1) {
+                    res.status(401).json({
+                        message: "Auth failed"
+                    });
+                }
+                bcrypt.compare(req.body.password, user[0].password, (err, result) => {
+                    if (err) {
+                        res.status(401).json({
+                            message: "Auth failed"
+                        });
+                    }
+                    if (result) {
+                        const token = jwt.sign({
+                            email: user[0].email,
+                            userId: user[0]._id
+                        }, process.env.JWT_KEY, {
+                            expiresIn: "1h"
+                        });
+                        return res.status(200).json({
+                            message: "Auth succesful",
+                            token: token
+                        });
+                    }
+                    res.status(401).json({
+                        message: "Auth failed"
+                    });
+                });
+            })
+                .catch(err => {
+                console.log(err);
+                res.status(500).json({
+                    error: err
+                });
+            });
+        });
+    }
     del(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
             user_1.default.remove({ _id: req.params.uid })
@@ -88,10 +129,10 @@ class UserRouter {
             });
         });
     }
-    ;
     init() {
-        this.router.post('/signup', this.signup);
-        this.router.delete('/uid', this.del);
+        this.router.post("/signup", this.signup);
+        this.router.delete("/uid", this.del);
+        this.router.get("/login", this.login);
     }
 }
 exports.UserRouter = UserRouter;

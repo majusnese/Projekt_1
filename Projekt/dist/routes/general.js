@@ -42,7 +42,7 @@ class GeneralRouter {
                     seller.save();
                 }
                 res.status(201).json({
-                    message: 'worked'
+                    message: "worked"
                 });
             })
                 .catch(err => {
@@ -51,9 +51,8 @@ class GeneralRouter {
             });
         });
     }
-    ;
     init() {
-        this.router.post('/', this.create);
+        this.router.post("/", this.create);
     }
 }
 exports.GeneralRouter = GeneralRouter;

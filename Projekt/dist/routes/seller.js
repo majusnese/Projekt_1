@@ -20,8 +20,8 @@ class SellerRouter {
     find(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
             seller_1.default.find()
-                .select('label locations _id headquarter game')
-                .populate('game')
+                .select("label locations _id headquarter game")
+                .populate("game")
                 .exec()
                 .then(docs => {
                 const response = {
@@ -33,9 +33,9 @@ class SellerRouter {
                             _id: doc._id,
                             game: doc.game,
                             request: {
-                                type: 'GET',
-                                description: 'The link to look at this seller individually',
-                                url: 'http://localhost:3000/sellers/' + doc._id
+                                type: "GET",
+                                description: "The link to look at this seller individually",
+                                url: "http://localhost:3000/sellers/" + doc._id
                             }
                         };
                     })
@@ -45,7 +45,7 @@ class SellerRouter {
                 }
                 else {
                     res.status(400).json({
-                        message: 'There are no entries'
+                        message: "There are no entries"
                     });
                 }
             })
@@ -57,14 +57,13 @@ class SellerRouter {
             });
         });
     }
-    ;
     create(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
             games_1.default.findById(req.body.game)
                 .then(game => {
                 if (!game) {
                     return res.status(404).json({
-                        message: 'Game not found'
+                        message: "Game not found"
                     });
                 }
                 const seller = new seller_1.default({
@@ -78,7 +77,7 @@ class SellerRouter {
             })
                 .then(result => {
                 res.status(201).json({
-                    message: 'Post request successful to /sellers',
+                    message: "Post request successful to /sellers",
                     createdSeller: {
                         label: result.label,
                         locations: result.locations,
@@ -86,19 +85,19 @@ class SellerRouter {
                         _id: result._id,
                         game: result.game,
                         request: {
-                            type: 'GET',
-                            description: 'Look at the created seller',
-                            url: 'http://localhost:3000/sellers/' + result._id
+                            type: "GET",
+                            description: "Look at the created seller",
+                            url: "http://localhost:3000/sellers/" + result._id
                         },
                         request_getthis: {
-                            type: 'GET',
-                            description: 'Look at this seller individually',
-                            url: 'http://localhost:3000/sellers/' + result._id
+                            type: "GET",
+                            description: "Look at this seller individually",
+                            url: "http://localhost:3000/sellers/" + result._id
                         },
                         delete_request: {
-                            type: 'DELETE',
-                            description: 'Delete the seller',
-                            url: 'http://localhost:3000/sellers/' + result._id
+                            type: "DELETE",
+                            description: "Delete the seller",
+                            url: "http://localhost:3000/sellers/" + result._id
                         }
                     }
                 });
@@ -109,13 +108,12 @@ class SellerRouter {
             });
         });
     }
-    ;
     findbyid(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
             const id = req.params.id;
             seller_1.default.findById(id)
-                .select('label locations headquarter _id game')
-                .populate('game')
+                .select("label locations headquarter _id game")
+                .populate("game")
                 .exec()
                 .then(doc => {
                 if (doc) {
@@ -125,14 +123,14 @@ class SellerRouter {
                         headquarter: doc.headquarter,
                         game: doc.game,
                         delete_request: {
-                            type: 'DELETE',
-                            description: 'Delete the seller',
-                            url: 'http://localhost:3000/sellers/' + doc._id
+                            type: "DELETE",
+                            description: "Delete the seller",
+                            url: "http://localhost:3000/sellers/" + doc._id
                         }
                     });
                 }
                 else {
-                    res.status(404).json({ message: 'No Object found' });
+                    res.status(404).json({ message: "No Object found" });
                 }
             })
                 .catch(err => {
@@ -141,7 +139,6 @@ class SellerRouter {
             });
         });
     }
-    ;
     patch(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
             const id = req.params.id;
@@ -153,11 +150,11 @@ class SellerRouter {
                 .exec()
                 .then(result => {
                 res.status(200).json({
-                    message: 'Seller updated',
+                    message: "Seller updated",
                     request: {
-                        type: 'GET',
-                        description: 'Link to the updated seller',
-                        url: 'http://localhost:3000/sellers/' + result._id
+                        type: "GET",
+                        description: "Link to the updated seller",
+                        url: "http://localhost:3000/sellers/" + result._id
                     }
                 });
             })
@@ -169,7 +166,6 @@ class SellerRouter {
             });
         });
     }
-    ;
     del(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
             const id = req.params.id;
@@ -177,7 +173,7 @@ class SellerRouter {
                 .exec()
                 .then(result => {
                 res.status(200).json({
-                    message: 'Seller deleted'
+                    message: "Seller deleted"
                 });
             })
                 .catch(err => {
@@ -188,13 +184,12 @@ class SellerRouter {
             });
         });
     }
-    ;
     init() {
-        this.router.get('/', this.find);
-        this.router.post('/', this.create);
-        this.router.get('/:id', this.findbyid);
-        this.router.patch('/:id', this.patch);
-        this.router.delete('/:id', this.del);
+        this.router.get("/", this.find);
+        this.router.post("/", this.create);
+        this.router.get("/:id", this.findbyid);
+        this.router.patch("/:id", this.patch);
+        this.router.delete("/:id", this.del);
     }
 }
 exports.SellerRouter = SellerRouter;
