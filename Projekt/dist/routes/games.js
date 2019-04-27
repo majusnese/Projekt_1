@@ -236,18 +236,25 @@ class GameRouter {
     del(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
             const id = req.params.id;
-            games_1.default.deleteOne({ _id: id })
+            games_1.default.findById(id)
                 .exec()
-                .then(result => {
-                res.status(200).json({
-                    message: "Game deleted"
-                });
+                .then(doc => {
+                if (doc) {
+                    games_1.default.deleteOne({ _id: id })
+                        .exec()
+                        .then(result => {
+                        res.status(200).json({
+                            message: "Game deleted"
+                        });
+                    });
+                }
+                else {
+                    res.status(404).json({ message: "No Object found" });
+                }
             })
                 .catch(err => {
                 console.log(err);
-                res.status(500).json({
-                    error: err
-                });
+                res.status(500).json({ error: err });
             });
         });
     }
