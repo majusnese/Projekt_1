@@ -157,18 +157,24 @@ export class SellerRouter {
 
   public async del(req: Request, res: Response, next: NextFunction) {
     const id = req.params.id;
-    Seller.deleteOne({ _id: id })
+    Seller.findById(id)
       .exec()
-      .then(result => {
-        res.status(200).json({
-          message: "Seller deleted"
-        });
+      .then(doc => {
+        if (doc) {
+          Seller.deleteOne({ _id: id })
+            .exec()
+            .then(result => {
+              res.status(200).json({
+                message: "Seller deleted"
+              });
+            });
+        } else {
+          res.status(404).json({ message: "No Object found" });
+        }
       })
       .catch(err => {
         console.log(err);
-        res.status(500).json({
-          error: err
-        });
+        res.status(500).json({ error: err });
       });
   }
 

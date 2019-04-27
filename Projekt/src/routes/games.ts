@@ -225,18 +225,24 @@ export class GameRouter {
 
   public async del(req: Request, res: Response, next: NextFunction) {
     const id = req.params.id;
-    Game.deleteOne({ _id: id })
+    Game.findById(id)
       .exec()
-      .then(result => {
-        res.status(200).json({
-          message: "Game deleted"
-        });
+      .then(doc => {
+        if (doc) {
+          Game.deleteOne({ _id: id })
+            .exec()
+            .then(result => {
+              res.status(200).json({
+                message: "Game deleted"
+              });
+            });
+        } else {
+          res.status(404).json({ message: "No Object found" });
+        }
       })
       .catch(err => {
         console.log(err);
-        res.status(500).json({
-          error: err
-        });
+        res.status(500).json({ error: err });
       });
   }
 
