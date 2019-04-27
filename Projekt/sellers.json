@@ -1,0 +1,15 @@
+{
+    "label": "Gamestop",
+    "locations": "22",
+    "headquarter": "Berlin"
+}
+{
+    "label": "Rewe",
+    "locations": "111",
+    "headquarter": "Rotterdamm"
+}
+{
+    "label": "Lidl",
+    "locations": "999999",
+    "headquarter": "Ostsee"
+}

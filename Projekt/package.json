@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha --require ts-node/register --exit 'src/**/*.test.ts'",
     "build": "npx tsc",
-    "start": "npm run build && nodemon dist/server.js"
+    "start": "npm run build && nodemon dist/server.js",
+    "mongo": "ts-node src/utils/mongo"
   },
   "keywords": [
     "node",
@@ -31,9 +32,11 @@
     "jsonwebtoken": "8.5.1",
     "lodash": "4.17.11",
     "mime": "2.4.2",
+    "minimist": "1.2.0",
     "mocha": "6.1.4",
     "mongoose": "5.5.1",
-    "node": "11.14.0"
+    "node": "11.14.0",
+    "shelljs": "0.8.3"
   },
   "devDependencies": {
     "@types/body-parser": "0.0.33",
