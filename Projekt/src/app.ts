@@ -10,6 +10,7 @@ import * as graphql from "express-graphql";
 const { buildSchema } = require("graphql");
 import Game from "./models/games";
 import Seller from "./models/seller";
+import User from "./models/user";
 
 class App {
   public express: express.Application;
@@ -71,12 +72,24 @@ class App {
               game: ID!
             }
 
+            type User {
+              _id: ID!
+              name: String
+              email: String!
+            }
+
+            input UserInput {
+              email: String!
+              password: String!
+            }
+
             input SellerInput {
               label: String!
               locations: Int!
               headquarter: String!
               game: ID!
             }
+
             input GameInput {
               name: String! 
               price: Float!
@@ -93,6 +106,7 @@ class App {
             type RootMutation {
                 createGame(gameInput: GameInput) : Game
                 createSeller(sellerInput: SellerInput) : Seller
+                createUser(userInput: UserInput) : User
             }
 
             schema {
@@ -176,6 +190,24 @@ class App {
               .then(result => {
                 console.log(result);
                 return { ...result._doc };
+              })
+              .catch(err => {
+                console.log(err);
+                throw err;
+              });
+          },
+          createUser: (args) => {
+            const user_instance = new User({
+              id: new mongoose.Types.ObjectId(),
+              name: args.userInput.name,
+              password: args.userInput.password,
+              email: args.userInput.email
+            });
+            return user_instance
+              .save()
+              .then(result => {
+                console.log(result);
+                return { ...result._doc, password: "*********" };
               })
               .catch(err => {
                 console.log(err);

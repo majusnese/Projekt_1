@@ -12,6 +12,7 @@ const graphql = require("express-graphql");
 const { buildSchema } = require("graphql");
 const games_2 = require("./models/games");
 const seller_2 = require("./models/seller");
+const user_2 = require("./models/user");
 class App {
     constructor() {
         this.express = express();
@@ -62,12 +63,24 @@ class App {
               game: ID!
             }
 
+            type User {
+              _id: ID!
+              name: String
+              email: String!
+            }
+
+            input UserInput {
+              email: String!
+              password: String!
+            }
+
             input SellerInput {
               label: String!
               locations: Int!
               headquarter: String!
               game: ID!
             }
+
             input GameInput {
               name: String! 
               price: Float!
@@ -84,6 +97,7 @@ class App {
             type RootMutation {
                 createGame(gameInput: GameInput) : Game
                 createSeller(sellerInput: SellerInput) : Seller
+                createUser(userInput: UserInput) : User
             }
 
             schema {
@@ -167,6 +181,24 @@ class App {
                         .then(result => {
                         console.log(result);
                         return Object.assign({}, result._doc);
+                    })
+                        .catch(err => {
+                        console.log(err);
+                        throw err;
+                    });
+                },
+                createUser: (args) => {
+                    const user_instance = new user_2.default({
+                        id: new mongoose.Types.ObjectId(),
+                        name: args.userInput.name,
+                        password: args.userInput.password,
+                        email: args.userInput.email
+                    });
+                    return user_instance
+                        .save()
+                        .then(result => {
+                        console.log(result);
+                        return Object.assign({}, result._doc, { password: "*********" });
                     })
                         .catch(err => {
                         console.log(err);
