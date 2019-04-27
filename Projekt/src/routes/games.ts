@@ -244,8 +244,8 @@ export class GameRouter {
     this.router.get("/", this.find);
     this.router.post("/", checkAuth, this.create);
     this.router.get("/:id", this.findbyid);
-    this.router.patch("/:id", this.patch);
-    this.router.delete("/:id", this.del);
+    this.router.patch("/:id", checkAuth, this.patch);
+    this.router.delete("/:id", checkAuth, this.del);
     this.router.get("/findbyanything/:anything", this.findbyanything);
   }
 }

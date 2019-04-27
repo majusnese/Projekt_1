@@ -2,6 +2,7 @@ import { Router, Request, Response, NextFunction } from "express";
 import mongoose = require("mongoose");
 import Seller from "../models/seller";
 import Game from "../models/games";
+const checkAuth = require('../utils/check-auth');
 
 export class SellerRouter {
   router: Router;
@@ -173,10 +174,10 @@ export class SellerRouter {
 
   init() {
     this.router.get("/", this.find);
-    this.router.post("/", this.create);
+    this.router.post("/", checkAuth, this.create);
     this.router.get("/:id", this.findbyid);
-    this.router.patch("/:id", this.patch);
-    this.router.delete("/:id", this.del);
+    this.router.patch("/:id", checkAuth, this.patch);
+    this.router.delete("/:id", checkAuth, this.del);
   }
 }
 
