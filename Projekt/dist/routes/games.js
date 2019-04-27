@@ -12,7 +12,7 @@ const express_1 = require("express");
 const games_1 = require("../models/games");
 const mongoose = require("mongoose");
 const Validator_1 = require("../utils/Validator");
-const checkAuth = require('../utils/check-auth');
+const checkAuth = require("../utils/check-auth");
 class GameRouter {
     constructor() {
         this.router = express_1.Router();
@@ -255,8 +255,8 @@ class GameRouter {
         this.router.get("/", this.find);
         this.router.post("/", checkAuth, this.create);
         this.router.get("/:id", this.findbyid);
-        this.router.patch("/:id", this.patch);
-        this.router.delete("/:id", this.del);
+        this.router.patch("/:id", checkAuth, this.patch);
+        this.router.delete("/:id", checkAuth, this.del);
         this.router.get("/findbyanything/:anything", this.findbyanything);
     }
 }

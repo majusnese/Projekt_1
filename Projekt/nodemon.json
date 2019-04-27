@@ -1,7 +1,6 @@
 
 {
     "env": {
-        "MONGO_ATLAS_PW": "Legendary11",
         "JWT_KEY": "qwertz"
     }
 }

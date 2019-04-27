@@ -12,6 +12,7 @@ const express_1 = require("express");
 const games_1 = require("../models/games");
 const mongoose = require("mongoose");
 const seller_1 = require("../models/seller");
+const checkAuth = require("../utils/check-auth");
 class GeneralRouter {
     constructor() {
         this.router = express_1.Router();
@@ -52,7 +53,7 @@ class GeneralRouter {
         });
     }
     init() {
-        this.router.post("/", this.create);
+        this.router.post("/", checkAuth, this.create);
     }
 }
 exports.GeneralRouter = GeneralRouter;

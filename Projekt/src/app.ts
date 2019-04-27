@@ -2,10 +2,14 @@ import express = require("express");
 import GameRouter from "./routes/games";
 import SellerRouter from "./routes/seller";
 import GeneralRouter from "./routes/general";
+import UserRouter from "./routes/user";
 import * as logger from "morgan";
 import * as bodyParser from "body-parser";
 import mongoose = require("mongoose");
-import UserRouter from "./routes/user";
+import * as graphql from "express-graphql";
+const { buildSchema } = require("graphql");
+import Game from "./models/games";
+import Seller from "./models/seller";
 
 class App {
   public express: express.Application;
@@ -46,9 +50,145 @@ class App {
     this.express.use("/sellers", SellerRouter);
     this.express.use("/general", GeneralRouter);
     this.express.use("/user", UserRouter);
+
+    //GraphQl for providing a Query to the Client
+    this.express.use(
+      "/graphql",
+      graphql({
+        schema: buildSchema(`
+            type Game {
+              _id: ID!
+              name: String!
+              price: Float!
+              platforms: [String]
+            }
+
+            type Seller {
+              _id: ID!
+              label: String!
+              locations: Int!
+              headquarter: String!
+              game: ID!
+            }
+
+            input SellerInput {
+              label: String!
+              locations: Int!
+              headquarter: String!
+              game: ID!
+            }
+            input GameInput {
+              name: String! 
+              price: Float!
+              platforms: [String]
+            }
+
+            type RootQuery {
+                games: [Game!]!
+                sellers: [Seller!]!
+                game(id: ID): Game!
+                seller(id: ID): Seller!
+            }
+
+            type RootMutation {
+                createGame(gameInput: GameInput) : Game
+                createSeller(sellerInput: SellerInput) : Seller
+            }
+
+            schema {
+              query: RootQuery
+              mutation: RootMutation
+            }
+        `),
+        rootValue: {
+          games: () => {
+            return Game.find()
+              .then(games => {
+                return games.map(game => {
+                  return { ...game._doc };
+                });
+              })
+              .catch(err => {
+                console.log(err);
+                throw err;
+              });
+          },
+          sellers: () => {
+            return Seller.find()
+              .then(sellers => {
+                return sellers.map(seller => {
+                  return { ...seller._doc };
+                });
+              })
+              .catch(err => {
+                console.log(err);
+                throw err;
+              });
+          },
+          seller: (args) => {
+            return Seller.findById(args.id)
+              .then(seller => {
+                return seller;
+              })
+              .catch(err => {
+                console.log(err);
+                throw err;
+              });
+          },
+          game: (args) => {
+            return Game.findById(args.id)
+              .then(game => {
+                return game;
+              })
+              .catch(err => {
+                console.log(err);
+                throw err;
+              });
+          },
+          createSeller: (args) => {
+            const seller_instance = new Seller({
+              id: new mongoose.Types.ObjectId(),
+              label: args.sellerInput.label,
+              headquarter: args.sellerInput.headquarter,
+              locations: args.sellerInput.locations,
+              game: args.sellerInput.game
+            });
+            return seller_instance
+              .save()
+              .then(result => {
+                console.log(result);
+                return { ...result._doc };
+              })
+              .catch(err => {
+                console.log(err);
+                throw err;
+              });
+          },
+          createGame: (args) => {
+            const game_instance = new Game({
+              id: new mongoose.Types.ObjectId(),
+              name: args.gameInput.name,
+              platforms: args.gameInput.platforms,
+              price: args.gameInput.price
+            });
+            return game_instance
+              .save()
+              .then(result => {
+                console.log(result);
+                return { ...result._doc };
+              })
+              .catch(err => {
+                console.log(err);
+                throw err;
+              });
+          }
+        },
+        graphiql: true
+      })
+    );
   }
 
-  //mongodb+srv://test:qwertz@noderest-i2sjw.mongodb.net/test?retryWrites=true
+  //mongodb+srv://test:qwertz@noderest-i2sjw.mongodb.net/rest?retryWrites=true
   private connect(): void {
     mongoose.connect("mongodb://localhost:27017/testdb", {
       useNewUrlParser: true
