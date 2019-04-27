@@ -2,7 +2,7 @@ import { Router, Request, Response, NextFunction } from "express";
 import mongoose = require("mongoose");
 import Seller from "../models/seller";
 import Game from "../models/games";
-const checkAuth = require('../utils/check-auth');
+const checkAuth = require("../utils/check-auth");
 
 export class SellerRouter {
   router: Router;
