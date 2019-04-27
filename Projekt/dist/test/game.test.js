@@ -14,9 +14,31 @@ const spiel_neu = require("./spiel_neu.json");
 const spiel_neu_falsch = require("./spiel_neu_falsch.json");
 const App_1 = require("../App");
 const asserArrays = require("chai-arrays");
+const shell = require("shelljs");
 chai.use(asserArrays);
 chai.use(chaiHttp);
 const expect = chai.expect;
+const login = {
+    "email": "test@rest.de",
+    "password": "qwertz"
+};
+let token = '';
+after(() => {
+    shell.exec('npm run mongo import');
+});
+before((done) => {
+    chai.request(App_1.default)
+        .post("/user/login")
+        .send(login)
+        .end((error, response) => {
+        if (error) {
+            return done(error);
+        }
+        token = response.body.token;
+        token.should.be.not.empty;
+        done();
+    });
+});
 describe("GET /games/", () => {
     it("Alle Games", () => __awaiter(this, void 0, void 0, function* () {
         return chai
@@ -36,9 +58,10 @@ describe("GET /games/", () => {
 });
 describe("POST /games/", () => {
     it("Neues Game", () => {
-        return chai
+        chai
             .request(App_1.default)
             .post("/games/")
+            .set('Authorization', `Bearer ${token}`)
             .send(spiel_neu)
             .then(res => {
             expect(res.status).to.equal(201);
@@ -52,6 +75,7 @@ describe("POST /games/", () => {
         return chai
             .request(App_1.default)
             .post("/games/")
+            .set('Authorization', process.env.TESTING_KEY)
             .send(spiel_neu_falsch)
             .then(res => {
             expect(res.status).to.equal(500);
@@ -63,6 +87,7 @@ describe("DELETE /games/:id", () => {
         let game = yield chai
             .request(App_1.default)
             .post("/games/")
+            .set('Authorization', process.env.TESTING_KEY)
             .send(spiel_neu)
             .then(res => {
             return res.body.createdGame._id;
@@ -82,6 +107,7 @@ describe("DELETE /games/:id", () => {
         return chai
             .request(App_1.default)
             .del("/games/" + "4cc339821b820f1f2dfdfb42")
+            .set('Authorization', process.env.TESTING_KEY)
             .then(res => {
             expect(res.status).to.equal(404);
         });

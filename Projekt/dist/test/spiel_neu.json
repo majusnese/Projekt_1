@@ -2,7 +2,7 @@
     "name": "Super Mario Bros.",
     "price": "15",
     "platforms": [
-        "Gameboy",
-        "Nintendo DS"
+        "PC",
+        "XBOX"
     ]
 }

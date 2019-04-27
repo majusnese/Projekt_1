@@ -6,10 +6,36 @@ import * as spiel_neu_falsch from "./spiel_neu_falsch.json";
 import app from "../App";
 import { request } from "http";
 import asserArrays = require("chai-arrays");
+import * as shell from 'shelljs';
 
 chai.use(asserArrays);
 chai.use(chaiHttp);
 const expect = chai.expect;
+
+const login = {
+  "email": "test@rest.de",
+  "password": "qwertz"
+}
+
+let token = '';
+
+after(() => {
+  shell.exec('npm run mongo import')
+});
+
+before((done: MochaDone) => {
+  chai.request(app)
+  .post("/user/login")
+  .send(login)
+  .end((error, response) => {
+    if(error){
+      return done(error);
+    }
+    token = response.body.token
+    token.should.be.not.empty
+    done()
+  })
+})
 
 describe("GET /games/", () => {
   it("Alle Games", async () => {
@@ -30,10 +56,11 @@ describe("GET /games/", () => {
 });
 
 describe("POST /games/", () => {
-  it("Neues Game", () => {
-    return chai
+  it("Neues Game",() => {
+    chai
       .request(app)
       .post("/games/")
+      .set('Authorization', `Bearer ${token}`)
       .send(spiel_neu)
       .then(res => {
         expect(res.status).to.equal(201);
@@ -48,6 +75,7 @@ describe("POST /games/", () => {
     return chai
       .request(app)
       .post("/games/")
+      .set('Authorization', process.env.TESTING_KEY)
       .send(spiel_neu_falsch)
       .then(res => {
         expect(res.status).to.equal(500);
@@ -60,6 +88,7 @@ describe("DELETE /games/:id", () => {
     let game = await chai
       .request(app)
       .post("/games/")
+      .set('Authorization', process.env.TESTING_KEY)
       .send(spiel_neu)
       .then(res => {
         return res.body.createdGame._id;
@@ -80,6 +109,7 @@ describe("DELETE /games/:id", () => {
     return chai
       .request(app)
       .del("/games/" + "4cc339821b820f1f2dfdfb42")
+      .set('Authorization', process.env.TESTING_KEY)
       .then(res => {
         expect(res.status).to.equal(404);
       });

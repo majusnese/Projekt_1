@@ -38,7 +38,8 @@ export class UserRouter {
                 .then(result => {
                   console.log(result);
                   res.status(201).json({
-                    message: "user created"
+                    message: "user created",
+                    uid: result._id
                   });
                 })
                 .catch(err => {
@@ -85,7 +86,7 @@ export class UserRouter {
               process.env.JWT_KEY,
               {
                 expiresIn: "1h"
-              }
+              } 
             );
             return res.status(200).json({
               message: "Auth succesful",
@@ -125,7 +126,7 @@ export class UserRouter {
   init() {
     this.router.post("/signup", this.signup);
     this.router.delete("/uid", this.del);
-    this.router.get("/login", this.login);
+    this.router.post("/login", this.login);
   }
 }
 

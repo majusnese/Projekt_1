@@ -47,7 +47,8 @@ class UserRouter {
                                 .then(result => {
                                 console.log(result);
                                 res.status(201).json({
-                                    message: "user created"
+                                    message: "user created",
+                                    uid: result._id
                                 });
                             })
                                 .catch(err => {
@@ -132,7 +133,7 @@ class UserRouter {
     init() {
         this.router.post("/signup", this.signup);
         this.router.delete("/uid", this.del);
-        this.router.get("/login", this.login);
+        this.router.post("/login", this.login);
     }
 }
 exports.UserRouter = UserRouter;
