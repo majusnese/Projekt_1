@@ -80,7 +80,7 @@ describe("POST /games/", () => {
             .set('Authorization', `Bearer ${token}`)
             .send(spiel_neu_falsch)
             .then(res => {
-            expect(res.status).to.equal(409);
+            expect(res.status).to.equal(422);
         });
     });
 });

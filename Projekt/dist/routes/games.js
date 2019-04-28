@@ -56,6 +56,7 @@ class GameRouter {
             });
         });
     }
+    //422: unprocessable Entity 
     create(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
             const game = new games_1.default({
@@ -65,7 +66,7 @@ class GameRouter {
                 price: req.body.price
             });
             if (!Validator_1.isGame(game)) {
-                res.status(409).json({
+                res.status(422).json({
                     message: "please provide proper data"
                 });
             }

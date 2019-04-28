@@ -48,6 +48,7 @@ export class GameRouter {
       });
   }
 
+  //422: unprocessable Entity 
   public async create(req: Request, res: Response, next: NextFunction) {
     const game = new Game({
       id: new mongoose.Types.ObjectId(),
@@ -56,7 +57,7 @@ export class GameRouter {
       price: req.body.price
     });
     if (!isGame(game)) {
-      res.status(409).json({
+      res.status(422).json({
         message: "please provide proper data"
       });
     }

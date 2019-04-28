@@ -3,8 +3,7 @@ import Game from '../models/games';
 import mongoose = require('mongoose');
 import { isString, isArray, isNumber } from 'util';
 
-    
-    
+  
 export function isGame(game) {
   if (
     !isString(game.name) ||
