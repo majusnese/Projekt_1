@@ -19,22 +19,24 @@ chai.use(asserArrays);
 chai.use(chaiHttp);
 const expect = chai.expect;
 const login = {
-    "email": "test@rest.de",
-    "password": "qwerty"
+    email: "test@rest.de",
+    password: "qwerty"
 };
-let token = '';
+let token = "";
 after(() => {
-    shell.exec('npm run mongo importbackup');
+    shell.exec("npm run mongo importbackup");
 });
 before((done) => {
     init_1.init();
-    chai.request(App_1.default)
+    chai
+        .request(App_1.default)
         .post("/user/signup")
         .send(login)
-        .then((response) => {
+        .then(response => {
         expect([422, 201]).to.include(response.status);
     });
-    chai.request(App_1.default)
+    chai
+        .request(App_1.default)
         .post("/user/login")
         .send(login)
         .end((error, response) => {
@@ -83,7 +85,7 @@ describe("Getting stuff", () => {
         let game = yield chai
             .request(App_1.default)
             .post("/games/")
-            .set('Authorization', `Bearer ${token}`)
+            .set("Authorization", `Bearer ${token}`)
             .send(spiel_neu)
             .then(res => {
             return res.body.createdGame._id;
@@ -112,7 +114,7 @@ describe("POST /games/", () => {
         chai
             .request(App_1.default)
             .post("/games/")
-            .set('Authorization', `Bearer ${token}`)
+            .set("Authorization", `Bearer ${token}`)
             .send(spiel_neu)
             .then(res => {
             expect(res.status).to.equal(201);
@@ -126,7 +128,7 @@ describe("DELETE /games/:id", () => {
         let game = yield chai
             .request(App_1.default)
             .post("/games/")
-            .set('Authorization', `Bearer ${token}`)
+            .set("Authorization", `Bearer ${token}`)
             .send(spiel_neu)
             .then(res => {
             return res.body.createdGame._id;
@@ -134,7 +136,7 @@ describe("DELETE /games/:id", () => {
         return chai
             .request(App_1.default)
             .del("/games/" + game)
-            .set('Authorization', `Bearer ${token}`)
+            .set("Authorization", `Bearer ${token}`)
             .then(res => {
             expect(res.status).to.equal(200);
             expect(res).to.be.json;
@@ -147,7 +149,7 @@ describe("DELETE /games/:id", () => {
         return chai
             .request(App_1.default)
             .del("/games/" + "4cc339821b820f1f2dfdfb42")
-            .set('Authorization', `Bearer ${token}`)
+            .set("Authorization", `Bearer ${token}`)
             .then(res => {
             expect(res.status).to.equal(404);
         });

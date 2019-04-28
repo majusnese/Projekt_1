@@ -4,7 +4,7 @@
   "description": "Node.Js REST",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require ts-node/register --timeout 15000 --exit 'src/**/*.test.ts'",
+    "test": "mocha --require ts-node/register --timeout 150000 --exit 'src/**/*.test.ts'",
     "build": "npx tsc",
     "start": "npm run build && nodemon dist/server.js",
     "mongo": "ts-node src/utils/mongo"
