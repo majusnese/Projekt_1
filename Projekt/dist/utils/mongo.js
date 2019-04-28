@@ -18,15 +18,15 @@ const fillservertest = () => {
 };
 const exportall = () => {
     shell.exec('mongoexport --db testdb --collection games --out games_export.json');
-    shell.exec('mongoexport --db testdb --collection sellers --out sellers.json');
-    shell.exec('mongoexport --db testdb --collection users --out users.json');
+    shell.exec('mongoexport --db testdb --collection sellers --out sellers_export.json');
+    shell.exec('mongoexport --db testdb --collection users --out users_export.json');
 };
 const fillserverback = () => {
     shell.exec('mongoimport --db testdb --collection games --drop --file games_export.json');
     console.log("games filled");
     shell.exec('mongoimport --db testdb --collection sellers --drop --file sellers_export.json');
     console.log("sellers filled");
-    shell.exec('mongoimport --db testdb --collection sellers --drop --file users_export.json');
+    shell.exec('mongoimport --db testdb --collection users --drop --file users_export.json');
     console.log("users filled");
 };
 switch (values[2]) {

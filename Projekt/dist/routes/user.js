@@ -88,7 +88,6 @@ class UserRouter {
                             message: "Auth failed"
                         });
                     }
-                    console.log(result);
                     if (result) {
                         const token = jwt.sign({
                             email: user[0].email,
