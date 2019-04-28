@@ -23,27 +23,14 @@ after(() => {
   shell.exec("npm run mongo importbackup");
 });
 
-before((done: MochaDone) => {
+before(async () => {
   init();
-  chai
+  await chai
     .request(app)
     .post("/user/signup")
     .send(login)
     .then(response => {
       expect([422, 201]).to.include(response.status);
-    });
-
-  chai
-    .request(app)
-    .post("/user/login")
-    .send(login)
-    .end((error, response) => {
-      if (error) {
-        return done(error);
-      }
-      token = response.body.token;
-      expect(token).to.not.be.empty;
-      done();
     });
 });
 
@@ -88,7 +75,73 @@ describe("Getting stuff", () => {
       });
   });
 
+  it('Es existiert kein Game mit "COD" im Namen', async () => {
+    chai
+      .request(app)
+      .get(`/games/?name=COD`)
+      .then(res => {
+        expect(res.status).to.equal(404);
+      });
+  });
+});
+
+describe("Mutating stuff", () => {
+  it("login", async () => {
+    token = await chai
+      .request(app)
+      .post("/user/login")
+      .send(login)
+      .then(result => {
+        expect([422, 201].includes(result.status));
+        return result.body.token;
+      });
+  });
+
+  it("Neues Game", () => {
+    chai
+      .request(app)
+      .post("/games/")
+      .set("Authorization", `Bearer ${token}`)
+      .send(spiel_neu)
+      .then(res => {
+        expect(res.status).to.equal(201);
+        expect(res).to.be.json;
+        expect(res.body).to.contain.keys("message", "createdGame");
+      });
+  });
+
+  it("Game löschen zu vorhandener ID", async () => {
+    let game = await chai
+      .request(app)
+      .post("/games/")
+      .set("Authorization", `Bearer ${token}`)
+      .send(spiel_neu)
+      .then(res => {
+        return res.body.createdGame._id;
+      });
+    return chai
+      .request(app)
+      .del("/games/" + game)
+      .set("Authorization", `Bearer ${token}`)
+      .then(res => {
+        expect(res.status).to.equal(200);
+        expect(res).to.be.json;
+        expect(res.body).to.contain.keys("message");
+      });
+  });
+
+  it("Versuchen nicht vorhandenes Game zu löschen", async () => {
+    return chai
+      .request(app)
+      .del("/games/" + "4cc339821b820f1f2dfdfb42")
+      .set("Authorization", `Bearer ${token}`)
+      .then(res => {
+        expect(res.status).to.equal(404);
+      });
+  });
+
   it('Es existiert ein Game namens "Super Mario Bros."', async () => {
+    console.log(token);
     let game = await chai
       .request(app)
       .post("/games/")
@@ -111,64 +164,6 @@ describe("Getting stuff", () => {
           "id"
         );
         expect(res.body.id).to.equal(game);
-      });
-  });
-
-  it('Es existiert kein Game mit "COD" im Namen', async () => {
-    chai
-      .request(app)
-      .get(`/games/?name=COD`)
-      .then(res => {
-        expect(res.status).to.equal(404);
-      });
-  });
-});
-
-describe("POST /games/", () => {
-  it("Neues Game", () => {
-    chai
-      .request(app)
-      .post("/games/")
-      .set("Authorization", `Bearer ${token}`)
-      .send(spiel_neu)
-      .then(res => {
-        expect(res.status).to.equal(201);
-        expect(res).to.be.json;
-        expect(res.body).to.contain.keys("message", "createdGame");
-      });
-  });
-});
-
-describe("DELETE /games/:id", () => {
-  it("Game löschen zu vorhandener ID", async () => {
-    let game = await chai
-      .request(app)
-      .post("/games/")
-      .set("Authorization", `Bearer ${token}`)
-      .send(spiel_neu)
-      .then(res => {
-        return res.body.createdGame._id;
-      });
-    return chai
-      .request(app)
-      .del("/games/" + game)
-      .set("Authorization", `Bearer ${token}`)
-      .then(res => {
-        expect(res.status).to.equal(200);
-        expect(res).to.be.json;
-        expect(res.body).to.contain.keys("message");
-      });
-  });
-});
-
-describe("DELETE /games/:id", () => {
-  it("Versuchen nicht vorhandenes Game zu löschen", async () => {
-    return chai
-      .request(app)
-      .del("/games/" + "4cc339821b820f1f2dfdfb42")
-      .set("Authorization", `Bearer ${token}`)
-      .then(res => {
-        expect(res.status).to.equal(404);
       });
   });
 });
