@@ -15,6 +15,7 @@ const spiel_neu_falsch = require("./spiel_neu_falsch.json");
 const App_1 = require("../App");
 const asserArrays = require("chai-arrays");
 const shell = require("shelljs");
+const init_1 = require("./init");
 chai.use(asserArrays);
 chai.use(chaiHttp);
 const expect = chai.expect;
@@ -27,6 +28,7 @@ after(() => {
     shell.exec('npm run mongo import');
 });
 before((done) => {
+    init_1.init();
     chai.request(App_1.default)
         .post("/user/login")
         .send(login)
@@ -35,7 +37,7 @@ before((done) => {
             return done(error);
         }
         token = response.body.token;
-        token.should.be.not.empty;
+        expect(token).to.not.be.empty;
         done();
     });
 });
@@ -75,10 +77,10 @@ describe("POST /games/", () => {
         return chai
             .request(App_1.default)
             .post("/games/")
-            .set('Authorization', process.env.TESTING_KEY)
+            .set('Authorization', `Bearer ${token}`)
             .send(spiel_neu_falsch)
             .then(res => {
-            expect(res.status).to.equal(500);
+            expect(res.status).to.equal(409);
         });
     });
 });
@@ -87,7 +89,7 @@ describe("DELETE /games/:id", () => {
         let game = yield chai
             .request(App_1.default)
             .post("/games/")
-            .set('Authorization', process.env.TESTING_KEY)
+            .set('Authorization', `Bearer ${token}`)
             .send(spiel_neu)
             .then(res => {
             return res.body.createdGame._id;
@@ -95,6 +97,7 @@ describe("DELETE /games/:id", () => {
         return chai
             .request(App_1.default)
             .del("/games/" + game)
+            .set('Authorization', `Bearer ${token}`)
             .then(res => {
             expect(res.status).to.equal(200);
             expect(res).to.be.json;
@@ -107,7 +110,7 @@ describe("DELETE /games/:id", () => {
         return chai
             .request(App_1.default)
             .del("/games/" + "4cc339821b820f1f2dfdfb42")
-            .set('Authorization', process.env.TESTING_KEY)
+            .set('Authorization', `Bearer ${token}`)
             .then(res => {
             expect(res.status).to.equal(404);
         });
@@ -137,6 +140,7 @@ describe("GET /games/:name", () => {
         let game = yield chai
             .request(App_1.default)
             .post("/games/")
+            .set('Authorization', `Bearer ${token}`)
             .send(spiel_neu)
             .then(res => {
             return res.body.createdGame._id;

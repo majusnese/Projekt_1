@@ -63,6 +63,8 @@ export class UserRouter {
   }
 
   public async login(req: Request, res: Response, next: NextFunction) {
+    const jwt_key = process.env.JWT_KEY;
+    console.log(jwt_key);
     User.find({ email: req.body.email })
       .exec()
       .then(user => {
@@ -83,7 +85,7 @@ export class UserRouter {
                 email: user[0].email,
                 userId: user[0]._id
               },
-              process.env.JWT_KEY,
+              jwt_key,
               {
                 expiresIn: "1h"
               } 
