@@ -3,6 +3,8 @@ import mongoose = require("mongoose");
 import Seller from "../models/seller";
 import Game from "../models/games";
 const checkAuth = require("../utils/check-auth");
+import { logger } from "../utils/logger";
+import stringify from "fast-safe-stringify";
 
 export class SellerRouter {
   router: Router;
@@ -43,7 +45,7 @@ export class SellerRouter {
         }
       })
       .catch(err => {
-        console.log(err);
+        logger.error(`Findall seller Error: ${stringify(err)}`);
         res.status(500).json({
           error: err
         });
@@ -95,7 +97,7 @@ export class SellerRouter {
         });
       })
       .catch(err => {
-        console.log(err);
+        logger.error(`Post seller Error: ${stringify(err)}`);
         res.status(500).json({ error: err });
       });
   }
@@ -124,7 +126,7 @@ export class SellerRouter {
         }
       })
       .catch(err => {
-        console.log(err);
+        logger.error(`Findbyid seller Error: ${stringify(err)}`);
         res.status(500).json({ error: err });
       });
   }
@@ -148,7 +150,7 @@ export class SellerRouter {
         });
       })
       .catch(err => {
-        console.log(err);
+        logger.error(`Update seller Error: ${stringify(err)}`);
         res.status(500).json({
           error: err
         });
@@ -173,7 +175,7 @@ export class SellerRouter {
         }
       })
       .catch(err => {
-        console.log(err);
+        logger.error(`Del seller Error: ${stringify(err)}`);
         res.status(500).json({ error: err });
       });
   }

@@ -13,6 +13,8 @@ const games_1 = require("../models/games");
 const mongoose = require("mongoose");
 const Validator_1 = require("../utils/Validator");
 const checkAuth = require("../utils/check-auth");
+const logger_1 = require("../utils/logger");
+const fast_safe_stringify_1 = require("fast-safe-stringify");
 class GameRouter {
     constructor() {
         this.router = express_1.Router();
@@ -49,7 +51,7 @@ class GameRouter {
                 }
             })
                 .catch(err => {
-                console.log(err);
+                logger_1.logger.error(`Findall game Error: ${fast_safe_stringify_1.default(err)}`);
                 res.status(500).json({
                     error: err
                 });
@@ -99,7 +101,7 @@ class GameRouter {
                 });
             })
                 .catch(err => {
-                console.log(err);
+                logger_1.logger.error(`Post game Error: ${fast_safe_stringify_1.default(err)}`);
                 res.status(500).json({ error: err });
             });
         });
@@ -119,24 +121,23 @@ class GameRouter {
                 objid = mongoose.Types.ObjectId(param);
                 isObjectId = true;
             }
-            console.log(isObjectId);
-            console.log(objid);
             let isNumber = false;
             let number_t = 1234567890;
             if (!isNaN(param) && !isObjectId) {
                 number_t = Number(param);
                 isNumber = true;
             }
-            console.log(isNumber);
-            console.log(number_t);
             let isPlatform = false;
             let platform_t = "AAAAA";
             if (["PC", "XBOX", "PS4"].includes(param)) {
                 platform_t = param;
                 isPlatform = true;
             }
-            console.log(isPlatform);
-            console.log(platform_t);
+            if (!isNumber && !isObjectId && !isPlatform) {
+                res.status(422).json({
+                    message: "Argument could not be processed"
+                });
+            }
             games_1.default.find()
                 .or([
                 { _id: objid },
@@ -172,7 +173,7 @@ class GameRouter {
                 }
             })
                 .catch(err => {
-                console.log(err);
+                logger_1.logger.error(`findbyanything game Error: ${fast_safe_stringify_1.default(err)}`);
                 res.status(500).json({ error: err });
             });
         });
@@ -202,7 +203,7 @@ class GameRouter {
                 }
             })
                 .catch(err => {
-                console.log(err);
+                logger_1.logger.error(`Findbyid game Error: ${fast_safe_stringify_1.default(err)}`);
                 res.status(500).json({ error: err });
             });
         });
@@ -227,7 +228,7 @@ class GameRouter {
                 });
             })
                 .catch(err => {
-                console.log(err);
+                logger_1.logger.error(`Update game Error: ${fast_safe_stringify_1.default(err)}`);
                 res.status(500).json({
                     error: err
                 });
@@ -254,7 +255,7 @@ class GameRouter {
                 }
             })
                 .catch(err => {
-                console.log(err);
+                logger_1.logger.error(`Delete game Error: ${fast_safe_stringify_1.default(err)}`);
                 res.status(500).json({ error: err });
             });
         });

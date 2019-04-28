@@ -3,6 +3,8 @@ import mongoose = require("mongoose");
 import User from "../models/user";
 import bcrypt = require("bcrypt");
 import * as jwt from "jsonwebtoken";
+import { logger } from "../utils/logger";
+import stringify from "fast-safe-stringify";
 
 export class UserRouter {
   router: Router;

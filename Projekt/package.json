@@ -25,6 +25,7 @@
     "body-parser": "1.18.3",
     "chai": "4.2.0",
     "chai-arrays": "2.0.0",
+    "chai-as-promised": "7.1.1",
     "chai-http": "4.2.1",
     "express-graphql": "0.8.0",
     "fresh": "0.5.2",
@@ -36,7 +37,8 @@
     "mocha": "6.1.4",
     "mongoose": "5.5.1",
     "node": "11.14.0",
-    "shelljs": "0.8.3"
+    "shelljs": "0.8.3",
+    "winston": "3.2.1"
   },
   "devDependencies": {
     "@types/body-parser": "0.0.33",

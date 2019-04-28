@@ -3,6 +3,8 @@ import Game from "../models/games";
 import mongoose = require("mongoose");
 import { isGame } from "../utils/Validator";
 const checkAuth = require("../utils/check-auth");
+import { logger } from "../utils/logger";
+import stringify from "fast-safe-stringify";
 
 export class GameRouter {
   router: Router;
@@ -41,7 +43,7 @@ export class GameRouter {
         }
       })
       .catch(err => {
-        console.log(err);
+        logger.error(`Findall game Error: ${stringify(err)}`);
         res.status(500).json({
           error: err
         });
@@ -90,7 +92,7 @@ export class GameRouter {
         });
       })
       .catch(err => {
-        console.log(err);
+        logger.error(`Post game Error: ${stringify(err)}`);
         res.status(500).json({ error: err });
       });
   }
@@ -110,8 +112,6 @@ export class GameRouter {
       objid = mongoose.Types.ObjectId(param);
       isObjectId = true;
     }
-    console.log(isObjectId);
-    console.log(objid);
 
     let isNumber = false;
     let number_t = 1234567890;
@@ -119,8 +119,6 @@ export class GameRouter {
       number_t = Number(param);
       isNumber = true;
     }
-    console.log(isNumber);
-    console.log(number_t);
 
     let isPlatform = false;
     let platform_t = "AAAAA";
@@ -128,9 +126,12 @@ export class GameRouter {
       platform_t = param;
       isPlatform = true;
     }
-    console.log(isPlatform);
-    console.log(platform_t);
 
+    if(!isNumber && !isObjectId && !isPlatform){
+      res.status(422).json({
+        message: "Argument could not be processed"
+      });
+    }
     Game.find()
       .or([
         { _id: objid },
@@ -165,7 +166,7 @@ export class GameRouter {
         }
       })
       .catch(err => {
-        console.log(err);
+        logger.error(`findbyanything game Error: ${stringify(err)}`);
         res.status(500).json({ error: err });
       });
   }
@@ -193,7 +194,7 @@ export class GameRouter {
         }
       })
       .catch(err => {
-        console.log(err);
+        logger.error(`Findbyid game Error: ${stringify(err)}`);
         res.status(500).json({ error: err });
       });
   }
@@ -217,7 +218,7 @@ export class GameRouter {
         });
       })
       .catch(err => {
-        console.log(err);
+        logger.error(`Update game Error: ${stringify(err)}`);
         res.status(500).json({
           error: err
         });
@@ -242,7 +243,7 @@ export class GameRouter {
         }
       })
       .catch(err => {
-        console.log(err);
+        logger.error(`Delete game Error: ${stringify(err)}`);
         res.status(500).json({ error: err });
       });
   }

@@ -2,7 +2,7 @@ import * as http from "http";
 import App from "./App";
 import debug = require("debug");
 
-debug("ts-express:server");
+debug("ts-express:server"); 
 
 const port = normalizePort(3000);
 App.set("port", port);

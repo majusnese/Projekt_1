@@ -13,6 +13,8 @@ const mongoose = require("mongoose");
 const seller_1 = require("../models/seller");
 const games_1 = require("../models/games");
 const checkAuth = require("../utils/check-auth");
+const logger_1 = require("../utils/logger");
+const fast_safe_stringify_1 = require("fast-safe-stringify");
 class SellerRouter {
     constructor() {
         this.router = express_1.Router();
@@ -51,7 +53,7 @@ class SellerRouter {
                 }
             })
                 .catch(err => {
-                console.log(err);
+                logger_1.logger.error(`Findall seller Error: ${fast_safe_stringify_1.default(err)}`);
                 res.status(500).json({
                     error: err
                 });
@@ -104,7 +106,7 @@ class SellerRouter {
                 });
             })
                 .catch(err => {
-                console.log(err);
+                logger_1.logger.error(`Post seller Error: ${fast_safe_stringify_1.default(err)}`);
                 res.status(500).json({ error: err });
             });
         });
@@ -135,7 +137,7 @@ class SellerRouter {
                 }
             })
                 .catch(err => {
-                console.log(err);
+                logger_1.logger.error(`Findbyid seller Error: ${fast_safe_stringify_1.default(err)}`);
                 res.status(500).json({ error: err });
             });
         });
@@ -160,7 +162,7 @@ class SellerRouter {
                 });
             })
                 .catch(err => {
-                console.log(err);
+                logger_1.logger.error(`Update seller Error: ${fast_safe_stringify_1.default(err)}`);
                 res.status(500).json({
                     error: err
                 });
@@ -187,7 +189,7 @@ class SellerRouter {
                 }
             })
                 .catch(err => {
-                console.log(err);
+                logger_1.logger.error(`Del seller Error: ${fast_safe_stringify_1.default(err)}`);
                 res.status(500).json({ error: err });
             });
         });

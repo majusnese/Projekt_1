@@ -1,7 +1,6 @@
 import express = require("express");
 import GameRouter from "./routes/games";
 import SellerRouter from "./routes/seller";
-import GeneralRouter from "./routes/general";
 import UserRouter from "./routes/user";
 import * as logger from "morgan";
 import * as bodyParser from "body-parser";
@@ -48,7 +47,6 @@ class App {
   private routes(): void {
     this.express.use("/games", GameRouter);
     this.express.use("/sellers", SellerRouter);
-    this.express.use("/general", GeneralRouter);
     this.express.use("/user", UserRouter);
 
     //GraphQl for providing a Query to the Client

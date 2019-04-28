@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
 const games_1 = require("./routes/games");
 const seller_1 = require("./routes/seller");
-const general_1 = require("./routes/general");
 const user_1 = require("./routes/user");
 const logger = require("morgan");
 const bodyParser = require("body-parser");
@@ -41,7 +40,6 @@ class App {
     routes() {
         this.express.use("/games", games_1.default);
         this.express.use("/sellers", seller_1.default);
-        this.express.use("/general", general_1.default);
         this.express.use("/user", user_1.default);
         //GraphQl for providing a Query to the Client
         this.express.use("/graphql", graphql({
