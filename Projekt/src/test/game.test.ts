@@ -20,12 +20,11 @@ const login = {
 let token = '';
 
 after(() => {
-  shell.exec('npm run mongo import')
+  shell.exec('npm run mongo importbackup')
 });
 
 before((done: MochaDone) => {
   init();
-  console.log(login);
   chai.request(app)
   .post("/user/signup")
   .send(login)

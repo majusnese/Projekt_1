@@ -69,13 +69,13 @@ export class UserRouter {
       .then(user => {
         if (user.length < 1) {
           res.status(401).json({
-            message: "Auth failed2"
+            message: "Auth failed"
           });
         }
         bcrypt.compare(req.body.password, user[0].password, (err, result) => {
           if (err) {
             res.status(401).json({
-              message: "Auth failed3"
+              message: "Auth failed"
             });
           }
           if (result) {
@@ -94,9 +94,8 @@ export class UserRouter {
               token: token
             });
           }
-          console.log(req.body.password + user[0].password);
           res.status(401).json({
-            message: "Auth failed4"
+            message: "Auth failed"
           });
         });
       })

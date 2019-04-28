@@ -11,7 +11,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const chai = require("chai");
 const chaiHttp = require("chai-http");
 const spiel_neu = require("./spiel_neu.json");
-const spiel_neu_falsch = require("./spiel_neu_falsch.json");
 const App_1 = require("../App");
 const asserArrays = require("chai-arrays");
 const shell = require("shelljs");
@@ -25,23 +24,29 @@ const login = {
 };
 let token = '';
 after(() => {
-    shell.exec('npm run mongo import');
+    shell.exec('npm run mongo importbackup');
 });
 before((done) => {
     init_1.init();
-    console.log(login);
     chai.request(App_1.default)
         .post("/user/signup")
+        .send(login)
+        .then((response) => {
+        expect([422, 201]).to.include(response.status);
+    });
+    chai.request(App_1.default)
+        .post("/user/login")
         .send(login)
         .end((error, response) => {
         if (error) {
             return done(error);
         }
-        expect([422, 200]).to.include(response.status);
+        token = response.body.token;
+        expect(token).to.not.be.empty;
         done();
     });
 });
-describe("GET /games/", () => {
+describe("Getting stuff", () => {
     it("Alle Games", () => __awaiter(this, void 0, void 0, function* () {
         return chai
             .request(App_1.default)
@@ -57,6 +62,50 @@ describe("GET /games/", () => {
             expect(array_body).to.have.lengthOf(count);
         });
     }));
+    it("Game zu vorhandener ID", () => __awaiter(this, void 0, void 0, function* () {
+        let game = yield chai
+            .request(App_1.default)
+            .get("/games/")
+            .then(res => {
+            return res.body.games[0]._id;
+        });
+        return chai
+            .request(App_1.default)
+            .get("/games/" + game)
+            .then(res => {
+            expect(res.status).to.equal(200);
+            expect(res).to.be.json;
+            expect(res.body).to.contain.keys("price", "name", "platforms", "delete_request", "id");
+            expect(res.body.id).to.equal(game);
+        });
+    }));
+    it('Es existiert ein Game namens "Super Mario Bros."', () => __awaiter(this, void 0, void 0, function* () {
+        let game = yield chai
+            .request(App_1.default)
+            .post("/games/")
+            .set('Authorization', `Bearer ${token}`)
+            .send(spiel_neu)
+            .then(res => {
+            return res.body.createdGame._id;
+        });
+        return chai
+            .request(App_1.default)
+            .get("/games/" + game)
+            .then(res => {
+            expect(res.status).to.equal(200);
+            expect(res).to.be.json;
+            expect(res.body).to.contain.keys("price", "name", "platforms", "delete_request", "id");
+            expect(res.body.id).to.equal(game);
+        });
+    }));
+    it('Es existiert kein Game mit "COD" im Namen', () => __awaiter(this, void 0, void 0, function* () {
+        chai
+            .request(App_1.default)
+            .get(`/games/?name=COD`)
+            .then(res => {
+            expect(res.status).to.equal(404);
+        });
+    }));
 });
 describe("POST /games/", () => {
     it("Neues Game", () => {
@@ -69,18 +118,6 @@ describe("POST /games/", () => {
             expect(res.status).to.equal(201);
             expect(res).to.be.json;
             expect(res.body).to.contain.keys("message", "createdGame");
-        });
-    });
-});
-describe("POST /games/ wrong", () => {
-    it("Neues Game mit falschen Daten", () => {
-        return chai
-            .request(App_1.default)
-            .post("/games/")
-            .set('Authorization', `Bearer ${token}`)
-            .send(spiel_neu_falsch)
-            .then(res => {
-            expect(res.status).to.equal(422);
         });
     });
 });
@@ -111,56 +148,6 @@ describe("DELETE /games/:id", () => {
             .request(App_1.default)
             .del("/games/" + "4cc339821b820f1f2dfdfb42")
             .set('Authorization', `Bearer ${token}`)
-            .then(res => {
-            expect(res.status).to.equal(404);
-        });
-    }));
-});
-describe("GET /games/:id", () => {
-    it("Game zu vorhandener ID", () => __awaiter(this, void 0, void 0, function* () {
-        let game = yield chai
-            .request(App_1.default)
-            .get("/games/")
-            .then(res => {
-            return res.body.games[0]._id;
-        });
-        return chai
-            .request(App_1.default)
-            .get("/games/" + game)
-            .then(res => {
-            expect(res.status).to.equal(200);
-            expect(res).to.be.json;
-            expect(res.body).to.contain.keys("price", "name", "platforms", "delete_request", "id");
-            expect(res.body.id).to.equal(game);
-        });
-    }));
-});
-describe("GET /games/:name", () => {
-    it('Es existiert ein Game namens "Super Mario Bros."', () => __awaiter(this, void 0, void 0, function* () {
-        let game = yield chai
-            .request(App_1.default)
-            .post("/games/")
-            .set('Authorization', `Bearer ${token}`)
-            .send(spiel_neu)
-            .then(res => {
-            return res.body.createdGame._id;
-        });
-        return chai
-            .request(App_1.default)
-            .get("/games/" + game)
-            .then(res => {
-            expect(res.status).to.equal(200);
-            expect(res).to.be.json;
-            expect(res.body).to.contain.keys("price", "name", "platforms", "delete_request", "id");
-            expect(res.body.id).to.equal(game);
-        });
-    }));
-});
-describe("GET /games/:name", () => {
-    it('Es existiert kein Game mit "COD" im Namen', () => __awaiter(this, void 0, void 0, function* () {
-        chai
-            .request(App_1.default)
-            .get(`/games/?name=COD`)
             .then(res => {
             expect(res.status).to.equal(404);
         });
