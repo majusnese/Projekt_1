@@ -21,7 +21,7 @@ chai.use(chaiHttp);
 const expect = chai.expect;
 const login = {
     "email": "test@rest.de",
-    "password": "qwertz"
+    "password": "qwerty"
 };
 let token = '';
 after(() => {
@@ -29,15 +29,15 @@ after(() => {
 });
 before((done) => {
     init_1.init();
+    console.log(login);
     chai.request(App_1.default)
-        .post("/user/login")
+        .post("/user/signup")
         .send(login)
         .end((error, response) => {
         if (error) {
             return done(error);
         }
-        token = response.body.token;
-        expect(token).to.not.be.empty;
+        expect([422, 200]).to.include(response.status);
         done();
     });
 });
@@ -72,7 +72,7 @@ describe("POST /games/", () => {
         });
     });
 });
-describe("POST /games/", () => {
+describe("POST /games/ wrong", () => {
     it("Neues Game mit falschen Daten", () => {
         return chai
             .request(App_1.default)

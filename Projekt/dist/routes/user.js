@@ -29,7 +29,7 @@ class UserRouter {
                     });
                 }
                 else {
-                    bcrypt.hash(req.body.password, 10, (err, hash) => {
+                    bcrypt.hash(req.body.password, 12, (err, hash) => {
                         if (err) {
                             return res.status(500).json({
                                 error: err,
@@ -74,19 +74,18 @@ class UserRouter {
     login(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
             const jwt_key = process.env.JWT_KEY;
-            console.log(jwt_key);
             user_1.default.find({ email: req.body.email })
                 .exec()
                 .then(user => {
                 if (user.length < 1) {
                     res.status(401).json({
-                        message: "Auth failed"
+                        message: "Auth failed2"
                     });
                 }
                 bcrypt.compare(req.body.password, user[0].password, (err, result) => {
                     if (err) {
                         res.status(401).json({
-                            message: "Auth failed"
+                            message: "Auth failed3"
                         });
                     }
                     if (result) {
@@ -101,8 +100,9 @@ class UserRouter {
                             token: token
                         });
                     }
+                    console.log(req.body.password + user[0].password);
                     res.status(401).json({
-                        message: "Auth failed"
+                        message: "Auth failed4"
                     });
                 });
             })

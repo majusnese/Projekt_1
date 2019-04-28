@@ -10,7 +10,7 @@ const startserver = () => {
 }
 
 const stopserver = () => {
-    shell.exec('mongo --eval "db.shutdownServer({force: true})" --norc admin');
+    shell.exec('mongo --eval "db.shutdownServer({force: true})" admin');
 }
 
 const fillserver = () => {

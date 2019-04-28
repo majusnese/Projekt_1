@@ -8,7 +8,7 @@ const startserver = () => {
     shell.exec("mongod");
 };
 const stopserver = () => {
-    shell.exec('mongo --eval "db.shutdownServer({force: true})" --norc admin');
+    shell.exec('mongo --eval "db.shutdownServer({force: true})" admin');
 };
 const fillserver = () => {
     shell.exec('mongoimport --db testdb --collection games --drop --file games.json');

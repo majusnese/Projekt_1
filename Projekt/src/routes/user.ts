@@ -21,7 +21,7 @@ export class UserRouter {
             message: "Mail already in use"
           });
         } else {
-          bcrypt.hash(req.body.password, 10, (err, hash) => {
+          bcrypt.hash(req.body.password, 12, (err, hash) => {
             if (err) {
               return res.status(500).json({
                 error: err,
@@ -64,19 +64,18 @@ export class UserRouter {
 
   public async login(req: Request, res: Response, next: NextFunction) {
     const jwt_key = process.env.JWT_KEY;
-    console.log(jwt_key);
     User.find({ email: req.body.email })
       .exec()
       .then(user => {
         if (user.length < 1) {
           res.status(401).json({
-            message: "Auth failed"
+            message: "Auth failed2"
           });
         }
         bcrypt.compare(req.body.password, user[0].password, (err, result) => {
           if (err) {
             res.status(401).json({
-              message: "Auth failed"
+              message: "Auth failed3"
             });
           }
           if (result) {
@@ -95,8 +94,9 @@ export class UserRouter {
               token: token
             });
           }
+          console.log(req.body.password + user[0].password);
           res.status(401).json({
-            message: "Auth failed"
+            message: "Auth failed4"
           });
         });
       })

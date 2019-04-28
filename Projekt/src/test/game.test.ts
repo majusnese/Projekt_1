@@ -14,7 +14,7 @@ const expect = chai.expect;
 
 const login = {
   "email": "test@rest.de",
-  "password": "qwertz"
+  "password": "qwerty"
 }
 
 let token = '';
@@ -25,6 +25,14 @@ after(() => {
 
 before((done: MochaDone) => {
   init();
+  console.log(login);
+  chai.request(app)
+  .post("/user/signup")
+  .send(login)
+  .then((response) => {
+    expect([422,201]).to.include(response.status);
+  });
+
   chai.request(app)
   .post("/user/login")
   .send(login)
@@ -34,27 +42,97 @@ before((done: MochaDone) => {
     }
     token = response.body.token;
     expect(token).to.not.be.empty;
-    done()
+    done();
   })
 })
 
-describe("GET /games/", () => {
-  it("Alle Games", async () => {
-    return chai
-      .request(app)
-      .get("/games/")
-      .then(res => {
-        expect(res.status).to.equal(200);
-        expect(res).to.be.json;
-        expect(res.body).to.have.keys("count", "games");
-        let array_body = res.body.games;
-        expect(array_body).to.be.array();
-        expect(array_body).to.have.lengthOf.at.least(2);
-        let count = res.body.count;
-        expect(array_body).to.have.lengthOf(count);
-      });
-  });
+describe("Getting stuff", () => {
+
+  
+    it("Alle Games", async () => {
+      return chai
+        .request(app)
+        .get("/games/")
+        .then(res => {
+          expect(res.status).to.equal(200);
+          expect(res).to.be.json;
+          expect(res.body).to.have.keys("count", "games");
+          let array_body = res.body.games;
+          expect(array_body).to.be.array();
+          expect(array_body).to.have.lengthOf.at.least(2);
+          let count = res.body.count;
+          expect(array_body).to.have.lengthOf(count);
+        });
+    });
+
+
+
+    it("Game zu vorhandener ID", async () => {
+      let game = await chai
+        .request(app)
+        .get("/games/")
+        .then(res => {
+          return res.body.games[0]._id;
+        });
+      return chai
+        .request(app)
+        .get("/games/" + game)
+        .then(res => {
+          expect(res.status).to.equal(200);
+          expect(res).to.be.json;
+          expect(res.body).to.contain.keys(
+            "price",
+            "name",
+            "platforms",
+            "delete_request",
+            "id"
+          );
+          expect(res.body.id).to.equal(game);
+        });
+    });
+  
+  
+
+    it('Es existiert ein Game namens "Super Mario Bros."', async () => {
+      let game = await chai
+        .request(app)
+        .post("/games/")
+        .set('Authorization', `Bearer ${token}`)
+        .send(spiel_neu)
+        .then(res => {
+          return res.body.createdGame._id;
+        });
+      return chai
+        .request(app)
+        .get("/games/" + game)
+        .then(res => {
+          expect(res.status).to.equal(200);
+          expect(res).to.be.json;
+          expect(res.body).to.contain.keys(
+            "price",
+            "name",
+            "platforms",
+            "delete_request",
+            "id"
+          );
+          expect(res.body.id).to.equal(game);
+        });
+    });
+
+  
+
+    it('Es existiert kein Game mit "COD" im Namen', async () => {
+      chai
+        .request(app)
+        .get(`/games/?name=COD`)
+        .then(res => {
+          expect(res.status).to.equal(404);
+        });
+    });
 });
+  
+  
+
 
 describe("POST /games/", () => {
   it("Neues Game",() => {
@@ -71,18 +149,6 @@ describe("POST /games/", () => {
   });
 });
 
-describe("POST /games/", () => {
-  it("Neues Game mit falschen Daten", () => {
-    return chai
-      .request(app)
-      .post("/games/")
-      .set('Authorization', `Bearer ${token}`)
-      .send(spiel_neu_falsch)
-      .then(res => {
-        expect(res.status).to.equal(422);
-      });
-  });
-});
 
 describe("DELETE /games/:id", () => {
   it("Game löschen zu vorhandener ID", async () => {
@@ -118,67 +184,3 @@ describe("DELETE /games/:id", () => {
   });
 });
 
-describe("GET /games/:id", () => {
-  it("Game zu vorhandener ID", async () => {
-    let game = await chai
-      .request(app)
-      .get("/games/")
-      .then(res => {
-        return res.body.games[0]._id;
-      });
-    return chai
-      .request(app)
-      .get("/games/" + game)
-      .then(res => {
-        expect(res.status).to.equal(200);
-        expect(res).to.be.json;
-        expect(res.body).to.contain.keys(
-          "price",
-          "name",
-          "platforms",
-          "delete_request",
-          "id"
-        );
-        expect(res.body.id).to.equal(game);
-      });
-  });
-});
-
-describe("GET /games/:name", () => {
-  it('Es existiert ein Game namens "Super Mario Bros."', async () => {
-    let game = await chai
-      .request(app)
-      .post("/games/")
-      .set('Authorization', `Bearer ${token}`)
-      .send(spiel_neu)
-      .then(res => {
-        return res.body.createdGame._id;
-      });
-    return chai
-      .request(app)
-      .get("/games/" + game)
-      .then(res => {
-        expect(res.status).to.equal(200);
-        expect(res).to.be.json;
-        expect(res.body).to.contain.keys(
-          "price",
-          "name",
-          "platforms",
-          "delete_request",
-          "id"
-        );
-        expect(res.body.id).to.equal(game);
-      });
-  });
-});
-
-describe("GET /games/:name", () => {
-  it('Es existiert kein Game mit "COD" im Namen', async () => {
-    chai
-      .request(app)
-      .get(`/games/?name=COD`)
-      .then(res => {
-        expect(res.status).to.equal(404);
-      });
-  });
-});
