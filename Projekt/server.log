@@ -839,3 +839,29 @@ error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T1
 error: No Game found {"timestamp":"2019-04-29T18:42:01.379Z"}
 error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:42:01.380Z"}
 error: findbyanything did not find entries: {"timestamp":"2019-04-29T18:42:01.403Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T20:44:00.590Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T20:44:14.689Z"}
+debug: 
+ {"timestamp":"2019-04-29T20:44:14.714Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T20:44:14.714Z"}
+debug: 
+ {"timestamp":"2019-04-29T20:44:14.722Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T20:44:14.722Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T20:44:15.558Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T20:44:15.603Z"}
+error: No Game to update {"timestamp":"2019-04-29T20:44:15.623Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T20:44:15.629Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T20:44:15.631Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T20:44:15.650Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T20:44:15.652Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T20:44:15.934Z"}
+error: Update seller failed due to wrong data for the seller!)} {"timestamp":"2019-04-29T20:44:15.940Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 'Game not found' to equal 'You provided unprocessable Data'","showDiff":true,"actual":"Game not found","expected":"You provided unprocessable Data","stack":"AssertionError: expected 'Game not found' to equal 'You provided unprocessable Data'\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\index.test.ts:307:42)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T20:44:15.943Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T20:44:15.954Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T20:44:15.959Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T20:44:15.960Z"}
+error: No Game found {"timestamp":"2019-04-29T20:44:15.975Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T20:44:15.976Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T20:44:15.998Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T20:45:00.656Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T20:45:54.079Z"}

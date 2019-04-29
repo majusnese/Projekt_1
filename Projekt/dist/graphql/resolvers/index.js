@@ -29,7 +29,7 @@ module.exports = {
             throw err;
         });
     },
-    seller: (args) => {
+    seller: args => {
         return seller_1.default.findById(args.id)
             .then(seller => {
             return seller;
@@ -39,7 +39,7 @@ module.exports = {
             throw err;
         });
     },
-    game: (args) => {
+    game: args => {
         return games_1.default.findById(args.id)
             .then(game => {
             return game;
@@ -49,15 +49,15 @@ module.exports = {
             throw err;
         });
     },
-    createSeller: (args) => {
-        const seller_instance = new seller_1.default({
+    createSeller: args => {
+        const sellerInstance = new seller_1.default({
             id: new mongoose.Types.ObjectId(),
             label: args.sellerInput.label,
             headquarter: args.sellerInput.headquarter,
             locations: args.sellerInput.locations,
             game: args.sellerInput.game
         });
-        return seller_instance
+        return sellerInstance
             .save()
             .then(result => {
             console.log(result);
@@ -68,14 +68,14 @@ module.exports = {
             throw err;
         });
     },
-    createGame: (args) => {
-        const game_instance = new games_1.default({
+    createGame: args => {
+        const gameInstance = new games_1.default({
             id: new mongoose.Types.ObjectId(),
             name: args.gameInput.name,
             platforms: args.gameInput.platforms,
             price: args.gameInput.price
         });
-        return game_instance
+        return gameInstance
             .save()
             .then(result => {
             console.log(result);
@@ -86,14 +86,14 @@ module.exports = {
             throw err;
         });
     },
-    createUser: (args) => {
-        const user_instance = new user_1.default({
+    createUser: args => {
+        const userInstance = new user_1.default({
             id: new mongoose.Types.ObjectId(),
             name: args.userInput.name,
             password: args.userInput.password,
             email: args.userInput.email
         });
-        return user_instance
+        return userInstance
             .save()
             .then(result => {
             console.log(result);

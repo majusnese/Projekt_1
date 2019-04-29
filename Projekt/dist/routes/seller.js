@@ -111,12 +111,12 @@ class SellerRouter {
                                     description: "Look at the created seller",
                                     url: "http://localhost:3000/sellers/" + result._id
                                 },
-                                request_getthis: {
+                                requestGetThis: {
                                     type: "GET",
                                     description: "Look at this seller individually",
                                     url: "http://localhost:3000/sellers/" + result._id
                                 },
-                                delete_request: {
+                                deleteRequest: {
                                     type: "DELETE",
                                     description: "Delete the seller",
                                     url: "http://localhost:3000/sellers/" + result._id
@@ -169,7 +169,7 @@ class SellerRouter {
                         headquarter: doc.headquarter,
                         game: doc.game,
                         id: doc._id,
-                        delete_request: {
+                        deleteRequest: {
                             type: "DELETE",
                             description: "Delete the seller",
                             url: "http://localhost:3000/sellers/" + doc._id
@@ -200,7 +200,7 @@ class SellerRouter {
                     });
                 };
             }
-            let seller_ins = yield seller_1.default.findById(id)
+            let sellerInstance = yield seller_1.default.findById(id)
                 .select("name price platforms _id")
                 .exec()
                 .then(doc => {
@@ -214,7 +214,7 @@ class SellerRouter {
                 .catch(error => {
                 logger_1.logger.error(`Update seller error while trying to find the seller: ${fast_safe_stringify_1.default(error)}`);
             });
-            if (seller_ins) {
+            if (sellerInstance) {
                 const updateOperations = {};
                 for (const ops of req.body) {
                     if (!Validator_3.isPropNameSeller(ops.propName) ||

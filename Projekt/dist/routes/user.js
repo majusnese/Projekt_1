@@ -23,53 +23,55 @@ class UserRouter {
     }
     signup(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
-            user_1.default.find({ email: req.body.email })
-                .exec()
-                .then(user => {
-                if (user.length >= 1) {
-                    logger_1.logger.error(`user signup Error because of duplicate email`);
-                    res.status(422).json({
-                        message: "Mail already in use"
-                    });
-                }
-                bcrypt.hash(req.body.password, 12, (err, hash) => {
-                    if (err) {
-                        res.status(500).json({
-                            error: err,
-                            message: "Error occurred."
+            try {
+                user_1.default.find({ email: req.body.email })
+                    .exec()
+                    .then(user => {
+                    if (user.length >= 1) {
+                        logger_1.logger.error(`user signup Error because of duplicate email`);
+                        res.status(422).json({
+                            message: "Mail already in use"
                         });
                     }
                     else {
-                        if (req.body.email.match(Validator_1.regex)) {
-                            const user = new user_1.default({
-                                _id: new mongoose.Types.ObjectId(),
-                                email: req.body.email,
-                                password: hash
-                            });
-                            user
-                                .save()
-                                .then(result => {
-                                res.status(201).json({
-                                    message: "user created",
-                                    uid: result._id
+                        bcrypt.hash(req.body.password, 12, (err, hash) => {
+                            if (err) {
+                                res.status(500).json({
+                                    error: err,
+                                    message: "Error occurred."
                                 });
-                            })
-                                .catch(err => {
-                                logger_1.logger.error(`user signup Error An error occurred after the password was hashed`);
-                            });
-                        }
-                        else {
-                            logger_1.logger.error(`user signup Error because of invalid email`);
-                            res.status(422).json({
-                                message: "invalid email"
-                            });
-                        }
+                            }
+                            else {
+                                if (Validator_1.regex.test(req.body.email)) {
+                                    const user = new user_1.default({
+                                        _id: new mongoose.Types.ObjectId(),
+                                        email: req.body.email,
+                                        password: hash
+                                    });
+                                    user.save().then(result => {
+                                        res.status(201).json({
+                                            message: "user created",
+                                            uid: user._id
+                                        });
+                                    });
+                                }
+                                else {
+                                    logger_1.logger.error(`user signup Error because of invalid email`);
+                                    res.status(422).json({
+                                        message: "invalid email"
+                                    });
+                                }
+                            }
+                        });
                     }
+                })
+                    .catch(err => {
+                    logger_1.logger.error(`user signup Error: ${fast_safe_stringify_1.default(err)}`);
                 });
-            })
-                .catch(err => {
-                logger_1.logger.error(`user signup Error: ${fast_safe_stringify_1.default(err)}`);
-            });
+            }
+            catch (err) {
+                logger_1.logger.error("user signup failed");
+            }
         });
     }
     login(req, res, next) {
@@ -96,8 +98,10 @@ class UserRouter {
                         }, jwt_key, {
                             expiresIn: "1h"
                         });
+                        console.log(user[0]._id);
                         return res.status(200).json({
                             message: "Auth succesful",
+                            id: user[0]._id,
                             token: token
                         });
                     }
@@ -113,7 +117,19 @@ class UserRouter {
     }
     del(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
-            user_1.default.remove({ _id: req.params.uid })
+            let id;
+            try {
+                id = mongoose.Types.ObjectId(req.params.uid);
+            }
+            catch (_a) {
+                err => {
+                    logger_1.logger.error(`Delete user error because an invalid id was passed: ${fast_safe_stringify_1.default(err)}`);
+                    res.status(422).json({
+                        message: "Please pass a valid ID"
+                    });
+                };
+            }
+            user_1.default.remove({ _id: id })
                 .exec()
                 .then(result => {
                 res.status(200).json({
@@ -127,7 +143,7 @@ class UserRouter {
     }
     init() {
         this.router.post("/signup", this.signup);
-        this.router.delete("/uid", this.del);
+        this.router.delete("/:uid", this.del);
         this.router.post("/login", this.login);
     }
 }

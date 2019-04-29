@@ -83,12 +83,12 @@ class GameRouter {
                                 description: "Look at the created game",
                                 url: "http://localhost:3000/games/" + result._id
                             },
-                            request_getthis: {
+                            requestGetThis: {
                                 type: "GET",
                                 description: "Look at this game individually",
                                 url: "http://localhost:3000/games/" + result._id
                             },
-                            delete_request: {
+                            deleteRequest: {
                                 type: "DELETE",
                                 description: "Delete the game",
                                 url: "http://localhost:3000/games/" + result._id
@@ -128,15 +128,15 @@ class GameRouter {
                 isObjectId = true;
             }
             let isNumber = false;
-            let number_t = 1234567890;
+            let numberTest = 1234567890;
             if (!isNaN(param) && !isObjectId) {
-                number_t = Number(param);
+                numberTest = Number(param);
                 isNumber = true;
             }
             let isPlatform = false;
-            let platform_t = "AAAAA";
+            let platformTest = "AAAAA";
             if (["PC", "XBOX", "PS4"].includes(param)) {
-                platform_t = param;
+                platformTest = param;
                 isPlatform = true;
             }
             if (!isNumber && !isObjectId && !isPlatform && !isString) {
@@ -145,12 +145,12 @@ class GameRouter {
                     message: "Argument could not be processed"
                 });
             }
-            games_1.default.find()
+            yield games_1.default.find()
                 .or([
                 { _id: objid },
                 { name: param },
-                { price: number_t },
-                { platforms: platform_t }
+                { price: numberTest },
+                { platforms: platformTest }
             ])
                 .exec()
                 .then(docs => {
@@ -209,7 +209,7 @@ class GameRouter {
                         name: doc.name,
                         price: doc.price,
                         platforms: doc.platforms,
-                        delete_request: {
+                        deleteRequest: {
                             type: "DELETE",
                             description: "Delete the game",
                             url: "http://localhost:3000/games/" + doc._id
@@ -240,7 +240,7 @@ class GameRouter {
                     });
                 };
             }
-            let game_ins = yield games_1.default.findById(id)
+            let gameInstance = yield games_1.default.findById(id)
                 .select("name price platforms _id")
                 .exec()
                 .then(doc => {
@@ -254,7 +254,7 @@ class GameRouter {
                 .catch(error => {
                 logger_1.logger.error(`Update game failed while trying to find the game: ${fast_safe_stringify_1.default(error)}`);
             });
-            if (game_ins) {
+            if (gameInstance) {
                 const updateOperations = {};
                 for (const ops of req.body) {
                     if (!Validator_3.isPropName(ops.propName) ||
@@ -320,7 +320,6 @@ class GameRouter {
                         .catch(err => {
                         logger_1.logger.error(`Delete game Error while trying to delete the Game: ${fast_safe_stringify_1.default(err)}`);
                     });
-                    ;
                 }
                 else {
                     logger_1.logger.error(`No Game to delete`);

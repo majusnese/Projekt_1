@@ -57,6 +57,7 @@ class App {
         mongoose.connection.on("error", function (error) {
             console.error("Database connection error: ", error);
         });
+        mongoose.set("useCreateIndex", true);
     }
     errorNF() {
         this.express.use(function (req, res, next) {

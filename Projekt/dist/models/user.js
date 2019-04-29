@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const Validator_1 = require("../utils/Validator");
 const userSchema = new mongoose.Schema({
     name: {
-        type: String,
+        type: String
     },
     email: {
         type: String,
@@ -13,8 +13,9 @@ const userSchema = new mongoose.Schema({
         match: Validator_1.regex
     },
     password: {
-        type: String, required: true
+        type: String,
+        required: true
     }
 });
-const user = mongoose.model('User', userSchema);
+const user = mongoose.model("User", userSchema);
 exports.default = user;
