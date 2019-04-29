@@ -7,8 +7,7 @@ import * as bodyParser from "body-parser";
 import mongoose = require("mongoose");
 import * as graphql from "express-graphql";
 const graphQlSchema = require("./graphql/schema");
-import * as graphQlResolver from './graphql/resolvers';
-
+import * as graphQlResolver from "./graphql/resolvers";
 
 class App {
   public express: express.Application;

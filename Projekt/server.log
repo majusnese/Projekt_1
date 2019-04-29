@@ -451,3 +451,244 @@ error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T1
 error: No Game found {"timestamp":"2019-04-29T16:14:12.977Z"}
 error: Findbyid test Error: {} {"timestamp":"2019-04-29T16:14:12.978Z"}
 error: findbyanything did not find entries: {"timestamp":"2019-04-29T16:14:13.003Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T18:07:38.211Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T18:07:52.209Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:07:52.234Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:07:52.234Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:07:52.245Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:07:52.245Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T18:07:53.044Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T18:07:53.092Z"}
+error: No Game to update {"timestamp":"2019-04-29T18:07:53.109Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T18:07:53.114Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T18:07:53.117Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T18:07:53.140Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:07:53.141Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T18:07:53.427Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T18:07:53.442Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T18:07:53.446Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T18:07:53.448Z"}
+error: No Game found {"timestamp":"2019-04-29T18:07:53.462Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:07:53.463Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T18:07:53.488Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T18:13:09.465Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T18:13:23.466Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:13:23.492Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:13:23.493Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:13:23.503Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:13:23.504Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T18:13:24.285Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T18:13:24.340Z"}
+error: No Game to update {"timestamp":"2019-04-29T18:13:24.358Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T18:13:24.362Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T18:13:24.364Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T18:13:24.386Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:13:24.390Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T18:13:24.662Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T18:13:24.676Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T18:13:24.683Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T18:13:24.684Z"}
+error: No Game found {"timestamp":"2019-04-29T18:13:24.702Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:13:24.703Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T18:13:24.724Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T18:18:47.538Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T18:19:06.440Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:19:06.464Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:19:06.464Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:19:06.472Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:19:06.472Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T18:19:18.164Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:19:18.178Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:19:18.178Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:19:18.186Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:19:18.186Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T18:19:18.992Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T18:19:19.032Z"}
+error: No Game to update {"timestamp":"2019-04-29T18:19:19.041Z"}
+error: No Game to update {"timestamp":"2019-04-29T18:19:19.048Z"}
+error: No Game to update {"timestamp":"2019-04-29T18:19:19.053Z"}
+error: Update Game test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.patch.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\game.test.ts:181:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T18:19:19.055Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T18:19:19.073Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T18:19:19.078Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:19:19.081Z"}
+error: Update seller failed due to wrong data for the seller!)} {"timestamp":"2019-04-29T18:19:19.344Z"}
+error: Update seller failed due to wrong data for the seller!)} {"timestamp":"2019-04-29T18:19:19.351Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\game.test.ts:298:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T18:19:19.353Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T18:19:19.359Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T18:19:19.364Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T18:19:19.370Z"}
+error: No Game found {"timestamp":"2019-04-29T18:19:19.380Z"}
+error: No Game found {"timestamp":"2019-04-29T18:19:19.386Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:19:19.388Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T18:19:19.402Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T18:19:19.410Z"}
+error: Delete seller did not find a seller to delete! {"timestamp":"2019-04-29T18:19:19.416Z"}
+error: No Game to delete {"timestamp":"2019-04-29T18:19:19.421Z"}
+error: user login Error: {} {"timestamp":"2019-04-29T18:19:19.432Z"}
+error: user login Error: {} {"timestamp":"2019-04-29T18:19:19.437Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T18:19:19.694Z"}
+error: New Game test Error: {"name":"AssertionError","message":"expected 401 to equal 422","showDiff":true,"actual":401,"expected":422,"stack":"AssertionError: expected 401 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\index.test.ts:133:43)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T18:19:19.731Z"}
+error: Update Game test Error: {"name":"AssertionError","message":"expected 401 to equal 404","showDiff":true,"actual":401,"expected":404,"stack":"AssertionError: expected 401 to equal 404\n    at chai.request.patch.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\index.test.ts:163:43)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T18:19:19.740Z"}
+error: Update Game test Error: {"name":"AssertionError","message":"expected 401 to equal 422","showDiff":true,"actual":401,"expected":422,"stack":"AssertionError: expected 401 to equal 422\n    at chai.request.patch.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\index.test.ts:180:43)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T18:19:19.746Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T18:19:19.760Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:19:19.762Z"}
+error: user login Error: {} {"timestamp":"2019-04-29T18:19:19.767Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 401 to equal 422","showDiff":true,"actual":401,"expected":422,"stack":"AssertionError: expected 401 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\index.test.ts:281:43)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T18:19:19.775Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 401 to equal 404","showDiff":true,"actual":401,"expected":404,"stack":"AssertionError: expected 401 to equal 404\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\index.test.ts:304:43)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T18:19:19.779Z"}
+error: No Game found {"timestamp":"2019-04-29T18:19:19.803Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:19:19.805Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T18:19:19.826Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T18:20:42.895Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T18:20:57.870Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:20:57.895Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:20:57.896Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:20:57.908Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:20:57.909Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T18:20:58.713Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T18:20:58.756Z"}
+error: No Game to update {"timestamp":"2019-04-29T18:20:58.772Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T18:20:58.778Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T18:20:58.780Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T18:20:58.796Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:20:58.798Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T18:20:59.067Z"}
+error: Update seller failed due to wrong data for the seller!)} {"timestamp":"2019-04-29T18:20:59.072Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 'Game not found' to equal 'You provided unprocessable Data'","showDiff":true,"actual":"Game not found","expected":"You provided unprocessable Data","stack":"AssertionError: expected 'Game not found' to equal 'You provided unprocessable Data'\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\index.test.ts:307:42)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T18:20:59.074Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T18:20:59.083Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T18:20:59.088Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T18:20:59.090Z"}
+error: No Game found {"timestamp":"2019-04-29T18:20:59.103Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:20:59.104Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T18:20:59.128Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T18:23:16.931Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T18:23:33.802Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:23:33.825Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:23:33.825Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:23:33.834Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:23:33.834Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T18:23:34.617Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T18:23:34.662Z"}
+error: No Game to update {"timestamp":"2019-04-29T18:23:34.681Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T18:23:34.688Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T18:23:34.690Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T18:23:34.706Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:23:34.708Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T18:23:34.978Z"}
+error: Update seller failed due to wrong data for the seller!)} {"timestamp":"2019-04-29T18:23:34.983Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 'Game not found' to equal 'You provided unprocessable Data'","showDiff":true,"actual":"Game not found","expected":"You provided unprocessable Data","stack":"AssertionError: expected 'Game not found' to equal 'You provided unprocessable Data'\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\index.test.ts:307:42)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T18:23:34.987Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T18:23:34.998Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T18:23:35.005Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T18:23:35.006Z"}
+error: No Game found {"timestamp":"2019-04-29T18:23:35.022Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:23:35.023Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T18:23:35.029Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T18:23:35.048Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T18:23:54.410Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T18:24:08.608Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:24:08.636Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:24:08.636Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:24:08.649Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:24:08.649Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T18:24:09.444Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T18:24:09.495Z"}
+error: No Game to update {"timestamp":"2019-04-29T18:24:09.515Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T18:24:09.520Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T18:24:09.522Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T18:24:09.541Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:24:09.542Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T18:24:09.829Z"}
+error: Update seller failed due to wrong data for the seller!)} {"timestamp":"2019-04-29T18:24:09.836Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 'Game not found' to equal 'You provided unprocessable Data'","showDiff":true,"actual":"Game not found","expected":"You provided unprocessable Data","stack":"AssertionError: expected 'Game not found' to equal 'You provided unprocessable Data'\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\index.test.ts:307:42)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T18:24:09.838Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T18:24:09.850Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T18:24:09.854Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T18:24:09.855Z"}
+error: No Game found {"timestamp":"2019-04-29T18:24:09.870Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:24:09.872Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T18:24:09.895Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T18:27:44.100Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T18:27:58.672Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:27:58.695Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:27:58.695Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:27:58.708Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:27:58.709Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T18:27:59.499Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T18:27:59.554Z"}
+error: No Game to update {"timestamp":"2019-04-29T18:27:59.577Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T18:27:59.584Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T18:27:59.587Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T18:27:59.604Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:27:59.606Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T18:27:59.873Z"}
+error: Update seller failed due to wrong data for the seller!)} {"timestamp":"2019-04-29T18:27:59.878Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 'Game not found' to equal 'You provided unprocessable Data'","showDiff":true,"actual":"Game not found","expected":"You provided unprocessable Data","stack":"AssertionError: expected 'Game not found' to equal 'You provided unprocessable Data'\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\index.test.ts:307:42)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T18:27:59.880Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T18:27:59.890Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T18:27:59.894Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T18:27:59.895Z"}
+error: No Game found {"timestamp":"2019-04-29T18:27:59.913Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:27:59.914Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T18:27:59.919Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T18:27:59.938Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T18:28:18.868Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T18:28:32.905Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:28:32.922Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:28:32.922Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:28:32.931Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:28:32.931Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T18:28:33.717Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T18:28:33.757Z"}
+error: No Game to update {"timestamp":"2019-04-29T18:28:33.775Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T18:28:33.781Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T18:28:33.783Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T18:28:33.798Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:28:33.800Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T18:28:34.079Z"}
+error: Update seller failed due to wrong data for the seller!)} {"timestamp":"2019-04-29T18:28:34.086Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 'Game not found' to equal 'You provided unprocessable Data'","showDiff":true,"actual":"Game not found","expected":"You provided unprocessable Data","stack":"AssertionError: expected 'Game not found' to equal 'You provided unprocessable Data'\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\index.test.ts:307:42)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T18:28:34.089Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T18:28:34.100Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T18:28:34.105Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T18:28:34.106Z"}
+error: No Game found {"timestamp":"2019-04-29T18:28:34.123Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:28:34.125Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T18:28:34.149Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T18:30:27.624Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T18:30:41.659Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:30:41.686Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:30:41.687Z"}
+debug: 
+ {"timestamp":"2019-04-29T18:30:41.698Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T18:30:41.698Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T18:30:42.493Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T18:30:42.549Z"}
+error: No Game to update {"timestamp":"2019-04-29T18:30:42.574Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T18:30:42.581Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T18:30:42.583Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T18:30:42.601Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:30:42.603Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T18:30:42.877Z"}
+error: Update seller failed due to wrong data for the seller!)} {"timestamp":"2019-04-29T18:30:42.882Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 'Game not found' to equal 'You provided unprocessable Data'","showDiff":true,"actual":"Game not found","expected":"You provided unprocessable Data","stack":"AssertionError: expected 'Game not found' to equal 'You provided unprocessable Data'\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\index.test.ts:307:42)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T18:30:42.884Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T18:30:42.894Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T18:30:42.903Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T18:30:42.904Z"}
+error: No Game found {"timestamp":"2019-04-29T18:30:42.918Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T18:30:42.919Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T18:30:42.941Z"}

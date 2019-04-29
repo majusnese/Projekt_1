@@ -108,12 +108,12 @@ export class SellerRouter {
                   description: "Look at the created seller",
                   url: "http://localhost:3000/sellers/" + result._id
                 },
-                request_getthis: {
+                requestGetThis: {
                   type: "GET",
                   description: "Look at this seller individually",
                   url: "http://localhost:3000/sellers/" + result._id
                 },
-                delete_request: {
+                deleteRequest: {
                   type: "DELETE",
                   description: "Delete the seller",
                   url: "http://localhost:3000/sellers/" + result._id
@@ -147,7 +147,10 @@ export class SellerRouter {
     } catch {
       err => {
         logger.error(
-          `Findbyid seller Error because an invalid id was passed: ${stringify(err)}`);
+          `Findbyid seller Error because an invalid id was passed: ${stringify(
+            err
+          )}`
+        );
         res.status(422).json({
           message: "Please pass a valid ID"
         });
@@ -165,7 +168,7 @@ export class SellerRouter {
             headquarter: doc.headquarter,
             game: doc.game,
             id: doc._id,
-            delete_request: {
+            deleteRequest: {
               type: "DELETE",
               description: "Delete the seller",
               url: "http://localhost:3000/sellers/" + doc._id
@@ -178,7 +181,8 @@ export class SellerRouter {
       })
       .catch(err => {
         logger.error(
-          `Findbyid seller Error while executing operation: ${stringify(err)}`);
+          `Findbyid seller Error while executing operation: ${stringify(err)}`
+        );
       });
   }
 
@@ -199,7 +203,7 @@ export class SellerRouter {
       };
     }
 
-    let seller_ins = await Seller.findById(id)
+    let sellerInstance = await Seller.findById(id)
       .select("name price platforms _id")
       .exec()
       .then(doc => {
@@ -211,11 +215,13 @@ export class SellerRouter {
       })
       .catch(error => {
         logger.error(
-          `Update seller error while trying to find the seller: ${stringify(error)}`
+          `Update seller error while trying to find the seller: ${stringify(
+            error
+          )}`
         );
       });
 
-    if (seller_ins) {
+    if (sellerInstance) {
       const updateOperations = {};
       for (const ops of req.body) {
         if (

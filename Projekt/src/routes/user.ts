@@ -5,7 +5,7 @@ import bcrypt = require("bcrypt");
 import * as jwt from "jsonwebtoken";
 import { logger } from "../utils/logger";
 import stringify from "fast-safe-stringify";
-import { regex } from '../utils/Validator'
+import { regex } from "../utils/Validator";
 
 export class UserRouter {
   router: Router;
@@ -39,14 +39,12 @@ export class UserRouter {
                     email: req.body.email,
                     password: hash
                   });
-                  user
-                    .save()
-                    .then(result => {
-                      res.status(201).json({
-                        message: "user created",
-                        uid: user._id
-                      });
-                    })
+                  user.save().then(result => {
+                    res.status(201).json({
+                      message: "user created",
+                      uid: user._id
+                    });
+                  });
                 } else {
                   logger.error(`user signup Error because of invalid email`);
                   res.status(422).json({
@@ -56,8 +54,7 @@ export class UserRouter {
               }
             });
           }
-        }
-        )
+        })
         .catch(err => {
           logger.error(`user signup Error: ${stringify(err)}`);
         });
@@ -65,7 +62,6 @@ export class UserRouter {
       logger.error("user signup failed");
     }
   }
-
 
   public async login(req: Request, res: Response, next: NextFunction) {
     const jwt_key = process.env.JWT_KEY;
@@ -94,7 +90,7 @@ export class UserRouter {
                 expiresIn: "1h"
               }
             );
-            console.log(user[0]._id)
+            console.log(user[0]._id);
             return res.status(200).json({
               message: "Auth succesful",
               id: user[0]._id,
@@ -118,7 +114,9 @@ export class UserRouter {
     } catch {
       err => {
         logger.error(
-          `Delete user error because an invalid id was passed: ${stringify(err)}`
+          `Delete user error because an invalid id was passed: ${stringify(
+            err
+          )}`
         );
         res.status(422).json({
           message: "Please pass a valid ID"

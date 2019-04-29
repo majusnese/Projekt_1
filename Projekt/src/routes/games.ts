@@ -78,12 +78,12 @@ export class GameRouter {
                 description: "Look at the created game",
                 url: "http://localhost:3000/games/" + result._id
               },
-              request_getthis: {
+              requestGetThis: {
                 type: "GET",
                 description: "Look at this game individually",
                 url: "http://localhost:3000/games/" + result._id
               },
-              delete_request: {
+              deleteRequest: {
                 type: "DELETE",
                 description: "Delete the game",
                 url: "http://localhost:3000/games/" + result._id
@@ -127,16 +127,16 @@ export class GameRouter {
     }
 
     let isNumber = false;
-    let number_t = 1234567890;
+    let numberTest = 1234567890;
     if (!isNaN(param) && !isObjectId) {
-      number_t = Number(param);
+      numberTest = Number(param);
       isNumber = true;
     }
 
     let isPlatform = false;
-    let platform_t = "AAAAA";
+    let platformTest = "AAAAA";
     if (["PC", "XBOX", "PS4"].includes(param)) {
-      platform_t = param;
+      platformTest = param;
       isPlatform = true;
     }
 
@@ -152,8 +152,8 @@ export class GameRouter {
       .or([
         { _id: objid },
         { name: param },
-        { price: number_t },
-        { platforms: platform_t }
+        { price: numberTest },
+        { platforms: platformTest }
       ])
       .exec()
       .then(docs => {
@@ -184,7 +184,9 @@ export class GameRouter {
       })
       .catch(err => {
         logger.error(
-          `findbyanything game error while trying to execute operation: ${stringify(err)}`
+          `findbyanything game error while trying to execute operation: ${stringify(
+            err
+          )}`
         );
       });
   }
@@ -216,7 +218,7 @@ export class GameRouter {
             name: doc.name,
             price: doc.price,
             platforms: doc.platforms,
-            delete_request: {
+            deleteRequest: {
               type: "DELETE",
               description: "Delete the game",
               url: "http://localhost:3000/games/" + doc._id
@@ -250,7 +252,7 @@ export class GameRouter {
         });
       };
     }
-    let game_ins = await Game.findById(id)
+    let gameInstance = await Game.findById(id)
       .select("name price platforms _id")
       .exec()
       .then(doc => {
@@ -268,7 +270,7 @@ export class GameRouter {
         );
       });
 
-    if (game_ins) {
+    if (gameInstance) {
       const updateOperations = {};
       for (const ops of req.body) {
         if (
