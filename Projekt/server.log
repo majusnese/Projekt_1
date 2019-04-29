@@ -583,3 +583,9 @@ debug:
 debug: Test-Id: undefined {"timestamp":"2019-04-29T17:55:42.280Z"}
 error: Findall seller Error: {} {"timestamp":"2019-04-29T17:55:42.287Z"}
 error: Findall game error while trying to execute operation: {} {"timestamp":"2019-04-29T17:56:27.545Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:58:37.225Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T17:58:51.537Z"}
+debug: 
+ {"timestamp":"2019-04-29T17:58:51.563Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T17:58:51.563Z"}
+error: Findall seller Error: {} {"timestamp":"2019-04-29T17:58:51.575Z"}
