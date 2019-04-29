@@ -22,6 +22,12 @@ const login = {
   email: "test@rest.de",
   password: "qwerty"
 };
+
+const login_falsch = {
+  email: "test@rest.de",
+  password: "abcde"
+}
+
 let token = "";
 let seller_id;
 const wrong_seller_id = "7cc5cd827fad48e5efb6d432";
@@ -33,6 +39,7 @@ import * as spiel_neu from "./spiel_neu.json";
 import * as spiel_neu_falsch from "./spiel_neu_falsch.json";
 import * as update_game from "./update_game.json";
 import * as update_game_wrong from "./update_game_wrong.json";
+import * as signup_falsch from "./signup_falsch.json";
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -73,6 +80,32 @@ describe("Mutating stuff", () => {
         expect([422, 201].includes(result.status));
         return result.body.token;
       }));
+  });
+
+  it("login mit falschen daten", async () => {
+    chai
+      .request(app)
+      .post("/user/login")
+      .send(login_falsch)
+      .then(result => {
+        expect(result.status).to.be.equal(401);
+      });
+  })
+
+  it("signup mit falschen daten", async () => {
+    try {
+      return await chai
+        .request(app)
+        .post("/user/signup")
+        .set("Authorization", `Bearer ${token}`)
+        .send(signup_falsch)
+        .then(res => {
+          expect(res.status).to.equal(500);
+          expect(res).to.be.json;
+        });
+    } catch (err) {
+      logger.error(`Signup falsch test Error: ${stringify(err)}`);
+    }
   });
 
   it("Neues Game", async () => {
@@ -155,6 +188,22 @@ describe("Mutating stuff", () => {
 
 //Suite fuer Gets
 describe("Getting stuff for sellers", () => {
+  it("Alle Seller", () => {
+    return chai
+      .request(app)
+      .get("/sellers/")
+      .then(res => {
+        expect(res.status).to.equal(200);
+        expect(res).to.be.json;
+        expect(res.body).to.have.keys("count", "sellers");
+        let array_body = res.body.sellers;
+        expect(array_body).to.be.array();
+        expect(array_body).to.have.lengthOf.at.least(2);
+        let count = res.body.count;
+        expect(array_body).to.have.lengthOf(count);
+      });
+  });
+
   it("Alle Seller", () => {
     return chai
       .request(app)

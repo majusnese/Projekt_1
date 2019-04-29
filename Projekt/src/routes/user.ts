@@ -45,7 +45,6 @@ export class UserRouter {
                   });
                 })
                 .catch(err => {
-                  console.log(err);
                   res.status(500).json({
                     error: err,
                     mesage: "An error occurred after the password was hashed"

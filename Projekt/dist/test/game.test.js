@@ -381,7 +381,7 @@ describe("Getting stuff for games", () => {
                 .request(App_1.default)
                 .get("/games/findbyanything/" + "tkkg")
                 .then(res => {
-                expect(res.status).to.equal(400);
+                expect(res.status).to.equal(404);
                 expect(res.body).to.contain.keys("message");
                 expect(res.body.message).to.be.equal("There are no entries");
             });
