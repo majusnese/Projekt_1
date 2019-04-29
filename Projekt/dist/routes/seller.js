@@ -50,6 +50,7 @@ class SellerRouter {
                     res.status(200).json(response);
                 }
                 else {
+                    logger_1.logger.debug(`Findall did not find entries`);
                     res.status(400).json({
                         message: "There are no entries"
                     });
@@ -68,10 +69,10 @@ class SellerRouter {
             }
             catch (_a) {
                 err => {
+                    logger_1.logger.error(`Create seller failed due to a wrong ID ${fast_safe_stringify_1.default(err)}`);
                     res.status(422).json({
                         message: "Please pass a valid ID"
                     });
-                    logger_1.logger.error(`Create seller Error: ${fast_safe_stringify_1.default(err)}`);
                 };
             }
             let check = yield games_1.default.findById(id)
@@ -83,7 +84,7 @@ class SellerRouter {
                 return false;
             })
                 .catch(error => {
-                logger_1.logger.error(`Update that seller Error: ${fast_safe_stringify_1.default(error)}`);
+                logger_1.logger.error(`Update failed while trying to find correlated Game: ${fast_safe_stringify_1.default(error)}`);
             });
             if (check) {
                 const seller = new seller_1.default({
@@ -124,7 +125,7 @@ class SellerRouter {
                         });
                     })
                         .catch(err => {
-                        logger_1.logger.error(`Post seller Error: ${fast_safe_stringify_1.default(err)}`);
+                        logger_1.logger.error(`Post seller Error while trying to update: ${fast_safe_stringify_1.default(err)}`);
                     });
                 }
                 else {
@@ -135,6 +136,7 @@ class SellerRouter {
                 }
             }
             else {
+                logger_1.logger.error(`Update seller failed due to wrong data for the seller!)}`);
                 res.status(404).json({
                     message: "Game not found"
                 });
@@ -149,10 +151,10 @@ class SellerRouter {
             }
             catch (_a) {
                 err => {
+                    logger_1.logger.error(`Findbyid seller Error because an invalid id was passed: ${fast_safe_stringify_1.default(err)}`);
                     res.status(422).json({
                         message: "Please pass a valid ID"
                     });
-                    logger_1.logger.error(`Findbyid seller Error: ${fast_safe_stringify_1.default(err)}`);
                 };
             }
             seller_1.default.findById(id)
@@ -175,11 +177,12 @@ class SellerRouter {
                     });
                 }
                 else {
+                    logger_1.logger.error(`Findbyid seller did not find a seller!`);
                     res.status(404).json({ message: "No Object found" });
                 }
             })
                 .catch(err => {
-                logger_1.logger.error(`Findbyid seller Error: ${fast_safe_stringify_1.default(err)}`);
+                logger_1.logger.error(`Findbyid seller Error while executing operation: ${fast_safe_stringify_1.default(err)}`);
             });
         });
     }
@@ -191,10 +194,10 @@ class SellerRouter {
             }
             catch (_a) {
                 err => {
+                    logger_1.logger.error(`Update seller error because an invalid id was passed: ${fast_safe_stringify_1.default(err)}`);
                     res.status(422).json({
                         message: "Please pass a valid ID"
                     });
-                    logger_1.logger.error(`Update seller Error: ${fast_safe_stringify_1.default(err)}`);
                 };
             }
             let seller_ins = yield seller_1.default.findById(id)
@@ -209,13 +212,14 @@ class SellerRouter {
                 }
             })
                 .catch(error => {
-                logger_1.logger.error(`Update that game Error: ${fast_safe_stringify_1.default(error)}`);
+                logger_1.logger.error(`Update seller error while trying to find the seller: ${fast_safe_stringify_1.default(error)}`);
             });
             if (seller_ins) {
                 const updateOperations = {};
                 for (const ops of req.body) {
                     if (!Validator_3.isPropNameSeller(ops.propName) ||
                         !Validator_2.isValidValueSeller(ops.propName, ops.value)) {
+                        logger_1.logger.error(`Update seller failed because unprocessable arguments were passed!`);
                         res.status(422).json({
                             message: "Field or Value is not valid"
                         });
@@ -235,10 +239,11 @@ class SellerRouter {
                     });
                 })
                     .catch(err => {
-                    logger_1.logger.error(`Update seller Error: ${fast_safe_stringify_1.default(err)}`);
+                    logger_1.logger.error(`Update seller Error while trying to update: ${fast_safe_stringify_1.default(err)}`);
                 });
             }
             else {
+                logger_1.logger.error(`Update seller did not find a seller!`);
                 res.status(404).json({
                     message: "Seller not found"
                 });
@@ -252,12 +257,10 @@ class SellerRouter {
                 id = mongoose.Types.ObjectId(req.params.id);
             }
             catch (_a) {
-                err => {
-                    res.status(422).json({
-                        message: "Please pass a valid ID"
-                    });
-                    logger_1.logger.error(`del seller Error: ${fast_safe_stringify_1.default(err)}`);
-                };
+                logger_1.logger.error(`Delete seller error because an invalid id was passed`);
+                res.status(422).json({
+                    message: "Please pass a valid ID"
+                });
             }
             seller_1.default.findById(id)
                 .exec()
@@ -272,11 +275,12 @@ class SellerRouter {
                     });
                 }
                 else {
+                    logger_1.logger.error(`Delete seller did not find a seller to delete!`);
                     res.status(404).json({ message: "No Object found" });
                 }
             })
                 .catch(err => {
-                logger_1.logger.error(`Del seller Error: ${fast_safe_stringify_1.default(err)}`);
+                logger_1.logger.error(`Del seller Error while trying to find the seller: ${fast_safe_stringify_1.default(err)}`);
             });
         });
     }

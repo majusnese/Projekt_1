@@ -42,6 +42,7 @@ export class SellerRouter {
         if (docs.length > 0) {
           res.status(200).json(response);
         } else {
+          logger.debug(`Findall did not find entries`);
           res.status(400).json({
             message: "There are no entries"
           });
@@ -58,10 +59,12 @@ export class SellerRouter {
       id = mongoose.Types.ObjectId(req.body.game);
     } catch {
       err => {
+        logger.error(
+          `Create seller failed due to a wrong ID ${stringify(err)}`
+        );
         res.status(422).json({
           message: "Please pass a valid ID"
         });
-        logger.error(`Create seller Error: ${stringify(err)}`);
       };
     }
     let check = await Game.findById(id)
@@ -73,7 +76,11 @@ export class SellerRouter {
         return false;
       })
       .catch(error => {
-        logger.error(`Update that seller Error: ${stringify(error)}`);
+        logger.error(
+          `Update failed while trying to find correlated Game: ${stringify(
+            error
+          )}`
+        );
       });
 
     if (check) {
@@ -115,7 +122,9 @@ export class SellerRouter {
             });
           })
           .catch(err => {
-            logger.error(`Post seller Error: ${stringify(err)}`);
+            logger.error(
+              `Post seller Error while trying to update: ${stringify(err)}`
+            );
           });
       } else {
         logger.error(`Post seller didnt work due to wrong arguments`);
@@ -124,6 +133,7 @@ export class SellerRouter {
         });
       }
     } else {
+      logger.error(`Update seller failed due to wrong data for the seller!)}`);
       res.status(404).json({
         message: "Game not found"
       });
@@ -136,10 +146,11 @@ export class SellerRouter {
       id = mongoose.Types.ObjectId(req.params.id);
     } catch {
       err => {
+        logger.error(
+          `Findbyid seller Error because an invalid id was passed: ${stringify(err)}`);
         res.status(422).json({
           message: "Please pass a valid ID"
         });
-        logger.error(`Findbyid seller Error: ${stringify(err)}`);
       };
     }
     Seller.findById(id)
@@ -161,11 +172,13 @@ export class SellerRouter {
             }
           });
         } else {
+          logger.error(`Findbyid seller did not find a seller!`);
           res.status(404).json({ message: "No Object found" });
         }
       })
       .catch(err => {
-        logger.error(`Findbyid seller Error: ${stringify(err)}`);
+        logger.error(
+          `Findbyid seller Error while executing operation: ${stringify(err)}`);
       });
   }
 
@@ -175,10 +188,14 @@ export class SellerRouter {
       id = mongoose.Types.ObjectId(req.params.id);
     } catch {
       err => {
+        logger.error(
+          `Update seller error because an invalid id was passed: ${stringify(
+            err
+          )}`
+        );
         res.status(422).json({
           message: "Please pass a valid ID"
         });
-        logger.error(`Update seller Error: ${stringify(err)}`);
       };
     }
 
@@ -193,7 +210,9 @@ export class SellerRouter {
         }
       })
       .catch(error => {
-        logger.error(`Update that game Error: ${stringify(error)}`);
+        logger.error(
+          `Update seller error while trying to find the seller: ${stringify(error)}`
+        );
       });
 
     if (seller_ins) {
@@ -203,6 +222,9 @@ export class SellerRouter {
           !isPropNameSeller(ops.propName) ||
           !isValidValueSeller(ops.propName, ops.value)
         ) {
+          logger.error(
+            `Update seller failed because unprocessable arguments were passed!`
+          );
           res.status(422).json({
             message: "Field or Value is not valid"
           });
@@ -222,9 +244,12 @@ export class SellerRouter {
           });
         })
         .catch(err => {
-          logger.error(`Update seller Error: ${stringify(err)}`);
+          logger.error(
+            `Update seller Error while trying to update: ${stringify(err)}`
+          );
         });
     } else {
+      logger.error(`Update seller did not find a seller!`);
       res.status(404).json({
         message: "Seller not found"
       });
@@ -236,12 +261,10 @@ export class SellerRouter {
     try {
       id = mongoose.Types.ObjectId(req.params.id);
     } catch {
-      err => {
-        res.status(422).json({
-          message: "Please pass a valid ID"
-        });
-        logger.error(`del seller Error: ${stringify(err)}`);
-      };
+      logger.error(`Delete seller error because an invalid id was passed`);
+      res.status(422).json({
+        message: "Please pass a valid ID"
+      });
     }
     Seller.findById(id)
       .exec()
@@ -255,11 +278,14 @@ export class SellerRouter {
               });
             });
         } else {
+          logger.error(`Delete seller did not find a seller to delete!`);
           res.status(404).json({ message: "No Object found" });
         }
       })
       .catch(err => {
-        logger.error(`Del seller Error: ${stringify(err)}`);
+        logger.error(
+          `Del seller Error while trying to find the seller: ${stringify(err)}`
+        );
       });
   }
 

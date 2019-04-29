@@ -39,13 +39,14 @@ export class GameRouter {
         if (docs.length > 0) {
           res.status(200).json(response);
         } else {
-          res.status(400).json({
+          logger.debug(`findall did not find entries:`);
+          res.status(404).json({
             message: "There are no entries"
           });
         }
       })
       .catch(err => {
-        logger.error(`Findall game Error: ${stringify(err)}`);
+        logger.error(`Findall game error while trying to execute operation: ${stringify(err)}`);
       });
   }
 
@@ -57,46 +58,49 @@ export class GameRouter {
       platforms: req.body.platforms,
       price: req.body.price
     });
-    if (!isGame(game)) {
+    if (isGame(game)) {
+      game
+        .save()
+        .then(result => {
+          res.status(201).json({
+            message: "Post request successful to /games",
+            createdGame: {
+              name: result.name,
+              price: result.price,
+              platforms: result.platforms,
+              _id: result._id,
+              request: {
+                type: "GET",
+                description: "Look at the created game",
+                url: "http://localhost:3000/games/" + result._id
+              },
+              request_getthis: {
+                type: "GET",
+                description: "Look at this game individually",
+                url: "http://localhost:3000/games/" + result._id
+              },
+              delete_request: {
+                type: "DELETE",
+                description: "Delete the game",
+                url: "http://localhost:3000/games/" + result._id
+              }
+            }
+          });
+        })
+        .catch(err => {
+          logger.error(`Post game error whily trying to execute operation: ${stringify(err)}`);
+        });
+    } else {
+      logger.error(`Post game was not succesful due to wrong data`);
       res.status(422).json({
         message: "please provide proper data"
       });
     }
-    game
-      .save()
-      .then(result => {
-        res.status(201).json({
-          message: "Post request successful to /games",
-          createdGame: {
-            name: result.name,
-            price: result.price,
-            platforms: result.platforms,
-            _id: result._id,
-            request: {
-              type: "GET",
-              description: "Look at the created game",
-              url: "http://localhost:3000/games/" + result._id
-            },
-            request_getthis: {
-              type: "GET",
-              description: "Look at this game individually",
-              url: "http://localhost:3000/games/" + result._id
-            },
-            delete_request: {
-              type: "DELETE",
-              description: "Delete the game",
-              url: "http://localhost:3000/games/" + result._id
-            }
-          }
-        });
-      })
-      .catch(err => {
-        logger.error(`Post game Error: ${stringify(err)}`);
-      });
   }
 
   public async findbyanything(req: Request, res: Response, next: NextFunction) {
     if (!req.params.anything) {
+      logger.error(`findbyanything did not get an argument`);
       res.status(422).json({
         message: "Please give an argument!"
       });
@@ -129,6 +133,7 @@ export class GameRouter {
     }
 
     if (!isNumber && !isObjectId && !isPlatform && !isString) {
+      logger.error(`findbyanything error because unprocessable arguments were passed`);
       res.status(422).json({
         message: "Argument could not be processed"
       });
@@ -161,13 +166,14 @@ export class GameRouter {
         if (docs.length > 0) {
           res.status(200).json(response);
         } else {
-          res.status(400).json({
+          logger.error(`findbyanything did not find entries:`);
+          res.status(404).json({
             message: "There are no entries"
           });
         }
       })
       .catch(err => {
-        logger.error(`findbyanything game Error: ${stringify(err)}`);
+        logger.error(`findbyanything game error while trying to execute operation: ${stringify(err)}`);
       });
   }
 
@@ -177,10 +183,11 @@ export class GameRouter {
       id = mongoose.Types.ObjectId(req.params.id);
     } catch {
       err => {
+        logger.error(`Findbyid game error because an invalid id was passed: ${stringify(err)}`);
         res.status(422).json({
           message: "Please pass a valid ID"
         });
-        logger.error(`Findbyid game Error: ${stringify(err)}`);
+        
       };
     }
 
@@ -201,11 +208,12 @@ export class GameRouter {
             }
           });
         } else {
+          logger.error(`No Game found`);
           res.status(404).json({ message: "No Object found" });
         }
       })
       .catch(err => {
-        logger.error(`Findbyid game Error: ${stringify(err)}`);
+        logger.error(`Findbyid game error whily trying to findbyid: ${stringify(err)}`);
       });
   }
 
@@ -215,10 +223,11 @@ export class GameRouter {
       id = mongoose.Types.ObjectId(req.params.id);
     } catch {
       err => {
+        logger.error(`Update game error because an invalid id was passed: ${stringify(err)}`);
         res.status(422).json({
           message: "Please pass a valid ID"
         });
-        logger.error(`Update game Error: ${stringify(err)}`);
+        
       };
     }
     let game_ins = await Game.findById(id)
@@ -232,7 +241,7 @@ export class GameRouter {
         }
       })
       .catch(error => {
-        logger.error(`Update that game Error: ${stringify(error)}`);
+        logger.error(`Update game failed while trying to find the game: ${stringify(error)}`);
       });
 
     if (game_ins) {
@@ -242,7 +251,10 @@ export class GameRouter {
           !isPropName(ops.propName) ||
           !isValidValue(ops.propName, ops.value)
         ) {
+
+          logger.error(`Update game failed, wrong arguments`);
           res.status(422).json({
+            
             message: "Field or Value is not valid"
           });
         }
@@ -261,9 +273,10 @@ export class GameRouter {
           });
         })
         .catch(err => {
-          logger.error(`Update game Error: ${stringify(err)}`);
+          logger.error(`Update game Error while trying to update: ${stringify(err)}`);
         });
     } else {
+      logger.error(`No Game to update`);
       res.status(404).json({
         message: "Game not found"
       });
@@ -276,10 +289,11 @@ export class GameRouter {
       id = mongoose.Types.ObjectId(req.params.id);
     } catch {
       err => {
+        logger.error(`Delete game Error because an invalid id was passed: ${stringify(err)}`);
         res.status(422).json({
           message: "Please pass a valid ID"
         });
-        logger.error(`Update game Error: ${stringify(err)}`);
+        
       };
     }
     Game.findById(id)
@@ -289,16 +303,21 @@ export class GameRouter {
           Game.deleteOne({ _id: id })
             .exec()
             .then(result => {
+              if(result){
               res.status(200).json({
                 message: "Game deleted"
-              });
-            });
+              });}
+            })
+            .catch(err => {
+              logger.error(`Delete game Error while trying to delete the Game: ${stringify(err)}`);
+            });;
         } else {
+          logger.error(`No Game to delete`);
           res.status(404).json({ message: "No Object found" });
         }
       })
       .catch(err => {
-        logger.error(`Delete game Error: ${stringify(err)}`);
+        logger.error(`Delete game Error while trying to find the Game: ${stringify(err)}`);
       });
   }
 
