@@ -240,9 +240,7 @@ class GameRouter {
                     return true;
                 }
                 else {
-                    return res.status(404).json({
-                        message: "Game not found"
-                    });
+                    return false;
                 }
             })
                 .catch(error => {
@@ -273,6 +271,11 @@ class GameRouter {
                 })
                     .catch(err => {
                     logger_1.logger.error(`Update game Error: ${fast_safe_stringify_1.default(err)}`);
+                });
+            }
+            else {
+                res.status(404).json({
+                    message: "Game not found"
                 });
             }
         });

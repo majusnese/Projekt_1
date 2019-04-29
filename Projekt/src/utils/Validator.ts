@@ -61,3 +61,30 @@ export function isPropName (prop){
   }
   return false;
 }
+
+export function isValidValueSeller(prop, value) {
+  if (prop == "_id") {
+    return false;
+  }
+  let typeValue = typeof value;
+  if (prop === "label" && typeValue === "string") {
+    return true;
+  }
+  if (prop === "headquarter" && typeValue === "string") {
+    return true;
+  }
+  if (prop === "locations" && typeValue == "number") {
+    return true;
+  }
+  if (prop === "game" && mongoose.Types.ObjectId.isValid(value)){
+    return true;
+  }
+  return false;
+}
+
+export function isPropNameSeller (prop){
+  if(["label","headquarter","game","locations"].includes(prop)){
+    return true;
+  }
+  return false;
+}

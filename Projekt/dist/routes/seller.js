@@ -15,6 +15,9 @@ const games_1 = require("../models/games");
 const checkAuth = require("../utils/check-auth");
 const logger_1 = require("../utils/logger");
 const fast_safe_stringify_1 = require("fast-safe-stringify");
+const Validator_1 = require("../utils/Validator");
+const Validator_2 = require("../utils/Validator");
+const Validator_3 = require("../utils/Validator");
 class SellerRouter {
     constructor() {
         this.router = express_1.Router();
@@ -71,25 +74,18 @@ class SellerRouter {
                     logger_1.logger.error(`Create seller Error: ${fast_safe_stringify_1.default(err)}`);
                 };
             }
-            console.log(id);
-            let game_ins = yield games_1.default.findById(id)
+            let check = yield games_1.default.findById(id)
                 .exec()
                 .then(doc => {
                 if (doc) {
                     return true;
                 }
-                else {
-                    res.status(404).json({
-                        message: "Game not found"
-                    });
-                    return false;
-                }
+                return false;
             })
                 .catch(error => {
                 logger_1.logger.error(`Update that seller Error: ${fast_safe_stringify_1.default(error)}`);
             });
-            console.log(game_ins);
-            if (game_ins) {
+            if (check) {
                 const seller = new seller_1.default({
                     id: new mongoose.Types.ObjectId(),
                     label: req.body.label,
@@ -97,41 +93,51 @@ class SellerRouter {
                     headquarter: req.body.headquarter,
                     game: req.body.game
                 });
-                seller
-                    .save()
-                    .then(result => {
-                    res.status(201).json({
-                        message: "Post request successful to /sellers",
-                        createdSeller: {
-                            label: result.label,
-                            locations: result.locations,
-                            headquarter: result.headquarter,
-                            _id: result._id,
-                            game: result.game,
-                            request: {
-                                type: "GET",
-                                description: "Look at the created seller",
-                                url: "http://localhost:3000/sellers/" + result._id
-                            },
-                            request_getthis: {
-                                type: "GET",
-                                description: "Look at this seller individually",
-                                url: "http://localhost:3000/sellers/" + result._id
-                            },
-                            delete_request: {
-                                type: "DELETE",
-                                description: "Delete the seller",
-                                url: "http://localhost:3000/sellers/" + result._id
+                if (Validator_1.isSeller(seller)) {
+                    seller
+                        .save()
+                        .then(result => {
+                        res.status(201).json({
+                            message: "Post request successful to /sellers",
+                            createdSeller: {
+                                label: result.label,
+                                locations: result.locations,
+                                headquarter: result.headquarter,
+                                _id: result._id,
+                                game: result.game,
+                                request: {
+                                    type: "GET",
+                                    description: "Look at the created seller",
+                                    url: "http://localhost:3000/sellers/" + result._id
+                                },
+                                request_getthis: {
+                                    type: "GET",
+                                    description: "Look at this seller individually",
+                                    url: "http://localhost:3000/sellers/" + result._id
+                                },
+                                delete_request: {
+                                    type: "DELETE",
+                                    description: "Delete the seller",
+                                    url: "http://localhost:3000/sellers/" + result._id
+                                }
                             }
-                        }
+                        });
+                    })
+                        .catch(err => {
+                        logger_1.logger.error(`Post seller Error: ${fast_safe_stringify_1.default(err)}`);
                     });
-                })
-                    .catch(err => {
-                    logger_1.logger.error(`Post seller Error: ${fast_safe_stringify_1.default(err)}`);
-                });
+                }
+                else {
+                    logger_1.logger.error(`Post seller didnt work due to wrong arguments`);
+                    res.status(422).json({
+                        message: "You provided unprocessable Data"
+                    });
+                }
             }
             else {
-                logger_1.logger.error(`Post seller yikes`);
+                res.status(404).json({
+                    message: "Game not found"
+                });
             }
         });
     }
@@ -191,25 +197,52 @@ class SellerRouter {
                     logger_1.logger.error(`Update seller Error: ${fast_safe_stringify_1.default(err)}`);
                 };
             }
-            const updateOperations = {};
-            for (const ops of req.body) {
-                updateOperations[ops.propName] = ops.value;
-            }
-            seller_1.default.update({ _id: id }, { $set: updateOperations })
+            let seller_ins = yield seller_1.default.findById(id)
+                .select("name price platforms _id")
                 .exec()
-                .then(result => {
-                res.status(200).json({
-                    message: "Seller updated",
-                    request: {
-                        type: "GET",
-                        description: "Link to the updated seller",
-                        url: "http://localhost:3000/sellers/" + result._id
-                    }
-                });
+                .then(doc => {
+                if (doc) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
             })
-                .catch(err => {
-                logger_1.logger.error(`Update seller Error: ${fast_safe_stringify_1.default(err)}`);
+                .catch(error => {
+                logger_1.logger.error(`Update that game Error: ${fast_safe_stringify_1.default(error)}`);
             });
+            if (seller_ins) {
+                const updateOperations = {};
+                for (const ops of req.body) {
+                    if (!Validator_3.isPropNameSeller(ops.propName) ||
+                        !Validator_2.isValidValueSeller(ops.propName, ops.value)) {
+                        res.status(422).json({
+                            message: "Field or Value is not valid"
+                        });
+                    }
+                    updateOperations[ops.propName] = ops.value;
+                }
+                seller_1.default.update({ _id: id }, { $set: updateOperations })
+                    .exec()
+                    .then(result => {
+                    res.status(200).json({
+                        message: "Seller updated",
+                        request: {
+                            type: "GET",
+                            description: "Link to the updated seller",
+                            url: "http://localhost:3000/sellers/" + result._id
+                        }
+                    });
+                })
+                    .catch(err => {
+                    logger_1.logger.error(`Update seller Error: ${fast_safe_stringify_1.default(err)}`);
+                });
+            }
+            else {
+                res.status(404).json({
+                    message: "Seller not found"
+                });
+            }
         });
     }
     del(req, res, next) {

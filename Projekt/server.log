@@ -860,3 +860,352 @@ debug:
 debug: Test-Id: 5cc5cd847fad48e5efb6d442 {"timestamp":"2019-04-29T01:13:05.392Z"}
 debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:17:27.388Z"}
 debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:18:17.091Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T09:46:04.611Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T09:50:08.437Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T09:50:45.103Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T09:50:46.440Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T09:50:47.784Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T09:50:39.478Z"}
+debug: 
+ {"timestamp":"2019-04-29T09:50:55.802Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T09:50:55.802Z"}
+debug: 
+ {"timestamp":"2019-04-29T09:50:55.814Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T09:50:55.814Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T09:50:55.834Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T09:50:56.167Z"}
+debug: 
+ {"timestamp":"2019-04-29T09:50:56.183Z"}
+debug: Test-Id: 5cc6c8fb32cab26798921e39 {"timestamp":"2019-04-29T09:50:56.183Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T09:50:56.202Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T09:50:56.208Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T09:50:56.228Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\game.test.ts:376:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T09:50:56.526Z"}
+debug: 
+ {"timestamp":"2019-04-29T09:50:56.540Z"}
+debug: Test-Id: 5cc6c8fd32cab26798921e41 {"timestamp":"2019-04-29T09:50:56.540Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T09:55:20.862Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T09:55:22.184Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T09:55:23.540Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T09:55:17.153Z"}
+debug: 
+ {"timestamp":"2019-04-29T09:55:31.338Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T09:55:31.338Z"}
+debug: 
+ {"timestamp":"2019-04-29T09:55:31.348Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T09:55:31.348Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T09:55:31.372Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T09:55:31.702Z"}
+debug: 
+ {"timestamp":"2019-04-29T09:55:31.717Z"}
+debug: Test-Id: 5cc6ca0e32cab26798921ecf {"timestamp":"2019-04-29T09:55:31.717Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T09:55:31.737Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T09:55:31.742Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T09:55:31.763Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\game.test.ts:381:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T09:55:32.058Z"}
+debug: 
+ {"timestamp":"2019-04-29T09:55:32.071Z"}
+debug: Test-Id: 5cc6ca1132cab26798921ed7 {"timestamp":"2019-04-29T09:55:32.071Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T09:58:27.046Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T09:58:28.363Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T09:58:29.681Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T09:58:23.262Z"}
+debug: 
+ {"timestamp":"2019-04-29T09:58:37.448Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T09:58:37.448Z"}
+debug: 
+ {"timestamp":"2019-04-29T09:58:37.459Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T09:58:37.459Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T09:58:37.481Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T09:58:37.825Z"}
+debug: 
+ {"timestamp":"2019-04-29T09:58:37.839Z"}
+debug: Test-Id: 5cc6cac832cab26798921f4f {"timestamp":"2019-04-29T09:58:37.839Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T09:58:37.859Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T09:58:37.864Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T09:58:37.881Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\game.test.ts:382:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T09:58:38.180Z"}
+debug: 
+ {"timestamp":"2019-04-29T09:58:38.194Z"}
+debug: Test-Id: 5cc6cacb32cab26798921f57 {"timestamp":"2019-04-29T09:58:38.194Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:01:13.155Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:01:14.464Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:01:15.808Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:01:09.473Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:01:23.480Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:01:23.480Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:01:23.493Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:01:23.493Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:01:23.513Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T10:01:23.875Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:01:23.894Z"}
+debug: Test-Id: 5cc6cb6e32cab26798921fc9 {"timestamp":"2019-04-29T10:01:23.894Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:01:23.912Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:01:23.918Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:01:23.936Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\game.test.ts:383:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T10:01:24.224Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:01:24.236Z"}
+debug: Test-Id: 5cc6cb7132cab26798921fd1 {"timestamp":"2019-04-29T10:01:24.236Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:02:19.431Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:02:29.555Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:02:30.868Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:02:32.179Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:02:25.833Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:02:39.815Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:02:39.815Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:02:39.829Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:02:39.829Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:02:39.859Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T10:02:40.212Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:02:40.227Z"}
+debug: Test-Id: 5cc6cbbb32cab26798922033 {"timestamp":"2019-04-29T10:02:40.227Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:02:40.247Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:02:40.253Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:02:40.272Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\game.test.ts:385:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T10:02:40.554Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:02:40.570Z"}
+debug: Test-Id: 5cc6cbbd32cab2679892203b {"timestamp":"2019-04-29T10:02:40.570Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:03:10.078Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:03:20.573Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:03:21.877Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:03:23.139Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:03:16.750Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:03:30.808Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:03:30.809Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:03:30.817Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:03:30.817Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:03:30.841Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T10:03:31.186Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:03:31.202Z"}
+debug: Test-Id: 5cc6cbee32cab26798922095 {"timestamp":"2019-04-29T10:03:31.202Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:03:31.221Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:03:31.226Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:03:31.246Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\game.test.ts:385:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T10:03:31.524Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:03:31.537Z"}
+debug: Test-Id: 5cc6cbf032cab2679892209d {"timestamp":"2019-04-29T10:03:31.537Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:04:21.474Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:04:22.808Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:04:24.134Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:04:17.765Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:04:31.743Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:04:31.743Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:04:31.756Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:04:31.757Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:04:31.782Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T10:04:32.135Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:04:32.150Z"}
+debug: Test-Id: 5cc6cc2b32cab267989220fa {"timestamp":"2019-04-29T10:04:32.150Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:04:32.166Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:04:32.172Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:04:32.194Z"}
+error: Post seller Error: {"errors":{"locations":{"message":"Cast to Number failed for value \"threehundred\" at path \"locations\"","name":"CastError","stringValue":"\"threehundred\"","kind":"Number","value":"threehundred","path":"locations","reason":{"message":"Cast to number failed for value \"threehundred\" at path \"locations\"","name":"CastError","stringValue":"\"threehundred\"","kind":"number","value":"threehundred","path":"locations"}}},"_message":"Seller validation failed","message":"Seller validation failed: locations: Cast to Number failed for value \"threehundred\" at path \"locations\"","name":"ValidationError"} {"timestamp":"2019-04-29T10:04:32.499Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:09:40.508Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:09:51.644Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:09:52.970Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:09:54.275Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:09:46.300Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:10:01.959Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:10:01.959Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:10:01.969Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:10:01.970Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:10:01.995Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T10:10:02.344Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:10:02.359Z"}
+debug: Test-Id: 5cc6cd7532cab26798922189 {"timestamp":"2019-04-29T10:10:02.359Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:10:02.376Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:10:02.383Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:10:02.401Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T10:10:02.681Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:10:02.697Z"}
+debug: Test-Id: 5cc6cd7732cab26798922191 {"timestamp":"2019-04-29T10:10:02.697Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:12:12.787Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:12:14.059Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:12:15.393Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:12:08.774Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:12:23.048Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:12:23.048Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:12:23.062Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:12:23.062Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:12:23.085Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T10:12:23.422Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:12:23.446Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:12:23.452Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:12:23.488Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\game.test.ts:364:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T10:12:23.761Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:16:23.456Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:16:32.953Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:16:34.274Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:16:35.533Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:16:29.158Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:16:43.196Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:16:43.197Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:16:43.211Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:16:43.211Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:16:43.239Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T10:16:43.602Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:16:43.635Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:16:43.642Z"}
+error: Update Game test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.patch.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\game.test.ts:263:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T10:16:43.653Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:16:43.675Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\game.test.ts:364:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T10:16:43.952Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:23:33.740Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:23:35.013Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:23:36.329Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:23:30.000Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:23:44.079Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:23:44.079Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:23:44.090Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:23:44.090Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:23:44.112Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T10:23:44.448Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:23:44.473Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:23:44.481Z"}
+error: Update Game test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.patch.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\game.test.ts:264:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T10:23:44.493Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:23:44.514Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\game.test.ts:365:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T10:23:44.789Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:25:40.913Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:25:50.001Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:25:51.261Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:25:52.513Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:25:46.223Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:26:00.248Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:26:00.248Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:26:00.259Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:26:00.259Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:26:00.281Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T10:26:00.627Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:26:00.648Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:26:00.656Z"}
+error: Update Game test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.patch.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\game.test.ts:263:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T10:26:00.666Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:26:00.687Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\game.test.ts:364:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T10:26:00.963Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:29:08.347Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:29:09.830Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:29:11.010Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:29:04.616Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:29:18.649Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:29:18.649Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:29:18.659Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:29:18.659Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:29:18.680Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T10:29:19.032Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:29:19.056Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:29:19.062Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:29:19.089Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\game.test.ts:365:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T10:29:19.366Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:33:31.956Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:33:33.202Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:33:34.520Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:33:27.978Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:33:42.258Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:33:42.258Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:33:42.267Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:33:42.267Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T10:33:42.580Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:33:42.600Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:33:42.605Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:33:42.627Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T10:33:42.905Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:33:42.948Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:36:12.613Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:36:25.040Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:36:26.227Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:36:27.540Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:36:19.775Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:36:35.347Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:36:35.348Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:36:35.359Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:36:35.359Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T10:36:35.681Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:36:35.703Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:36:35.708Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:36:35.728Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T10:36:36.005Z"}
+error: Update seller Error: {} {"timestamp":"2019-04-29T10:36:36.019Z"}
+error: Update seller Error: {} {"timestamp":"2019-04-29T10:36:36.029Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:36:36.048Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:40:15.168Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:40:38.423Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:40:39.780Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:40:41.160Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:40:34.270Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:40:48.797Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:40:48.797Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:40:48.806Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:40:48.806Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T10:40:49.118Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:40:49.145Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:40:49.165Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T10:40:49.442Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:40:49.482Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:47:07.222Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:47:19.805Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:47:21.046Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:47:22.401Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:47:15.643Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:47:30.026Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:47:30.027Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:47:30.035Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:47:30.035Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T10:47:30.358Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:47:30.382Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:47:30.403Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T10:47:30.679Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-29T10:47:30.686Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-29T10:47:30.698Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:47:30.720Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:48:44.010Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:48:58.879Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:49:00.168Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:49:01.432Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T10:48:53.587Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:49:09.124Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:49:09.125Z"}
+debug: 
+ {"timestamp":"2019-04-29T10:49:09.137Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T10:49:09.137Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T10:49:09.464Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T10:49:09.492Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:49:09.509Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T10:49:09.779Z"}
+error: Update seller Error: {} {"timestamp":"2019-04-29T10:49:09.793Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T10:49:09.807Z"}

@@ -7,9 +7,7 @@
     "test": "mocha --require ts-node/register --timeout 150000 --exit 'src/**/*.test.ts'",
     "build": "npx tsc",
     "start": "npm run build && nodemon dist/server.js",
-    "mongo": "ts-node src/utils/mongo",
-    "testsellers": "mocha --require ts-node/register --timeout 150000 --exit 'src/**/seller.test.ts'",
-    "testgames": "mocha --require ts-node/register --timeout 150000 --exit 'src/**/game.test.ts'"
+    "mongo": "ts-node src/utils/mongo"
   },
   "keywords": [
     "node",

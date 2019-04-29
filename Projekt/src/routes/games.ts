@@ -228,9 +228,7 @@ export class GameRouter {
         if (doc) {
           return true;
         } else {
-          return res.status(404).json({
-            message: "Game not found"
-          });
+          return false;
         }
       })
       .catch(error => {
@@ -265,6 +263,10 @@ export class GameRouter {
         .catch(err => {
           logger.error(`Update game Error: ${stringify(err)}`);
         });
+    } else {
+      res.status(404).json({
+        message: "Game not found"
+      });
     }
   }
 
