@@ -13,6 +13,7 @@ module.exports =  {
       "@typescript-eslint/explicit-function-return-type": false,
       "@typescript-eslint/no-var-requires": false,
       "@typescript-eslint/explicit-member-accessibility": false,
-      "@typescript-eslint/no-use-before-define": false
+      "@typescript-eslint/no-use-before-define": false,
+      "@typescript-eslint/no-unused-vars": false
     },
   };

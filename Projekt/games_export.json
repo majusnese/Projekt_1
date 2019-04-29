@@ -1,3 +1,3 @@
-{"_id":{"$oid":"5cc74015784ed5caa1a60325"},"name":"League of Legends","price":30,"platforms":["PC"]}
-{"_id":{"$oid":"5cc74015784ed5caa1a60326"},"name":"Overwatch","price":0,"platforms":["PC","PS4"]}
-{"_id":{"$oid":"5cc74015784ed5caa1a60327"},"name":"Pokémon: Feuerrot","price":45,"platforms":["Gameboy"]}
+{"_id":{"$oid":"5cc74497784ed5caa1a60708"},"name":"League of Legends","price":30,"platforms":["PC"]}
+{"_id":{"$oid":"5cc74497784ed5caa1a60709"},"name":"Overwatch","price":0,"platforms":["PC","PS4"]}
+{"_id":{"$oid":"5cc74497784ed5caa1a6070a"},"name":"Pokémon: Feuerrot","price":45,"platforms":["Gameboy"]}

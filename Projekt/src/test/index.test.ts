@@ -33,13 +33,13 @@ const WrongSellerId = "7cc5cd827fad48e5efb6d432";
 
 let UserId;
 
-import * as UpdateSeller from "./update_seller.json";
-import * as UpdateSellerWrong from "./update_seller_wrong.json";
-import * as SpielNeu from "./spiel_neu.json";
-import * as SpielNeuFalsch from "./spiel_neu_falsch.json";
-import * as UpdateGame from "./update_game.json";
-import * as UpdateGameWrong from "./update_game_wrong.json";
-import * as SignupFalsch from "./signup_falsch.json";
+import * as UpdateSeller from "./daten/update_seller.json";
+import * as UpdateSellerWrong from "./daten/update_seller_wrong.json";
+import * as SpielNeu from "./daten/spiel_neu.json";
+import * as SpielNeuFalsch from "./daten/spiel_neu_falsch.json";
+import * as UpdateGame from "./daten/update_game.json";
+import * as UpdateGameWrong from "./daten/update_game_wrong.json";
+import * as SignupFalsch from "./daten/signup_falsch.json";
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
