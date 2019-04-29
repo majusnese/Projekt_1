@@ -44,7 +44,6 @@ class App {
         this.express.use('/games', GameRouter);
         this.express.use('/sellers', SellerRouter);
         this.express.use('/user', UserRouter);
-
         //GraphQl for providing a Query to the Client
         this.express.use(
             '/graphql',
@@ -65,6 +64,7 @@ class App {
         mongoose.connection.on('error', function(error) {
             console.error('Database connection error: ', error);
         });
+        mongoose.set('useCreateIndex', true);
     }
 
     private errorNF(): void {

@@ -10,11 +10,12 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: true,
-        match: Validator_1.regex
+        match: Validator_1.regex,
     },
     password: {
-        type: String, required: true
-    }
+        type: String,
+        required: true,
+    },
 });
 const user = mongoose.model('User', userSchema);
 exports.default = user;

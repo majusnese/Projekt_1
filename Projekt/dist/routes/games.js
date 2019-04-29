@@ -12,7 +12,7 @@ const express_1 = require("express");
 const games_1 = require("../models/games");
 const mongoose = require("mongoose");
 const Validator_1 = require("../utils/Validator");
-const checkAuth = require("../utils/check-auth");
+const checkAuth = require('../utils/check-auth');
 const logger_1 = require("../utils/logger");
 const fast_safe_stringify_1 = require("fast-safe-stringify");
 const Validator_2 = require("../utils/Validator");
@@ -22,10 +22,10 @@ class GameRouter {
         this.router = express_1.Router();
         this.init();
     }
-    find(req, res, next) {
+    find(res) {
         return __awaiter(this, void 0, void 0, function* () {
             games_1.default.find()
-                .select("name price _id platforms")
+                .select('name price _id platforms')
                 .exec()
                 .then(docs => {
                 const response = {
@@ -36,12 +36,12 @@ class GameRouter {
                             price: doc.price,
                             _id: doc._id,
                             request: {
-                                type: "GET",
-                                description: "The link matching the request",
-                                url: "http://localhost:3000/games/" + doc._id
-                            }
+                                type: 'GET',
+                                description: 'The link matching the request',
+                                url: 'http://localhost:3000/games/' + doc._id,
+                            },
                         };
-                    })
+                    }),
                 };
                 if (docs.length > 0) {
                     res.status(200).json(response);
@@ -49,7 +49,7 @@ class GameRouter {
                 else {
                     logger_1.logger.debug(`findall did not find entries:`);
                     res.status(404).json({
-                        message: "There are no entries"
+                        message: 'There are no entries',
                     });
                 }
             })
@@ -59,41 +59,40 @@ class GameRouter {
         });
     }
     //422: unprocessable Entity
-    create(req, res, next) {
+    create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const game = new games_1.default({
                 id: new mongoose.Types.ObjectId(),
                 name: req.body.name,
                 platforms: req.body.platforms,
-                price: req.body.price
+                price: req.body.price,
             });
             if (Validator_1.isGame(game)) {
-                game
-                    .save()
+                game.save()
                     .then(result => {
                     res.status(201).json({
-                        message: "Post request successful to /games",
+                        message: 'Post request successful to /games',
                         createdGame: {
                             name: result.name,
                             price: result.price,
                             platforms: result.platforms,
                             _id: result._id,
                             request: {
-                                type: "GET",
-                                description: "Look at the created game",
-                                url: "http://localhost:3000/games/" + result._id
+                                type: 'GET',
+                                description: 'Look at the created game',
+                                url: 'http://localhost:3000/games/' + result._id,
                             },
-                            request_getthis: {
-                                type: "GET",
-                                description: "Look at this game individually",
-                                url: "http://localhost:3000/games/" + result._id
+                            requestGetThis: {
+                                type: 'GET',
+                                description: 'Look at this game individually',
+                                url: 'http://localhost:3000/games/' + result._id,
                             },
-                            delete_request: {
-                                type: "DELETE",
-                                description: "Delete the game",
-                                url: "http://localhost:3000/games/" + result._id
-                            }
-                        }
+                            deleteRequest: {
+                                type: 'DELETE',
+                                description: 'Delete the game',
+                                url: 'http://localhost:3000/games/' + result._id,
+                            },
+                        },
                     });
                 })
                     .catch(err => {
@@ -103,55 +102,50 @@ class GameRouter {
             else {
                 logger_1.logger.error(`Post game was not succesful due to wrong data`);
                 res.status(422).json({
-                    message: "please provide proper data"
+                    message: 'please provide proper data',
                 });
             }
         });
     }
-    findbyanything(req, res, next) {
+    findbyanything(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             if (!req.params.anything) {
                 logger_1.logger.error(`findbyanything did not get an argument`);
                 res.status(422).json({
-                    message: "Please give an argument!"
+                    message: 'Please give an argument!',
                 });
             }
             const param = req.params.anything;
             let isString = false;
-            if (typeof param === "string") {
+            if (typeof param === 'string') {
                 isString = true;
             }
-            let objid = "123456789012";
+            let objid = '123456789012';
             let isObjectId = false;
             if (mongoose.Types.ObjectId.isValid(param)) {
                 objid = mongoose.Types.ObjectId(param);
                 isObjectId = true;
             }
             let isNumber = false;
-            let number_t = 1234567890;
+            let numberTest = 1234567890;
             if (!isNaN(param) && !isObjectId) {
-                number_t = Number(param);
+                numberTest = Number(param);
                 isNumber = true;
             }
             let isPlatform = false;
-            let platform_t = "AAAAA";
-            if (["PC", "XBOX", "PS4"].includes(param)) {
-                platform_t = param;
+            let platformTest = 'AAAAA';
+            if (['PC', 'XBOX', 'PS4'].includes(param)) {
+                platformTest = param;
                 isPlatform = true;
             }
             if (!isNumber && !isObjectId && !isPlatform && !isString) {
                 logger_1.logger.error(`findbyanything error because unprocessable arguments were passed`);
                 res.status(422).json({
-                    message: "Argument could not be processed"
+                    message: 'Argument could not be processed',
                 });
             }
-            games_1.default.find()
-                .or([
-                { _id: objid },
-                { name: param },
-                { price: number_t },
-                { platforms: platform_t }
-            ])
+            yield games_1.default.find()
+                .or([{ _id: objid }, { name: param }, { price: numberTest }, { platforms: platformTest }])
                 .exec()
                 .then(docs => {
                 const response = {
@@ -163,12 +157,12 @@ class GameRouter {
                             _id: doc._id,
                             platforms: doc.platforms,
                             request: {
-                                type: "GET",
-                                description: "The link matching the request",
-                                url: "http://localhost:3000/games/" + doc._id
-                            }
+                                type: 'GET',
+                                description: 'The link matching the request',
+                                url: 'http://localhost:3000/games/' + doc._id,
+                            },
                         };
-                    })
+                    }),
                 };
                 if (docs.length > 0) {
                     res.status(200).json(response);
@@ -176,7 +170,7 @@ class GameRouter {
                 else {
                     logger_1.logger.error(`findbyanything did not find entries:`);
                     res.status(404).json({
-                        message: "There are no entries"
+                        message: 'There are no entries',
                     });
                 }
             })
@@ -185,7 +179,7 @@ class GameRouter {
             });
         });
     }
-    findbyid(req, res, next) {
+    findbyid(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             let id;
             try {
@@ -195,12 +189,12 @@ class GameRouter {
                 err => {
                     logger_1.logger.error(`Findbyid game error because an invalid id was passed: ${fast_safe_stringify_1.default(err)}`);
                     res.status(422).json({
-                        message: "Please pass a valid ID"
+                        message: 'Please pass a valid ID',
                     });
                 };
             }
             yield games_1.default.findById(id)
-                .select("name price platforms _id")
+                .select('name price platforms _id')
                 .exec()
                 .then(doc => {
                 if (doc) {
@@ -209,16 +203,16 @@ class GameRouter {
                         name: doc.name,
                         price: doc.price,
                         platforms: doc.platforms,
-                        delete_request: {
-                            type: "DELETE",
-                            description: "Delete the game",
-                            url: "http://localhost:3000/games/" + doc._id
-                        }
+                        deleteRequest: {
+                            type: 'DELETE',
+                            description: 'Delete the game',
+                            url: 'http://localhost:3000/games/' + doc._id,
+                        },
                     });
                 }
                 else {
                     logger_1.logger.error(`No Game found`);
-                    res.status(404).json({ message: "No Object found" });
+                    res.status(404).json({ message: 'No Object found' });
                 }
             })
                 .catch(err => {
@@ -226,7 +220,7 @@ class GameRouter {
             });
         });
     }
-    patch(req, res, next) {
+    patch(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             let id;
             try {
@@ -236,12 +230,12 @@ class GameRouter {
                 err => {
                     logger_1.logger.error(`Update game error because an invalid id was passed: ${fast_safe_stringify_1.default(err)}`);
                     res.status(422).json({
-                        message: "Please pass a valid ID"
+                        message: 'Please pass a valid ID',
                     });
                 };
             }
-            let game_ins = yield games_1.default.findById(id)
-                .select("name price platforms _id")
+            let gameInstance = yield games_1.default.findById(id)
+                .select('name price platforms _id')
                 .exec()
                 .then(doc => {
                 if (doc) {
@@ -254,28 +248,27 @@ class GameRouter {
                 .catch(error => {
                 logger_1.logger.error(`Update game failed while trying to find the game: ${fast_safe_stringify_1.default(error)}`);
             });
-            if (game_ins) {
+            if (gameInstance) {
                 const updateOperations = {};
                 for (const ops of req.body) {
-                    if (!Validator_3.isPropName(ops.propName) ||
-                        !Validator_2.isValidValue(ops.propName, ops.value)) {
+                    if (!Validator_3.isPropName(ops.propName) || !Validator_2.isValidValue(ops.propName, ops.value)) {
                         logger_1.logger.error(`Update game failed, wrong arguments`);
                         res.status(422).json({
-                            message: "Field or Value is not valid"
+                            message: 'Field or Value is not valid',
                         });
                     }
                     updateOperations[ops.propName] = ops.value;
                 }
                 games_1.default.update({ _id: id }, { $set: updateOperations })
                     .exec()
-                    .then(result => {
+                    .then(() => {
                     res.status(200).json({
-                        message: "Game updated",
+                        message: 'Game updated',
                         request: {
-                            type: "GET",
-                            description: "Link to the updated game",
-                            url: "http://localhost:3000/games/" + id
-                        }
+                            type: 'GET',
+                            description: 'Link to the updated game',
+                            url: 'http://localhost:3000/games/' + id,
+                        },
                     });
                 })
                     .catch(err => {
@@ -285,12 +278,12 @@ class GameRouter {
             else {
                 logger_1.logger.error(`No Game to update`);
                 res.status(404).json({
-                    message: "Game not found"
+                    message: 'Game not found',
                 });
             }
         });
     }
-    del(req, res, next) {
+    del(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             let id;
             try {
@@ -300,7 +293,7 @@ class GameRouter {
                 err => {
                     logger_1.logger.error(`Delete game Error because an invalid id was passed: ${fast_safe_stringify_1.default(err)}`);
                     res.status(422).json({
-                        message: "Please pass a valid ID"
+                        message: 'Please pass a valid ID',
                     });
                 };
             }
@@ -313,18 +306,17 @@ class GameRouter {
                         .then(result => {
                         if (result) {
                             res.status(200).json({
-                                message: "Game deleted"
+                                message: 'Game deleted',
                             });
                         }
                     })
                         .catch(err => {
                         logger_1.logger.error(`Delete game Error while trying to delete the Game: ${fast_safe_stringify_1.default(err)}`);
                     });
-                    ;
                 }
                 else {
                     logger_1.logger.error(`No Game to delete`);
-                    res.status(404).json({ message: "No Object found" });
+                    res.status(404).json({ message: 'No Object found' });
                 }
             })
                 .catch(err => {
@@ -333,12 +325,12 @@ class GameRouter {
         });
     }
     init() {
-        this.router.get("/", this.find);
-        this.router.post("/", checkAuth, this.create);
-        this.router.get("/:id", this.findbyid);
-        this.router.patch("/:id", checkAuth, this.patch);
-        this.router.delete("/:id", checkAuth, this.del);
-        this.router.get("/findbyanything/:anything", this.findbyanything);
+        this.router.get('/', this.find);
+        this.router.post('/', checkAuth, this.create);
+        this.router.get('/:id', this.findbyid);
+        this.router.patch('/:id', checkAuth, this.patch);
+        this.router.delete('/:id', checkAuth, this.del);
+        this.router.get('/findbyanything/:anything', this.findbyanything);
     }
 }
 exports.GameRouter = GameRouter;

@@ -10,8 +10,8 @@ const spielSchema = new mongoose.Schema({
     price: {
         type: Number,
         min: [0, 'Man bekommt für den Kauf eines Spiels kein Geld'],
-        required: true
-    }
+        required: true,
+    },
 });
 const spiel = mongoose.model('Game', spielSchema);
 exports.default = spiel;

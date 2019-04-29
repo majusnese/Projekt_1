@@ -1,4 +1,4 @@
-import { Router, Request, Response } from 'express';
+import { Router, Request, Response, NextFunction } from 'express';
 import Game from '../models/games';
 import mongoose = require('mongoose');
 import { isGame } from '../utils/Validator';
@@ -7,7 +7,6 @@ import { logger } from '../utils/logger';
 import stringify from 'fast-safe-stringify';
 import { isValidValue } from '../utils/Validator';
 import { isPropName } from '../utils/Validator';
-
 export class GameRouter {
     router: Router;
 
@@ -16,7 +15,7 @@ export class GameRouter {
         this.init();
     }
 
-    public async find(res: Response) {
+    public async find(req: Request, res: Response, next: NextFunction) {
         Game.find()
             .select('name price _id platforms')
             .exec()
@@ -247,7 +246,7 @@ export class GameRouter {
                 }
                 updateOperations[ops.propName] = ops.value;
             }
-            Game.update({ _id: id }, { $set: updateOperations })
+            Game.updateOne({ _id: id }, { $set: updateOperations })
                 .exec()
                 .then(() => {
                     res.status(200).json({

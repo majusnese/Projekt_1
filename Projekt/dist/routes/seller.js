@@ -12,7 +12,7 @@ const express_1 = require("express");
 const mongoose = require("mongoose");
 const seller_1 = require("../models/seller");
 const games_1 = require("../models/games");
-const checkAuth = require("../utils/check-auth");
+const checkAuth = require('../utils/check-auth');
 const logger_1 = require("../utils/logger");
 const fast_safe_stringify_1 = require("fast-safe-stringify");
 const Validator_1 = require("../utils/Validator");
@@ -23,11 +23,11 @@ class SellerRouter {
         this.router = express_1.Router();
         this.init();
     }
-    find(req, res, next) {
+    find(res) {
         return __awaiter(this, void 0, void 0, function* () {
             seller_1.default.find()
-                .select("label locations _id headquarter game")
-                .populate("game")
+                .select('label locations _id headquarter game')
+                .populate('game')
                 .exec()
                 .then(docs => {
                 const response = {
@@ -39,12 +39,12 @@ class SellerRouter {
                             _id: doc._id,
                             game: doc.game,
                             request: {
-                                type: "GET",
-                                description: "The link to look at this seller individually",
-                                url: "http://localhost:3000/sellers/" + doc._id
-                            }
+                                type: 'GET',
+                                description: 'The link to look at this seller individually',
+                                url: 'http://localhost:3000/sellers/' + doc._id,
+                            },
                         };
-                    })
+                    }),
                 };
                 if (docs.length > 0) {
                     res.status(200).json(response);
@@ -52,7 +52,7 @@ class SellerRouter {
                 else {
                     logger_1.logger.debug(`Findall did not find entries`);
                     res.status(400).json({
-                        message: "There are no entries"
+                        message: 'There are no entries',
                     });
                 }
             })
@@ -61,7 +61,7 @@ class SellerRouter {
             });
         });
     }
-    create(req, res, next) {
+    create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             let id = req.body.game;
             try {
@@ -71,7 +71,7 @@ class SellerRouter {
                 err => {
                     logger_1.logger.error(`Create seller failed due to a wrong ID ${fast_safe_stringify_1.default(err)}`);
                     res.status(422).json({
-                        message: "Please pass a valid ID"
+                        message: 'Please pass a valid ID',
                     });
                 };
             }
@@ -92,14 +92,14 @@ class SellerRouter {
                     label: req.body.label,
                     locations: req.body.locations,
                     headquarter: req.body.headquarter,
-                    game: req.body.game
+                    game: req.body.game,
                 });
                 if (Validator_1.isSeller(seller)) {
                     seller
                         .save()
                         .then(result => {
                         res.status(201).json({
-                            message: "Post request successful to /sellers",
+                            message: 'Post request successful to /sellers',
                             createdSeller: {
                                 label: result.label,
                                 locations: result.locations,
@@ -107,21 +107,21 @@ class SellerRouter {
                                 _id: result._id,
                                 game: result.game,
                                 request: {
-                                    type: "GET",
-                                    description: "Look at the created seller",
-                                    url: "http://localhost:3000/sellers/" + result._id
+                                    type: 'GET',
+                                    description: 'Look at the created seller',
+                                    url: 'http://localhost:3000/sellers/' + result._id,
                                 },
-                                request_getthis: {
-                                    type: "GET",
-                                    description: "Look at this seller individually",
-                                    url: "http://localhost:3000/sellers/" + result._id
+                                requestGetThis: {
+                                    type: 'GET',
+                                    description: 'Look at this seller individually',
+                                    url: 'http://localhost:3000/sellers/' + result._id,
                                 },
-                                delete_request: {
-                                    type: "DELETE",
-                                    description: "Delete the seller",
-                                    url: "http://localhost:3000/sellers/" + result._id
-                                }
-                            }
+                                deleteRequest: {
+                                    type: 'DELETE',
+                                    description: 'Delete the seller',
+                                    url: 'http://localhost:3000/sellers/' + result._id,
+                                },
+                            },
                         });
                     })
                         .catch(err => {
@@ -131,19 +131,19 @@ class SellerRouter {
                 else {
                     logger_1.logger.error(`Post seller didnt work due to wrong arguments`);
                     res.status(422).json({
-                        message: "You provided unprocessable Data"
+                        message: 'You provided unprocessable Data',
                     });
                 }
             }
             else {
                 logger_1.logger.error(`Update seller failed due to wrong data for the seller!)}`);
                 res.status(404).json({
-                    message: "Game not found"
+                    message: 'Game not found',
                 });
             }
         });
     }
-    findbyid(req, res, next) {
+    findbyid(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             let id;
             try {
@@ -153,13 +153,13 @@ class SellerRouter {
                 err => {
                     logger_1.logger.error(`Findbyid seller Error because an invalid id was passed: ${fast_safe_stringify_1.default(err)}`);
                     res.status(422).json({
-                        message: "Please pass a valid ID"
+                        message: 'Please pass a valid ID',
                     });
                 };
             }
             seller_1.default.findById(id)
-                .select("label locations headquarter _id game")
-                .populate("game")
+                .select('label locations headquarter _id game')
+                .populate('game')
                 .exec()
                 .then(doc => {
                 if (doc) {
@@ -169,16 +169,16 @@ class SellerRouter {
                         headquarter: doc.headquarter,
                         game: doc.game,
                         id: doc._id,
-                        delete_request: {
-                            type: "DELETE",
-                            description: "Delete the seller",
-                            url: "http://localhost:3000/sellers/" + doc._id
-                        }
+                        deleteRequest: {
+                            type: 'DELETE',
+                            description: 'Delete the seller',
+                            url: 'http://localhost:3000/sellers/' + doc._id,
+                        },
                     });
                 }
                 else {
                     logger_1.logger.error(`Findbyid seller did not find a seller!`);
-                    res.status(404).json({ message: "No Object found" });
+                    res.status(404).json({ message: 'No Object found' });
                 }
             })
                 .catch(err => {
@@ -186,7 +186,7 @@ class SellerRouter {
             });
         });
     }
-    patch(req, res, next) {
+    patch(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             let id;
             try {
@@ -196,12 +196,12 @@ class SellerRouter {
                 err => {
                     logger_1.logger.error(`Update seller error because an invalid id was passed: ${fast_safe_stringify_1.default(err)}`);
                     res.status(422).json({
-                        message: "Please pass a valid ID"
+                        message: 'Please pass a valid ID',
                     });
                 };
             }
-            let seller_ins = yield seller_1.default.findById(id)
-                .select("name price platforms _id")
+            let sellerInstance = yield seller_1.default.findById(id)
+                .select('name price platforms _id')
                 .exec()
                 .then(doc => {
                 if (doc) {
@@ -214,14 +214,13 @@ class SellerRouter {
                 .catch(error => {
                 logger_1.logger.error(`Update seller error while trying to find the seller: ${fast_safe_stringify_1.default(error)}`);
             });
-            if (seller_ins) {
+            if (sellerInstance) {
                 const updateOperations = {};
                 for (const ops of req.body) {
-                    if (!Validator_3.isPropNameSeller(ops.propName) ||
-                        !Validator_2.isValidValueSeller(ops.propName, ops.value)) {
+                    if (!Validator_3.isPropNameSeller(ops.propName) || !Validator_2.isValidValueSeller(ops.propName, ops.value)) {
                         logger_1.logger.error(`Update seller failed because unprocessable arguments were passed!`);
                         res.status(422).json({
-                            message: "Field or Value is not valid"
+                            message: 'Field or Value is not valid',
                         });
                     }
                     updateOperations[ops.propName] = ops.value;
@@ -230,12 +229,12 @@ class SellerRouter {
                     .exec()
                     .then(result => {
                     res.status(200).json({
-                        message: "Seller updated",
+                        message: 'Seller updated',
                         request: {
-                            type: "GET",
-                            description: "Link to the updated seller",
-                            url: "http://localhost:3000/sellers/" + result._id
-                        }
+                            type: 'GET',
+                            description: 'Link to the updated seller',
+                            url: 'http://localhost:3000/sellers/' + result._id,
+                        },
                     });
                 })
                     .catch(err => {
@@ -245,12 +244,12 @@ class SellerRouter {
             else {
                 logger_1.logger.error(`Update seller did not find a seller!`);
                 res.status(404).json({
-                    message: "Seller not found"
+                    message: 'Seller not found',
                 });
             }
         });
     }
-    del(req, res, next) {
+    del(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             let id;
             try {
@@ -259,7 +258,7 @@ class SellerRouter {
             catch (_a) {
                 logger_1.logger.error(`Delete seller error because an invalid id was passed`);
                 res.status(422).json({
-                    message: "Please pass a valid ID"
+                    message: 'Please pass a valid ID',
                 });
             }
             seller_1.default.findById(id)
@@ -268,15 +267,15 @@ class SellerRouter {
                 if (doc) {
                     seller_1.default.deleteOne({ _id: id })
                         .exec()
-                        .then(result => {
+                        .then(() => {
                         res.status(200).json({
-                            message: "Seller deleted"
+                            message: 'Seller deleted',
                         });
                     });
                 }
                 else {
                     logger_1.logger.error(`Delete seller did not find a seller to delete!`);
-                    res.status(404).json({ message: "No Object found" });
+                    res.status(404).json({ message: 'No Object found' });
                 }
             })
                 .catch(err => {
@@ -285,11 +284,11 @@ class SellerRouter {
         });
     }
     init() {
-        this.router.get("/", this.find);
-        this.router.post("/", checkAuth, this.create);
-        this.router.get("/:id", this.findbyid);
-        this.router.patch("/:id", checkAuth, this.patch);
-        this.router.delete("/:id", checkAuth, this.del);
+        this.router.get('/', this.find);
+        this.router.post('/', checkAuth, this.create);
+        this.router.get('/:id', this.findbyid);
+        this.router.patch('/:id', checkAuth, this.patch);
+        this.router.delete('/:id', checkAuth, this.del);
     }
 }
 exports.SellerRouter = SellerRouter;

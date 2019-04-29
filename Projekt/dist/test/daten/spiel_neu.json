@@ -1,0 +1,8 @@
+{
+    "name": "Super Mario Bros.",
+    "price": "15",
+    "platforms": [
+        "PC",
+        "XBOX"
+    ]
+}

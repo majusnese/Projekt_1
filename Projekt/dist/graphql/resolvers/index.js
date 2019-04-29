@@ -29,7 +29,7 @@ module.exports = {
             throw err;
         });
     },
-    seller: (args) => {
+    seller: args => {
         return seller_1.default.findById(args.id)
             .then(seller => {
             return seller;
@@ -39,7 +39,7 @@ module.exports = {
             throw err;
         });
     },
-    game: (args) => {
+    game: args => {
         return games_1.default.findById(args.id)
             .then(game => {
             return game;
@@ -49,16 +49,15 @@ module.exports = {
             throw err;
         });
     },
-    createSeller: (args) => {
-        const seller_instance = new seller_1.default({
+    createSeller: args => {
+        const SellerInstance = new seller_1.default({
             id: new mongoose.Types.ObjectId(),
             label: args.sellerInput.label,
             headquarter: args.sellerInput.headquarter,
             locations: args.sellerInput.locations,
-            game: args.sellerInput.game
+            game: args.sellerInput.game,
         });
-        return seller_instance
-            .save()
+        return SellerInstance.save()
             .then(result => {
             console.log(result);
             return Object.assign({}, result._doc);
@@ -68,15 +67,14 @@ module.exports = {
             throw err;
         });
     },
-    createGame: (args) => {
-        const game_instance = new games_1.default({
+    createGame: args => {
+        const GameInstance = new games_1.default({
             id: new mongoose.Types.ObjectId(),
             name: args.gameInput.name,
             platforms: args.gameInput.platforms,
-            price: args.gameInput.price
+            price: args.gameInput.price,
         });
-        return game_instance
-            .save()
+        return GameInstance.save()
             .then(result => {
             console.log(result);
             return Object.assign({}, result._doc);
@@ -86,22 +84,21 @@ module.exports = {
             throw err;
         });
     },
-    createUser: (args) => {
-        const user_instance = new user_1.default({
+    createUser: args => {
+        const UserInstance = new user_1.default({
             id: new mongoose.Types.ObjectId(),
             name: args.userInput.name,
             password: args.userInput.password,
-            email: args.userInput.email
+            email: args.userInput.email,
         });
-        return user_instance
-            .save()
+        return UserInstance.save()
             .then(result => {
             console.log(result);
-            return Object.assign({}, result._doc, { password: "*********" });
+            return Object.assign({}, result._doc, { password: '*********' });
         })
             .catch(err => {
             console.log(err);
             throw err;
         });
-    }
+    },
 };

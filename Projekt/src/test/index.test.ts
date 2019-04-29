@@ -188,7 +188,7 @@ describe('Mutating games', () => {
 });
 
 //Suite fuer Gets
-describe('Getting stuff for sellers', () => {
+describe('Getting sellers', () => {
     it('Alle Seller', () => {
         return chai
             .request(app)
@@ -360,7 +360,7 @@ describe('Mutating seller', () => {
 });
 
 //Suite fuer Gets
-describe('Getting stuff for games', () => {
+describe('Getting games', () => {
     it('Alle Games', () => {
         return chai
             .request(app)

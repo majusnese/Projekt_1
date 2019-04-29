@@ -5,16 +5,16 @@ const minimist = require("minimist");
 const arg = minimist(process.argv.slice(0));
 const values = arg._;
 const startserver = () => {
-    shell.exec("mongod");
+    shell.exec('mongod');
 };
 const stopserver = () => {
     shell.exec('mongo --eval "db.shutdownServer({force: true})" admin');
 };
 const fillservertest = () => {
     shell.exec('mongoimport --db testdb --collection games --drop --file games.json');
-    console.log("games filled");
+    console.log('games filled');
     shell.exec('mongoimport --db testdb --collection sellers --drop --file sellers.json');
-    console.log("sellers filled");
+    console.log('sellers filled');
 };
 const exportall = () => {
     shell.exec('mongoexport --db testdb --collection games --out games_export.json');
@@ -23,11 +23,11 @@ const exportall = () => {
 };
 const fillserverback = () => {
     shell.exec('mongoimport --db testdb --collection games --drop --file games_export.json');
-    console.log("games filled");
+    console.log('games filled');
     shell.exec('mongoimport --db testdb --collection sellers --drop --file sellers_export.json');
-    console.log("sellers filled");
+    console.log('sellers filled');
     shell.exec('mongoimport --db testdb --collection users --drop --file users_export.json');
-    console.log("users filled");
+    console.log('users filled');
 };
 switch (values[2]) {
     case 'export':

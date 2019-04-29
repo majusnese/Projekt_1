@@ -550,3 +550,36 @@ error: No Game found {"timestamp":"2019-04-29T17:17:25.546Z"}
 error: Findbyid test Error: {} {"timestamp":"2019-04-29T17:17:25.547Z"}
 error: findbyanything did not find entries: {"timestamp":"2019-04-29T17:17:25.554Z"}
 error: findbyanything did not find entries: {"timestamp":"2019-04-29T17:17:25.570Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:39:12.494Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:45:12.875Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:46:23.134Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:47:39.743Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:47:41.062Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:47:42.341Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:47:32.236Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T17:47:50.077Z"}
+error: Findall game error while trying to execute operation: {} {"timestamp":"2019-04-29T17:47:50.094Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:50:45.287Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:50:46.564Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:50:47.866Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:50:41.489Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T17:50:55.468Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:53:08.358Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:53:09.638Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:53:10.938Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:53:04.635Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T17:53:18.558Z"}
+debug: 
+ {"timestamp":"2019-04-29T17:53:18.579Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T17:53:18.579Z"}
+error: Findall seller Error: {} {"timestamp":"2019-04-29T17:53:18.587Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:55:32.078Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:55:33.341Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:55:34.629Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T17:55:28.251Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T17:55:42.255Z"}
+debug: 
+ {"timestamp":"2019-04-29T17:55:42.280Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T17:55:42.280Z"}
+error: Findall seller Error: {} {"timestamp":"2019-04-29T17:55:42.287Z"}
+error: Findall game error while trying to execute operation: {} {"timestamp":"2019-04-29T17:56:27.545Z"}
