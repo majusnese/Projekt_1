@@ -59,13 +59,37 @@ class SellerRouter {
     }
     create(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
-            games_1.default.findById(req.body.game)
-                .then(game => {
-                if (!game) {
-                    return res.status(404).json({
+            let id = req.body.game;
+            try {
+                id = mongoose.Types.ObjectId(req.body.game);
+            }
+            catch (_a) {
+                err => {
+                    res.status(422).json({
+                        message: "Please pass a valid ID"
+                    });
+                    logger_1.logger.error(`Create seller Error: ${fast_safe_stringify_1.default(err)}`);
+                };
+            }
+            console.log(id);
+            let game_ins = yield games_1.default.findById(id)
+                .exec()
+                .then(doc => {
+                if (doc) {
+                    return true;
+                }
+                else {
+                    res.status(404).json({
                         message: "Game not found"
                     });
+                    return false;
                 }
+            })
+                .catch(error => {
+                logger_1.logger.error(`Update that seller Error: ${fast_safe_stringify_1.default(error)}`);
+            });
+            console.log(game_ins);
+            if (game_ins) {
                 const seller = new seller_1.default({
                     id: new mongoose.Types.ObjectId(),
                     label: req.body.label,
@@ -73,38 +97,42 @@ class SellerRouter {
                     headquarter: req.body.headquarter,
                     game: req.body.game
                 });
-                return seller.save();
-            })
-                .then(result => {
-                res.status(201).json({
-                    message: "Post request successful to /sellers",
-                    createdSeller: {
-                        label: result.label,
-                        locations: result.locations,
-                        headquarter: result.headquarter,
-                        _id: result._id,
-                        game: result.game,
-                        request: {
-                            type: "GET",
-                            description: "Look at the created seller",
-                            url: "http://localhost:3000/sellers/" + result._id
-                        },
-                        request_getthis: {
-                            type: "GET",
-                            description: "Look at this seller individually",
-                            url: "http://localhost:3000/sellers/" + result._id
-                        },
-                        delete_request: {
-                            type: "DELETE",
-                            description: "Delete the seller",
-                            url: "http://localhost:3000/sellers/" + result._id
+                seller
+                    .save()
+                    .then(result => {
+                    res.status(201).json({
+                        message: "Post request successful to /sellers",
+                        createdSeller: {
+                            label: result.label,
+                            locations: result.locations,
+                            headquarter: result.headquarter,
+                            _id: result._id,
+                            game: result.game,
+                            request: {
+                                type: "GET",
+                                description: "Look at the created seller",
+                                url: "http://localhost:3000/sellers/" + result._id
+                            },
+                            request_getthis: {
+                                type: "GET",
+                                description: "Look at this seller individually",
+                                url: "http://localhost:3000/sellers/" + result._id
+                            },
+                            delete_request: {
+                                type: "DELETE",
+                                description: "Delete the seller",
+                                url: "http://localhost:3000/sellers/" + result._id
+                            }
                         }
-                    }
+                    });
+                })
+                    .catch(err => {
+                    logger_1.logger.error(`Post seller Error: ${fast_safe_stringify_1.default(err)}`);
                 });
-            })
-                .catch(err => {
-                logger_1.logger.error(`Post seller Error: ${fast_safe_stringify_1.default(err)}`);
-            });
+            }
+            else {
+                logger_1.logger.error(`Post seller yikes`);
+            }
         });
     }
     findbyid(req, res, next) {
@@ -132,6 +160,7 @@ class SellerRouter {
                         locations: doc.locations,
                         headquarter: doc.headquarter,
                         game: doc.game,
+                        id: doc._id,
                         delete_request: {
                             type: "DELETE",
                             description: "Delete the seller",

@@ -16,20 +16,35 @@ const shell = require("shelljs");
 const init_1 = require("./init");
 const logger_1 = require("../utils/logger");
 const fast_safe_stringify_1 = require("fast-safe-stringify");
+const game_test_1 = require("./game.test");
 chai.use(asserArrays);
 chai.use(chaiHttp);
 const expect = chai.expect;
-const wrong_game_id = "7cc5cd827fad48e5efb6d438";
-const game_name = "Overwatch";
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Testdaten oder so
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+let seller_id;
+const wrong_seller_id = "7cc5cd827fad48e5efb6d432";
+const seller_name = "Gamestop";
 const login = {
     email: "test@rest.de",
     password: "qwerty"
 };
 let token = "";
-const spiel_neu = require("./spiel_neu.json");
-const spiel_neu_falsch = require("./spiel_neu_falsch.json");
-const update_game = require("./update_game.json");
-const update_game_wrong = require("./update_game_wrong.json");
+const seller_neu = {
+    "label": "Mediamarkt",
+    "locations": 333,
+    "headquarter": "Suedsee",
+    "game": game_test_1.game_id
+};
+const seller_neu_falsch = {
+    "label": "Mediamarkt",
+    "locations": "threehundred",
+    "headquarter": "Suedsee",
+    "game": game_test_1.game_id
+};
+const update_seller = require("./update_seller.json");
+const update_seller_wrong = require("./update_seller_wrong.json");
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 before(() => __awaiter(this, void 0, void 0, function* () {
     init_1.init();
@@ -40,26 +55,26 @@ before(() => __awaiter(this, void 0, void 0, function* () {
         .then(response => {
         expect([422, 201]).to.include(response.status);
     });
-    exports.game_id = yield chai
+    seller_id = yield chai
         .request(App_1.default)
-        .get("/games/")
+        .get("/sellers/")
         .then(result => {
         logger_1.logger.debug("\n");
-        logger_1.logger.debug("Test-Id: " + exports.game_id);
-        return result.body.games[0]._id;
+        logger_1.logger.debug("Test-Id: " + seller_id);
+        return result.body.sellers[0]._id;
     });
 }));
 //Suite fuer Gets
-describe("Getting stuff for games", () => {
-    it("Alle Games", () => {
+describe("Getting stuff for sellers", () => {
+    it("Alle Seller", () => {
         return chai
             .request(App_1.default)
-            .get("/games/")
+            .get("/sellers/")
             .then(res => {
             expect(res.status).to.equal(200);
             expect(res).to.be.json;
-            expect(res.body).to.have.keys("count", "games");
-            let array_body = res.body.games;
+            expect(res.body).to.have.keys("count", "sellers");
+            let array_body = res.body.sellers;
             expect(array_body).to.be.array();
             expect(array_body).to.have.lengthOf.at.least(2);
             let count = res.body.count;
@@ -69,19 +84,19 @@ describe("Getting stuff for games", () => {
     it("Findbyid", () => __awaiter(this, void 0, void 0, function* () {
         return chai
             .request(App_1.default)
-            .get("/games/" + exports.game_id)
+            .get("/sellers/" + seller_id)
             .then(res => {
             expect(res.status).to.equal(200);
             expect(res).to.be.json;
-            expect(res.body).to.contain.keys("price", "name", "platforms", "delete_request", "id");
-            expect(res.body.id).to.equal(exports.game_id);
+            expect(res.body).to.contain.keys("label", "locations", "headquarter");
+            expect(res.body.id).to.equal(seller_id);
         });
     }));
     it("Findbyid mit falscher id", () => __awaiter(this, void 0, void 0, function* () {
         try {
             return yield chai
                 .request(App_1.default)
-                .get("/games/" + wrong_game_id)
+                .get("/sellers/" + wrong_seller_id)
                 .then(res => {
                 expect(res.status).to.equal(404);
                 expect(res.body).to.contain.keys("message");
@@ -92,54 +107,6 @@ describe("Getting stuff for games", () => {
             logger_1.logger.error(`Findbyid test Error: ${fast_safe_stringify_1.default(err)}`);
         }
     }));
-    describe("findbyanything", () => {
-        it("Name", () => {
-            return chai
-                .request(App_1.default)
-                .get("/games/findbyanything/" + game_name)
-                .then(res => {
-                expect(res.status).to.equal(200);
-                expect(res.body.games[0].name).to.be.equal(game_name);
-            });
-        });
-        it("Platform", () => {
-            return chai
-                .request(App_1.default)
-                .get("/games/findbyanything/" + "PC")
-                .then(res => {
-                expect(res.status).to.equal(200);
-                expect(res.body.games[0].platforms).to.include("PC");
-            });
-        });
-        it("ID", () => {
-            return chai
-                .request(App_1.default)
-                .get("/games/findbyanything/" + exports.game_id)
-                .then(res => {
-                expect(res.status).to.equal(200);
-                expect(res.body.games[0]._id).to.be.equal(exports.game_id);
-            });
-        });
-        it("Price", () => {
-            return chai
-                .request(App_1.default)
-                .get("/games/findbyanything/" + 30)
-                .then(res => {
-                expect(res.status).to.equal(200);
-                expect(res.body.games[0].price).to.be.equal(30);
-            });
-        });
-        it("Findbyanything falscher Param", () => {
-            return chai
-                .request(App_1.default)
-                .get("/games/findbyanything/" + "tkkg")
-                .then(res => {
-                expect(res.status).to.equal(400);
-                expect(res.body).to.contain.keys("message");
-                expect(res.body.message).to.be.equal("There are no entries");
-            });
-        });
-    });
 });
 describe("Mutating stuff", () => {
     it("login", () => __awaiter(this, void 0, void 0, function* () {
@@ -152,25 +119,25 @@ describe("Mutating stuff", () => {
             return result.body.token;
         }));
     }));
-    it("Neues Game", () => {
-        return chai
+    it("Neuer Seller", () => __awaiter(this, void 0, void 0, function* () {
+        return yield chai
             .request(App_1.default)
-            .post("/games/")
+            .post("/sellers/")
             .set("Authorization", `Bearer ${token}`)
-            .send(spiel_neu)
+            .send(seller_neu)
             .then(res => {
             expect(res.status).to.equal(201);
             expect(res).to.be.json;
-            expect(res.body).to.contain.keys("message", "createdGame");
+            expect(res.body).to.contain.keys("message", "createdSeller");
         });
-    });
-    it("Neues Game mit falschen Daten", () => {
+    }));
+    it("Neues Seller mit falschen Daten", () => __awaiter(this, void 0, void 0, function* () {
         try {
-            return chai
+            return yield chai
                 .request(App_1.default)
-                .post("/games/")
+                .post("/sellers/")
                 .set("Authorization", `Bearer ${token}`)
-                .send(spiel_neu_falsch)
+                .send(seller_neu_falsch)
                 .then(res => {
                 expect(res.status).to.equal(422);
                 expect(res).to.be.json;
@@ -178,13 +145,13 @@ describe("Mutating stuff", () => {
             });
         }
         catch (err) {
-            logger_1.logger.error(`New Game test Error: ${fast_safe_stringify_1.default(err)}`);
+            logger_1.logger.error(`New Seller test Error: ${fast_safe_stringify_1.default(err)}`);
         }
-    });
-    it("Game löschen zu vorhandener ID", () => __awaiter(this, void 0, void 0, function* () {
-        return chai
+    }));
+    it("Seller löschen zu vorhandener ID", () => __awaiter(this, void 0, void 0, function* () {
+        return yield chai
             .request(App_1.default)
-            .del("/games/" + exports.game_id)
+            .del("/sellers/" + seller_id)
             .set("Authorization", `Bearer ${token}`)
             .then(res => {
             expect(res.status).to.equal(200);
@@ -192,33 +159,33 @@ describe("Mutating stuff", () => {
             expect(res.body).to.contain.keys("message");
         });
     }));
-    it("Update game", () => __awaiter(this, void 0, void 0, function* () {
-        exports.game_id = yield chai
+    it("Update seller", () => __awaiter(this, void 0, void 0, function* () {
+        seller_id = yield chai
             .request(App_1.default)
-            .get("/games/")
+            .get("/sellers/")
             .then(result => {
             logger_1.logger.debug("\n");
-            logger_1.logger.debug("Test-Id: " + exports.game_id);
-            return result.body.games[0]._id;
+            logger_1.logger.debug("Test-Id: " + seller_id);
+            return result.body.sellers[0]._id;
         });
         return chai
             .request(App_1.default)
-            .patch("/games/" + exports.game_id)
+            .patch("/sellers/" + seller_id)
             .set("Authorization", `Bearer ${token}`)
-            .send(update_game)
+            .send(update_seller)
             .then(res => {
             expect(res.status).to.equal(200);
             expect(res).to.be.json;
             expect(res.body).to.contain.keys("message", "request");
         });
     }));
-    it("Update game mit nicht existentierender ID", () => {
+    it("Update seller mit nicht existentierender ID", () => {
         try {
             return chai
                 .request(App_1.default)
-                .patch("/games/" + wrong_game_id)
+                .patch("/sellers/" + wrong_seller_id)
                 .set("Authorization", `Bearer ${token}`)
-                .send(update_game)
+                .send(update_seller)
                 .then(res => {
                 expect(res.status).to.equal(404);
                 expect(res).to.be.json;
@@ -226,16 +193,16 @@ describe("Mutating stuff", () => {
             });
         }
         catch (err) {
-            logger_1.logger.error(`Update Game test Error: ${fast_safe_stringify_1.default(err)}`);
+            logger_1.logger.error(`Update Seller test Error: ${fast_safe_stringify_1.default(err)}`);
         }
     });
-    it("Update game mit falschen Daten", () => {
+    it("Update seller mit falschen Daten", () => {
         try {
             return chai
                 .request(App_1.default)
-                .patch("/games/" + exports.game_id)
+                .patch("/sellers/" + seller_id)
                 .set("Authorization", `Bearer ${token}`)
-                .send(update_game_wrong)
+                .send(update_seller_wrong)
                 .then(res => {
                 expect(res.status).to.equal(422);
                 expect(res).to.be.json;
@@ -243,7 +210,7 @@ describe("Mutating stuff", () => {
             });
         }
         catch (err) {
-            logger_1.logger.error(`Update Game test Error: ${fast_safe_stringify_1.default(err)}`);
+            logger_1.logger.error(`Update Seller test Error: ${fast_safe_stringify_1.default(err)}`);
         }
     });
 });

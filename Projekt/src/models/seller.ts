@@ -16,8 +16,7 @@ const sellerSchema = new mongoose.Schema({
     },
     game: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Game',
-        required: true
+        ref: 'Game'
     }            
     }
 );

@@ -232,7 +232,6 @@ class GameRouter {
                     logger_1.logger.error(`Update game Error: ${fast_safe_stringify_1.default(err)}`);
                 };
             }
-            console.log(mongoose.Types.ObjectId(id));
             let game_ins = yield games_1.default.findById(id)
                 .select("name price platforms _id")
                 .exec()

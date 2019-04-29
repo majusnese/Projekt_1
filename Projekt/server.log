@@ -651,3 +651,212 @@ debug:
 debug: Test-Id: 5cc643c2da72fac486b81497 {"timestamp":"2019-04-29T00:22:31.553Z"}
 error: Update game Error: {} {"timestamp":"2019-04-29T00:22:31.571Z"}
 error: Update game Error: {} {"timestamp":"2019-04-29T00:22:31.578Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:25:30.723Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:25:41.300Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:26:04.762Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:26:10.763Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:29:22.068Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:29:54.394Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:31:02.872Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:31:56.958Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:33:13.693Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:34:06.100Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:34:16.859Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:34:18.131Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:34:19.450Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:34:11.831Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:34:27.273Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T00:34:27.273Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T00:34:27.301Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T00:34:27.629Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T00:34:27.636Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:34:27.648Z"}
+debug: Test-Id: 5cc5cd847fad48e5efb6d444 {"timestamp":"2019-04-29T00:34:27.648Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:36:21.653Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:36:39.051Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:36:40.326Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:36:41.571Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:36:35.230Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:36:49.282Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T00:36:49.282Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T00:36:49.319Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T00:36:49.597Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T00:36:49.604Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:36:49.620Z"}
+debug: Test-Id: 5cc5cd847fad48e5efb6d444 {"timestamp":"2019-04-29T00:36:49.620Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:38:18.254Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:39:00.308Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:39:01.545Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:39:02.863Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:38:54.994Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:39:10.602Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T00:39:10.602Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T00:39:10.623Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T00:39:10.885Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T00:39:10.893Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:39:10.909Z"}
+debug: Test-Id: 5cc5cd847fad48e5efb6d442 {"timestamp":"2019-04-29T00:39:10.909Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:43:38.978Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:43:40.242Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:43:41.574Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:43:35.156Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:43:49.246Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T00:43:49.246Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:43:49.259Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T00:43:49.260Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T00:43:49.291Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T00:43:49.565Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T00:43:49.575Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:43:49.592Z"}
+debug: Test-Id: 5cc5cd847fad48e5efb6d442 {"timestamp":"2019-04-29T00:43:49.592Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:45:37.030Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:45:46.269Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:45:47.536Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:45:48.878Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:45:40.987Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:45:56.504Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T00:45:56.504Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:45:56.511Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T00:45:56.511Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T00:45:56.534Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T00:45:56.817Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T00:45:56.827Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:45:56.846Z"}
+debug: Test-Id: 5cc5cd847fad48e5efb6d442 {"timestamp":"2019-04-29T00:45:56.847Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:48:49.750Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T00:48:55.498Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:51:29.515Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T00:51:41.327Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T00:51:50.263Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:54:52.938Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:55:35.240Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T00:55:46.270Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:58:39.786Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T00:58:49.751Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:59:10.571Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T00:59:23.349Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:59:41.548Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T00:59:44.777Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T00:59:55.538Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:00:06.649Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T01:00:11.859Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T01:00:52.760Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T01:00:54.185Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:01:49.005Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T01:01:51.864Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:02:16.608Z"}
+error: Post seller Error: {} {"timestamp":"2019-04-29T01:02:19.349Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:02:44.662Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:03:10.227Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:03:11.449Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:03:12.776Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:03:04.979Z"}
+debug: 
+ {"timestamp":"2019-04-29T01:03:20.528Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T01:03:20.528Z"}
+debug: 
+ {"timestamp":"2019-04-29T01:03:20.536Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T01:03:20.537Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T01:03:20.564Z"}
+error: Post seller Error: {"errors":{"game":{"message":"Path `game` is required.","name":"ValidatorError","properties":{"message":"Path `game` is required.","type":"required","path":"game"},"kind":"required","path":"game"}},"_message":"Seller validation failed","message":"Seller validation failed: game: Path `game` is required.","name":"ValidationError"} {"timestamp":"2019-04-29T01:03:20.846Z"}
+error: Post seller Error: {"errors":{"locations":{"message":"Cast to Number failed for value \"threehundred\" at path \"locations\"","name":"CastError","stringValue":"\"threehundred\"","kind":"Number","value":"threehundred","path":"locations","reason":{"message":"Cast to number failed for value \"threehundred\" at path \"locations\"","name":"CastError","stringValue":"\"threehundred\"","kind":"number","value":"threehundred","path":"locations"}},"game":{"message":"Path `game` is required.","name":"ValidatorError","properties":{"message":"Path `game` is required.","type":"required","path":"game"},"kind":"required","path":"game"}},"_message":"Seller validation failed","message":"Seller validation failed: locations: Cast to Number failed for value \"threehundred\" at path \"locations\", game: Path `game` is required.","name":"ValidationError"} {"timestamp":"2019-04-29T01:03:20.890Z"}
+debug: 
+ {"timestamp":"2019-04-29T01:03:20.910Z"}
+debug: Test-Id: 5cc5cd847fad48e5efb6d443 {"timestamp":"2019-04-29T01:03:20.910Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:08:30.350Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:08:31.605Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:08:32.925Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:08:26.013Z"}
+debug: 
+ {"timestamp":"2019-04-29T01:08:40.638Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T01:08:40.639Z"}
+debug: 
+ {"timestamp":"2019-04-29T01:08:40.645Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T01:08:40.645Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T01:08:40.672Z"}
+error: Post seller Error: {"errors":{"game":{"message":"Path `game` is required.","name":"ValidatorError","properties":{"message":"Path `game` is required.","type":"required","path":"game"},"kind":"required","path":"game"}},"_message":"Seller validation failed","message":"Seller validation failed: game: Path `game` is required.","name":"ValidationError"} {"timestamp":"2019-04-29T01:08:40.966Z"}
+error: Post seller Error: {"errors":{"locations":{"message":"Cast to Number failed for value \"threehundred\" at path \"locations\"","name":"CastError","stringValue":"\"threehundred\"","kind":"Number","value":"threehundred","path":"locations","reason":{"message":"Cast to number failed for value \"threehundred\" at path \"locations\"","name":"CastError","stringValue":"\"threehundred\"","kind":"number","value":"threehundred","path":"locations"}},"game":{"message":"Path `game` is required.","name":"ValidatorError","properties":{"message":"Path `game` is required.","type":"required","path":"game"},"kind":"required","path":"game"}},"_message":"Seller validation failed","message":"Seller validation failed: locations: Cast to Number failed for value \"threehundred\" at path \"locations\", game: Path `game` is required.","name":"ValidationError"} {"timestamp":"2019-04-29T01:08:40.995Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\seller.test.ts:156:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T01:08:40.997Z"}
+debug: 
+ {"timestamp":"2019-04-29T01:08:41.015Z"}
+debug: Test-Id: 5cc5cd847fad48e5efb6d442 {"timestamp":"2019-04-29T01:08:41.015Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:08:51.734Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:09:09.332Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:09:10.568Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:09:11.874Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:09:04.055Z"}
+debug: 
+ {"timestamp":"2019-04-29T01:09:19.572Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T01:09:19.572Z"}
+debug: 
+ {"timestamp":"2019-04-29T01:09:19.579Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T01:09:19.579Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T01:09:19.603Z"}
+error: Post seller yikes {"timestamp":"2019-04-29T01:09:19.878Z"}
+error: Post seller yikes {"timestamp":"2019-04-29T01:09:19.890Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\seller.test.ts:156:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T01:09:19.892Z"}
+debug: 
+ {"timestamp":"2019-04-29T01:09:19.908Z"}
+debug: Test-Id: 5cc5cd847fad48e5efb6d442 {"timestamp":"2019-04-29T01:09:19.908Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:10:20.695Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:10:30.226Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:10:31.548Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:10:32.857Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:10:25.060Z"}
+debug: 
+ {"timestamp":"2019-04-29T01:10:40.559Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T01:10:40.560Z"}
+debug: 
+ {"timestamp":"2019-04-29T01:10:40.569Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T01:10:40.569Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T01:10:40.592Z"}
+error: Post seller yikes {"timestamp":"2019-04-29T01:10:40.860Z"}
+error: Post seller yikes {"timestamp":"2019-04-29T01:10:40.872Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\seller.test.ts:156:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T01:10:40.874Z"}
+debug: 
+ {"timestamp":"2019-04-29T01:10:40.888Z"}
+debug: Test-Id: 5cc5cd847fad48e5efb6d442 {"timestamp":"2019-04-29T01:10:40.889Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:12:42.524Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:12:43.834Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:12:45.149Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:12:38.252Z"}
+debug: 
+ {"timestamp":"2019-04-29T01:12:52.803Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:12:56.342Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:12:57.795Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:12:59.036Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T01:12:52.803Z"}
+debug: 
+ {"timestamp":"2019-04-29T01:13:04.642Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T01:13:04.642Z"}
+debug: 
+ {"timestamp":"2019-04-29T01:13:04.651Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T01:13:04.651Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T01:13:04.683Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T01:13:05.022Z"}
+debug: 
+ {"timestamp":"2019-04-29T01:13:05.035Z"}
+debug: Test-Id: 5cc64f90da72fac486b81c3a {"timestamp":"2019-04-29T01:13:05.035Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T01:13:05.053Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T01:13:05.058Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T01:13:05.079Z"}
+error: Post seller yikes {"timestamp":"2019-04-29T01:13:05.356Z"}
+error: Post seller yikes {"timestamp":"2019-04-29T01:13:05.372Z"}
+error: New Seller test Error: {"name":"AssertionError","message":"expected 404 to equal 422","showDiff":true,"actual":404,"expected":422,"stack":"AssertionError: expected 404 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\seller.test.ts:156:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T01:13:05.375Z"}
+debug: 
+ {"timestamp":"2019-04-29T01:13:05.392Z"}
+debug: Test-Id: 5cc5cd847fad48e5efb6d442 {"timestamp":"2019-04-29T01:13:05.392Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:17:27.388Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T01:18:17.091Z"}

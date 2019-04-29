@@ -50,52 +50,77 @@ export class SellerRouter {
   }
 
   public async create(req: Request, res: Response, next: NextFunction) {
-    Game.findById(req.body.game)
-      .then(game => {
-        if (!game) {
-          return res.status(404).json({
+    let id = req.body.game;
+    try {
+      id = mongoose.Types.ObjectId(req.body.game);
+    } catch {
+      err => {
+        res.status(422).json({
+          message: "Please pass a valid ID"
+        });
+        logger.error(`Create seller Error: ${stringify(err)}`);
+      };
+    }
+    console.log(id);
+    let game_ins = await Game.findById(id)
+      .exec()
+      .then(doc => {
+        if (doc) {
+          return true;
+        } else {
+          res.status(404).json({
             message: "Game not found"
           });
+          return false;
         }
-        const seller = new Seller({
-          id: new mongoose.Types.ObjectId(),
-          label: req.body.label,
-          locations: req.body.locations,
-          headquarter: req.body.headquarter,
-          game: req.body.game
-        });
-        return seller.save();
       })
-      .then(result => {
-        res.status(201).json({
-          message: "Post request successful to /sellers",
-          createdSeller: {
-            label: result.label,
-            locations: result.locations,
-            headquarter: result.headquarter,
-            _id: result._id,
-            game: result.game,
-            request: {
-              type: "GET",
-              description: "Look at the created seller",
-              url: "http://localhost:3000/sellers/" + result._id
-            },
-            request_getthis: {
-              type: "GET",
-              description: "Look at this seller individually",
-              url: "http://localhost:3000/sellers/" + result._id
-            },
-            delete_request: {
-              type: "DELETE",
-              description: "Delete the seller",
-              url: "http://localhost:3000/sellers/" + result._id
-            }
-          }
-        });
-      })
-      .catch(err => {
-        logger.error(`Post seller Error: ${stringify(err)}`);
+      .catch(error => {
+        logger.error(`Update that seller Error: ${stringify(error)}`);
       });
+    console.log(game_ins);
+    if (game_ins) {
+      const seller = new Seller({
+        id: new mongoose.Types.ObjectId(),
+        label: req.body.label,
+        locations: req.body.locations,
+        headquarter: req.body.headquarter,
+        game: req.body.game
+      });
+      seller
+        .save()
+        .then(result => {
+          res.status(201).json({
+            message: "Post request successful to /sellers",
+            createdSeller: {
+              label: result.label,
+              locations: result.locations,
+              headquarter: result.headquarter,
+              _id: result._id,
+              game: result.game,
+              request: {
+                type: "GET",
+                description: "Look at the created seller",
+                url: "http://localhost:3000/sellers/" + result._id
+              },
+              request_getthis: {
+                type: "GET",
+                description: "Look at this seller individually",
+                url: "http://localhost:3000/sellers/" + result._id
+              },
+              delete_request: {
+                type: "DELETE",
+                description: "Delete the seller",
+                url: "http://localhost:3000/sellers/" + result._id
+              }
+            }
+          });
+        })
+        .catch(err => {
+          logger.error(`Post seller Error: ${stringify(err)}`);
+        });
+    } else {
+      logger.error(`Post seller yikes`);
+    }
   }
 
   public async findbyid(req: Request, res: Response, next: NextFunction) {
@@ -121,6 +146,7 @@ export class SellerRouter {
             locations: doc.locations,
             headquarter: doc.headquarter,
             game: doc.game,
+            id: doc._id,
             delete_request: {
               type: "DELETE",
               description: "Delete the seller",
