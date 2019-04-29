@@ -15,6 +15,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const logger_1 = require("../utils/logger");
 const fast_safe_stringify_1 = require("fast-safe-stringify");
+const Validator_1 = require("../utils/Validator");
 class UserRouter {
     constructor() {
         this.router = express_1.Router();
@@ -26,19 +27,20 @@ class UserRouter {
                 .exec()
                 .then(user => {
                 if (user.length >= 1) {
-                    return res.status(422).json({
+                    logger_1.logger.error(`user signup Error because of duplicate email`);
+                    res.status(422).json({
                         message: "Mail already in use"
                     });
                 }
-                else {
-                    bcrypt.hash(req.body.password, 12, (err, hash) => {
-                        if (err) {
-                            return res.status(500).json({
-                                error: err,
-                                message: "Error occurred."
-                            });
-                        }
-                        else {
+                bcrypt.hash(req.body.password, 12, (err, hash) => {
+                    if (err) {
+                        res.status(500).json({
+                            error: err,
+                            message: "Error occurred."
+                        });
+                    }
+                    else {
+                        if (req.body.email.match(Validator_1.regex)) {
                             const user = new user_1.default({
                                 _id: new mongoose.Types.ObjectId(),
                                 email: req.body.email,
@@ -47,21 +49,23 @@ class UserRouter {
                             user
                                 .save()
                                 .then(result => {
-                                console.log(result);
                                 res.status(201).json({
                                     message: "user created",
                                     uid: result._id
                                 });
                             })
                                 .catch(err => {
-                                res.status(500).json({
-                                    error: err,
-                                    mesage: "An error occurred after the password was hashed"
-                                });
+                                logger_1.logger.error(`user signup Error An error occurred after the password was hashed`);
                             });
                         }
-                    });
-                }
+                        else {
+                            logger_1.logger.error(`user signup Error because of invalid email`);
+                            res.status(422).json({
+                                message: "invalid email"
+                            });
+                        }
+                    }
+                });
             })
                 .catch(err => {
                 logger_1.logger.error(`user signup Error: ${fast_safe_stringify_1.default(err)}`);

@@ -5,6 +5,7 @@ import bcrypt = require("bcrypt");
 import * as jwt from "jsonwebtoken";
 import { logger } from "../utils/logger";
 import stringify from "fast-safe-stringify";
+import { regex } from '../utils/Validator'
 
 export class UserRouter {
   router: Router;
@@ -15,49 +16,56 @@ export class UserRouter {
   }
 
   public async signup(req: Request, res: Response, next: NextFunction) {
-    User.find({ email: req.body.email })
-      .exec()
-      .then(user => {
-        if (user.length >= 1) {
-          return res.status(422).json({
-            message: "Mail already in use"
-          });
-        } else {
-          bcrypt.hash(req.body.password, 12, (err, hash) => {
-            if (err) {
-              return res.status(500).json({
-                error: err,
-                message: "Error occurred."
-              });
-            } else {
-              const user = new User({
-                _id: new mongoose.Types.ObjectId(),
-                email: req.body.email,
-                password: hash
-              });
-              user
-                .save()
-                .then(result => {
-                  console.log(result);
-                  res.status(201).json({
-                    message: "user created",
-                    uid: result._id
-                  });
-                })
-                .catch(err => {
-                  res.status(500).json({
-                    error: err,
-                    mesage: "An error occurred after the password was hashed"
-                  });
+    try {
+      User.find({ email: req.body.email })
+        .exec()
+        .then(user => {
+          if (user.length >= 1) {
+            logger.error(`user signup Error because of duplicate email`);
+            res.status(422).json({
+              message: "Mail already in use"
+            });
+          } else {
+            bcrypt.hash(req.body.password, 12, (err, hash) => {
+              if (err) {
+                res.status(500).json({
+                  error: err,
+                  message: "Error occurred."
                 });
-            }
-          });
+              } else {
+                if (regex.test(req.body.email)) {
+                  const user = new User({
+                    _id: new mongoose.Types.ObjectId(),
+                    email: req.body.email,
+                    password: hash
+                  });
+                  user
+                    .save()
+                    .then(result => {
+                      res.status(201).json({
+                        message: "user created",
+                        uid: user._id
+                      });
+                    })
+                } else {
+                  logger.error(`user signup Error because of invalid email`);
+                  res.status(422).json({
+                    message: "invalid email"
+                  });
+                }
+              }
+            });
+          }
         }
-      })
-      .catch(err => {
-        logger.error(`user signup Error: ${stringify(err)}`);
-      });
+        )
+        .catch(err => {
+          logger.error(`user signup Error: ${stringify(err)}`);
+        });
+    } catch (err) {
+      logger.error("user signup failed");
+    }
   }
+
 
   public async login(req: Request, res: Response, next: NextFunction) {
     const jwt_key = process.env.JWT_KEY;
@@ -84,10 +92,12 @@ export class UserRouter {
               jwt_key,
               {
                 expiresIn: "1h"
-              } 
+              }
             );
+            console.log(user[0]._id)
             return res.status(200).json({
               message: "Auth succesful",
+              id: user[0]._id,
               token: token
             });
           }
@@ -102,7 +112,21 @@ export class UserRouter {
   }
 
   public async del(req: Request, res: Response, next: NextFunction) {
-    User.remove({ _id: req.params.uid })
+    let id;
+    try {
+      id = mongoose.Types.ObjectId(req.params.uid);
+    } catch {
+      err => {
+        logger.error(
+          `Delete user error because an invalid id was passed: ${stringify(err)}`
+        );
+        res.status(422).json({
+          message: "Please pass a valid ID"
+        });
+      };
+    }
+
+    User.remove({ _id: id })
       .exec()
       .then(result => {
         res.status(200).json({
@@ -116,7 +140,7 @@ export class UserRouter {
 
   init() {
     this.router.post("/signup", this.signup);
-    this.router.delete("/uid", this.del);
+    this.router.delete("/:uid", this.del);
     this.router.post("/login", this.login);
   }
 }

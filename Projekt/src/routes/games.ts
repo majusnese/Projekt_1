@@ -46,7 +46,11 @@ export class GameRouter {
         }
       })
       .catch(err => {
-        logger.error(`Findall game error while trying to execute operation: ${stringify(err)}`);
+        logger.error(
+          `Findall game error while trying to execute operation: ${stringify(
+            err
+          )}`
+        );
       });
   }
 
@@ -88,7 +92,11 @@ export class GameRouter {
           });
         })
         .catch(err => {
-          logger.error(`Post game error whily trying to execute operation: ${stringify(err)}`);
+          logger.error(
+            `Post game error whily trying to execute operation: ${stringify(
+              err
+            )}`
+          );
         });
     } else {
       logger.error(`Post game was not succesful due to wrong data`);
@@ -133,12 +141,14 @@ export class GameRouter {
     }
 
     if (!isNumber && !isObjectId && !isPlatform && !isString) {
-      logger.error(`findbyanything error because unprocessable arguments were passed`);
+      logger.error(
+        `findbyanything error because unprocessable arguments were passed`
+      );
       res.status(422).json({
         message: "Argument could not be processed"
       });
     }
-    Game.find()
+    await Game.find()
       .or([
         { _id: objid },
         { name: param },
@@ -173,7 +183,9 @@ export class GameRouter {
         }
       })
       .catch(err => {
-        logger.error(`findbyanything game error while trying to execute operation: ${stringify(err)}`);
+        logger.error(
+          `findbyanything game error while trying to execute operation: ${stringify(err)}`
+        );
       });
   }
 
@@ -183,11 +195,14 @@ export class GameRouter {
       id = mongoose.Types.ObjectId(req.params.id);
     } catch {
       err => {
-        logger.error(`Findbyid game error because an invalid id was passed: ${stringify(err)}`);
+        logger.error(
+          `Findbyid game error because an invalid id was passed: ${stringify(
+            err
+          )}`
+        );
         res.status(422).json({
           message: "Please pass a valid ID"
         });
-        
       };
     }
 
@@ -213,7 +228,9 @@ export class GameRouter {
         }
       })
       .catch(err => {
-        logger.error(`Findbyid game error whily trying to findbyid: ${stringify(err)}`);
+        logger.error(
+          `Findbyid game error whily trying to findbyid: ${stringify(err)}`
+        );
       });
   }
 
@@ -223,11 +240,14 @@ export class GameRouter {
       id = mongoose.Types.ObjectId(req.params.id);
     } catch {
       err => {
-        logger.error(`Update game error because an invalid id was passed: ${stringify(err)}`);
+        logger.error(
+          `Update game error because an invalid id was passed: ${stringify(
+            err
+          )}`
+        );
         res.status(422).json({
           message: "Please pass a valid ID"
         });
-        
       };
     }
     let game_ins = await Game.findById(id)
@@ -241,7 +261,11 @@ export class GameRouter {
         }
       })
       .catch(error => {
-        logger.error(`Update game failed while trying to find the game: ${stringify(error)}`);
+        logger.error(
+          `Update game failed while trying to find the game: ${stringify(
+            error
+          )}`
+        );
       });
 
     if (game_ins) {
@@ -251,10 +275,8 @@ export class GameRouter {
           !isPropName(ops.propName) ||
           !isValidValue(ops.propName, ops.value)
         ) {
-
           logger.error(`Update game failed, wrong arguments`);
           res.status(422).json({
-            
             message: "Field or Value is not valid"
           });
         }
@@ -273,7 +295,9 @@ export class GameRouter {
           });
         })
         .catch(err => {
-          logger.error(`Update game Error while trying to update: ${stringify(err)}`);
+          logger.error(
+            `Update game Error while trying to update: ${stringify(err)}`
+          );
         });
     } else {
       logger.error(`No Game to update`);
@@ -289,11 +313,14 @@ export class GameRouter {
       id = mongoose.Types.ObjectId(req.params.id);
     } catch {
       err => {
-        logger.error(`Delete game Error because an invalid id was passed: ${stringify(err)}`);
+        logger.error(
+          `Delete game Error because an invalid id was passed: ${stringify(
+            err
+          )}`
+        );
         res.status(422).json({
           message: "Please pass a valid ID"
         });
-        
       };
     }
     Game.findById(id)
@@ -303,21 +330,28 @@ export class GameRouter {
           Game.deleteOne({ _id: id })
             .exec()
             .then(result => {
-              if(result){
-              res.status(200).json({
-                message: "Game deleted"
-              });}
+              if (result) {
+                res.status(200).json({
+                  message: "Game deleted"
+                });
+              }
             })
             .catch(err => {
-              logger.error(`Delete game Error while trying to delete the Game: ${stringify(err)}`);
-            });;
+              logger.error(
+                `Delete game Error while trying to delete the Game: ${stringify(
+                  err
+                )}`
+              );
+            });
         } else {
           logger.error(`No Game to delete`);
           res.status(404).json({ message: "No Object found" });
         }
       })
       .catch(err => {
-        logger.error(`Delete game Error while trying to find the Game: ${stringify(err)}`);
+        logger.error(
+          `Delete game Error while trying to find the Game: ${stringify(err)}`
+        );
       });
   }
 

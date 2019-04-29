@@ -1,4 +1,3 @@
-{"_id":{"$oid":"5cc6cc2d32cab26798922102"},"label":"Gamestop","locations":"22","headquarter":"Berlin"}
-{"_id":{"$oid":"5cc6cc2d32cab26798922103"},"label":"Rewe","locations":"111","headquarter":"Rotterdamm"}
-{"_id":{"$oid":"5cc6cc2d32cab26798922104"},"label":"Lidl","locations":"999999","headquarter":"Ostsee"}
-{"_id":{"$oid":"5cc6cc307e2691349885c232"},"label":"Mediamarkt","locations":333,"headquarter":"Suedsee","game":{"$oid":"5cc6cc2b32cab267989220fb"},"__v":0}
+{"_id":{"$oid":"5cc71707784ed5caa1a5f5ac"},"label":"Gamestop","locations":"22","headquarter":"Berlin"}
+{"_id":{"$oid":"5cc71707784ed5caa1a5f5ad"},"label":"Lidl","locations":"999999","headquarter":"Ostsee"}
+{"_id":{"$oid":"5cc71707784ed5caa1a5f5ae"},"label":"Rewe","locations":"111","headquarter":"Rotterdamm"}

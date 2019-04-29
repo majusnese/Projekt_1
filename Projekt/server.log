@@ -1,0 +1,453 @@
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:07:35.651Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:07:53.692Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:07:55.062Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:07:56.312Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:07:48.769Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:08:04.198Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:08:04.198Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:08:04.211Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:08:04.211Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T15:08:04.783Z"}
+error: No Game to update {"timestamp":"2019-04-29T15:08:04.812Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T15:08:04.817Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T15:08:04.819Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T15:08:04.843Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:08:04.845Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T15:08:05.119Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T15:08:05.130Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T15:08:05.135Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T15:08:05.136Z"}
+error: No Game found {"timestamp":"2019-04-29T15:08:05.151Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:08:05.153Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T15:08:05.182Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:12:04.876Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:12:21.762Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:15:58.957Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:16:08.450Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:17:47.987Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:23:27.675Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:23:42.866Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:23:44.247Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:23:45.490Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:23:37.529Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T15:23:53.468Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:23:53.493Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:23:53.493Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:23:53.505Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:23:53.505Z"}
+error: user signup Error: {} {"timestamp":"2019-04-29T15:23:54.038Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:26:09.914Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:26:20.375Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:26:21.765Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:26:23.070Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:26:15.190Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T15:26:30.591Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:26:30.618Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:26:30.618Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:26:30.629Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:26:30.629Z"}
+error: Signup falsch test Error: {"name":"AssertionError","message":"expected 500 to equal 422","showDiff":true,"actual":500,"expected":422,"stack":"AssertionError: expected 500 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\game.test.ts:103:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T15:26:31.419Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T15:26:31.450Z"}
+error: No Game to update {"timestamp":"2019-04-29T15:26:31.465Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T15:26:31.470Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T15:26:31.472Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T15:26:31.495Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:26:31.496Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T15:26:31.772Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T15:26:31.783Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T15:26:31.790Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T15:26:31.791Z"}
+error: No Game found {"timestamp":"2019-04-29T15:26:31.805Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:26:31.806Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T15:26:31.830Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:28:47.951Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:29:05.762Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:29:07.007Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:29:08.315Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:29:01.991Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T15:29:16.482Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:29:16.508Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:29:16.508Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:29:16.519Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:29:16.519Z"}
+error: user signup Error An error occurred after the password was hashe {"timestamp":"2019-04-29T15:29:16.767Z"}
+error: user signup Error An error occurred after the password was hashe {"timestamp":"2019-04-29T15:29:17.314Z"}
+error: Signup falsch test Error: {"name":"AssertionError","message":"expected 500 to equal 422","showDiff":true,"actual":500,"expected":422,"stack":"AssertionError: expected 500 to equal 422\n    at chai.request.post.set.send.then.res (C:\\Users\\majus\\Desktop\\Wichtig\\Studium\\sem4\\swe\\projekt_1\\Projekt\\src\\test\\game.test.ts:103:33)\n    at processTicksAndRejections (internal/process/task_queues.js:86:5)"} {"timestamp":"2019-04-29T15:29:17.319Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T15:29:17.351Z"}
+error: No Game to update {"timestamp":"2019-04-29T15:29:17.368Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T15:29:17.373Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T15:29:17.375Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T15:29:17.398Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:29:17.400Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T15:29:17.669Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T15:29:17.682Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T15:29:17.687Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T15:29:17.688Z"}
+error: No Game found {"timestamp":"2019-04-29T15:29:17.702Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:29:17.703Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T15:29:17.726Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:34:57.467Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:35:09.648Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:35:10.901Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:35:12.177Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:35:04.462Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T15:35:19.724Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:35:19.751Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:35:19.751Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:35:19.760Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:35:19.760Z"}
+error: user signup Error An error occurred after the password was hashed {"timestamp":"2019-04-29T15:35:20.003Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T15:35:20.592Z"}
+error: No Game to update {"timestamp":"2019-04-29T15:35:20.609Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T15:35:20.615Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T15:35:20.617Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T15:35:20.637Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:35:20.639Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T15:35:20.925Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T15:35:20.935Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T15:35:20.941Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T15:35:20.942Z"}
+error: No Game found {"timestamp":"2019-04-29T15:35:20.957Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:35:20.959Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T15:35:20.964Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T15:35:20.986Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:36:24.190Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:36:25.480Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:36:26.762Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:36:18.855Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T15:36:34.364Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:36:34.391Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:36:34.391Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:36:34.402Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:36:34.402Z"}
+error: No Game to update {"timestamp":"2019-04-29T15:36:34.977Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T15:36:34.979Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T15:36:34.982Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T15:36:35.017Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:36:35.020Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T15:36:35.324Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T15:36:35.337Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T15:36:35.344Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T15:36:35.345Z"}
+error: No Game found {"timestamp":"2019-04-29T15:36:35.362Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:36:35.363Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T15:36:35.387Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:38:20.299Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:38:21.571Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:38:22.882Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:38:15.197Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T15:38:30.636Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:38:30.661Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:38:30.662Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:38:30.673Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:38:30.673Z"}
+error: user signup Error An error occurred after the password was hashed {"timestamp":"2019-04-29T15:38:30.924Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T15:38:31.448Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T15:38:31.486Z"}
+error: No Game to update {"timestamp":"2019-04-29T15:38:31.510Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T15:38:31.514Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T15:38:31.516Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T15:38:31.539Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:38:31.541Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T15:38:31.816Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T15:38:31.829Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T15:38:31.836Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T15:38:31.837Z"}
+error: No Game found {"timestamp":"2019-04-29T15:38:31.852Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:38:31.854Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T15:38:31.858Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T15:38:31.878Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:43:28.748Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:43:30.021Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:43:31.299Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:43:24.975Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T15:43:38.926Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:43:38.953Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:43:38.953Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:43:38.962Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:43:38.962Z"}
+error: user signup Error An error occurred after the password was hashed {"timestamp":"2019-04-29T15:43:39.246Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T15:43:39.767Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T15:43:39.805Z"}
+error: No Game to update {"timestamp":"2019-04-29T15:43:39.821Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T15:43:39.827Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T15:43:39.829Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T15:43:39.855Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:43:39.857Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T15:43:40.128Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T15:43:40.144Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T15:43:40.149Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T15:43:40.150Z"}
+error: No Game found {"timestamp":"2019-04-29T15:43:40.166Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:43:40.167Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T15:43:40.172Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T15:43:40.196Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:45:42.644Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:45:43.928Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:45:45.203Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:45:37.460Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T15:45:52.810Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:45:52.836Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:45:52.836Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:45:52.847Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:45:52.847Z"}
+error: user signup Error An error occurred after the password was hashed {"timestamp":"2019-04-29T15:45:53.097Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T15:45:53.643Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T15:45:53.685Z"}
+error: No Game to update {"timestamp":"2019-04-29T15:45:53.705Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T15:45:53.710Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T15:45:53.712Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T15:45:53.741Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:45:53.743Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T15:45:54.024Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T15:45:54.039Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T15:45:54.044Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T15:45:54.045Z"}
+error: No Game found {"timestamp":"2019-04-29T15:45:54.058Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:45:54.060Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T15:45:54.082Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:47:12.940Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:47:14.193Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:47:15.491Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:47:07.817Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T15:47:23.117Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:47:23.142Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:47:23.142Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:47:23.154Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:47:23.154Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T15:47:23.925Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T15:47:23.959Z"}
+error: No Game to update {"timestamp":"2019-04-29T15:47:23.982Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T15:47:23.987Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T15:47:23.989Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T15:47:24.013Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:47:24.015Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T15:47:24.286Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T15:47:24.297Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T15:47:24.302Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T15:47:24.303Z"}
+error: No Game found {"timestamp":"2019-04-29T15:47:24.316Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:47:24.318Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T15:47:24.322Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T15:47:24.344Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:52:51.873Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:52:53.140Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:52:54.445Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:52:46.713Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T15:53:02.098Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:53:02.118Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:53:02.118Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:53:02.127Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:53:02.127Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T15:53:02.948Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T15:53:03.007Z"}
+error: No Game to update {"timestamp":"2019-04-29T15:53:03.024Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T15:53:03.029Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T15:53:03.031Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T15:53:03.052Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:53:03.053Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T15:53:03.327Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T15:53:03.340Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T15:53:03.349Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T15:53:03.351Z"}
+error: No Game found {"timestamp":"2019-04-29T15:53:03.365Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:53:03.367Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T15:53:03.372Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T15:53:03.392Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:56:20.397Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:56:21.685Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:56:22.940Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:56:16.606Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T15:56:30.544Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:56:30.571Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:56:30.571Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:56:30.583Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:56:30.583Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T15:56:31.383Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T15:56:31.421Z"}
+error: No Game to update {"timestamp":"2019-04-29T15:56:31.444Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T15:56:31.449Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T15:56:31.451Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T15:56:31.471Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:56:31.473Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T15:56:31.754Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T15:56:31.766Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T15:56:31.771Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T15:56:31.773Z"}
+error: No Game found {"timestamp":"2019-04-29T15:56:31.789Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:56:31.791Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T15:56:31.816Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:58:55.294Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:58:56.544Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:58:57.881Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T15:58:51.519Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T15:59:05.468Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:59:05.493Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:59:05.494Z"}
+debug: 
+ {"timestamp":"2019-04-29T15:59:05.504Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T15:59:05.505Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T15:59:06.312Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T15:59:06.348Z"}
+error: No Game to update {"timestamp":"2019-04-29T15:59:06.369Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T15:59:06.374Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T15:59:06.376Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T15:59:06.400Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:59:06.402Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T15:59:06.675Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T15:59:06.688Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T15:59:06.692Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T15:59:06.694Z"}
+error: No Game found {"timestamp":"2019-04-29T15:59:06.710Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T15:59:06.711Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T15:59:06.741Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:05:57.496Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:05:58.742Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:06:00.026Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:05:53.191Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T16:06:07.641Z"}
+debug: 
+ {"timestamp":"2019-04-29T16:06:07.664Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T16:06:07.664Z"}
+debug: 
+ {"timestamp":"2019-04-29T16:06:07.673Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T16:06:07.673Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T16:06:08.466Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T16:06:08.502Z"}
+error: No Game to update {"timestamp":"2019-04-29T16:06:08.519Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T16:06:08.525Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T16:06:08.527Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T16:06:08.548Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T16:06:08.550Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T16:06:08.827Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T16:06:08.838Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T16:06:08.843Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T16:06:08.844Z"}
+error: No Game found {"timestamp":"2019-04-29T16:06:08.859Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T16:06:08.861Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T16:06:08.884Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:08:40.660Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:08:41.923Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:08:43.191Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:08:36.489Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T16:08:50.893Z"}
+debug: 
+ {"timestamp":"2019-04-29T16:08:50.909Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T16:08:50.909Z"}
+debug: 
+ {"timestamp":"2019-04-29T16:08:50.918Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T16:08:50.918Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T16:08:51.703Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T16:08:51.743Z"}
+error: No Game to update {"timestamp":"2019-04-29T16:08:51.760Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T16:08:51.765Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T16:08:51.767Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T16:08:51.791Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T16:08:51.793Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T16:08:52.074Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T16:08:52.088Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T16:08:52.094Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T16:08:52.095Z"}
+error: No Game found {"timestamp":"2019-04-29T16:08:52.110Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T16:08:52.111Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T16:08:52.144Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:10:09.103Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:10:10.394Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:10:11.745Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:10:04.972Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T16:10:19.536Z"}
+debug: 
+ {"timestamp":"2019-04-29T16:10:19.562Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T16:10:19.562Z"}
+debug: 
+ {"timestamp":"2019-04-29T16:10:19.574Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T16:10:19.574Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T16:10:20.372Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T16:10:20.430Z"}
+error: No Game to update {"timestamp":"2019-04-29T16:10:20.449Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T16:10:20.455Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T16:10:20.458Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T16:10:20.482Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T16:10:20.484Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T16:10:20.759Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T16:10:20.778Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T16:10:20.783Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T16:10:20.785Z"}
+error: No Game found {"timestamp":"2019-04-29T16:10:20.801Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T16:10:20.802Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T16:10:20.834Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:11:58.935Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:12:00.160Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:12:01.486Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:11:53.683Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T16:12:09.043Z"}
+debug: 
+ {"timestamp":"2019-04-29T16:12:09.069Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T16:12:09.069Z"}
+debug: 
+ {"timestamp":"2019-04-29T16:12:09.077Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T16:12:09.078Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T16:12:09.876Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T16:12:09.922Z"}
+error: No Game to update {"timestamp":"2019-04-29T16:12:09.942Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T16:12:09.947Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T16:12:09.950Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T16:12:09.971Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T16:12:09.973Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T16:12:10.240Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T16:12:10.254Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T16:12:10.261Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T16:12:10.262Z"}
+error: No Game found {"timestamp":"2019-04-29T16:12:10.279Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T16:12:10.280Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T16:12:10.301Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:14:01.596Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:14:02.792Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:14:04.095Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T16:13:56.319Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-29T16:14:11.746Z"}
+debug: 
+ {"timestamp":"2019-04-29T16:14:11.773Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T16:14:11.773Z"}
+debug: 
+ {"timestamp":"2019-04-29T16:14:11.783Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T16:14:11.783Z"}
+error: user signup Error because of invalid email {"timestamp":"2019-04-29T16:14:12.564Z"}
+error: Post game was not succesful due to wrong data {"timestamp":"2019-04-29T16:14:12.605Z"}
+error: No Game to update {"timestamp":"2019-04-29T16:14:12.627Z"}
+error: Update game failed, wrong arguments {"timestamp":"2019-04-29T16:14:12.635Z"}
+error: Update game Error while trying to update: {} {"timestamp":"2019-04-29T16:14:12.638Z"}
+error: Findbyid seller did not find a seller! {"timestamp":"2019-04-29T16:14:12.667Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T16:14:12.670Z"}
+error: Post seller didnt work due to wrong arguments {"timestamp":"2019-04-29T16:14:12.942Z"}
+error: Update seller did not find a seller! {"timestamp":"2019-04-29T16:14:12.954Z"}
+error: Update seller failed because unprocessable arguments were passed! {"timestamp":"2019-04-29T16:14:12.960Z"}
+error: Update seller Error while trying to update: {} {"timestamp":"2019-04-29T16:14:12.961Z"}
+error: No Game found {"timestamp":"2019-04-29T16:14:12.977Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T16:14:12.978Z"}
+error: findbyanything did not find entries: {"timestamp":"2019-04-29T16:14:13.003Z"}

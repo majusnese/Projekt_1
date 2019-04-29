@@ -31,7 +31,8 @@ const login_falsch = {
 let token = "";
 let seller_id;
 const wrong_seller_id = "7cc5cd827fad48e5efb6d432";
-const seller_name = "Gamestop";
+
+let user_id;
 
 import * as update_seller from "./update_seller.json";
 import * as update_seller_wrong from "./update_seller_wrong.json";
@@ -44,13 +45,13 @@ import * as signup_falsch from "./signup_falsch.json";
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 before(async () => {
-  init();
+  await init();
   await chai
     .request(app)
     .post("/user/signup")
     .send(login)
     .then(response => {
-      expect([422, 201]).to.include(response.status);
+      return expect([422, 201]).to.include(response.status);
     });
   game_id = await chai
     .request(app)
@@ -72,18 +73,19 @@ before(async () => {
 
 describe("Mutating stuff", () => {
   it("login", async () => {
-    return (token = await chai
+    return await chai
       .request(app)
       .post("/user/login")
       .send(login)
       .then(result => {
         expect([422, 201].includes(result.status));
-        return result.body.token;
-      }));
+        token = result.body.token;
+        user_id = result.body.id;
+      });
   });
 
   it("login mit falschen daten", async () => {
-    chai
+    return chai
       .request(app)
       .post("/user/login")
       .send(login_falsch)
@@ -93,14 +95,14 @@ describe("Mutating stuff", () => {
   })
 
   it("signup mit falschen daten", async () => {
-    try {
+     try {
       return await chai
         .request(app)
         .post("/user/signup")
         .set("Authorization", `Bearer ${token}`)
         .send(signup_falsch)
         .then(res => {
-          expect(res.status).to.equal(500);
+          expect(res.status).to.equal(422);
           expect(res).to.be.json;
         });
     } catch (err) {
@@ -471,6 +473,18 @@ describe("Deleting", () => {
     return chai
       .request(app)
       .del("/games/" + game_id)
+      .set("Authorization", `Bearer ${token}`)
+      .then(res => {
+        expect(res.status).to.equal(200);
+        expect(res).to.be.json;
+        expect(res.body).to.contain.keys("message");
+      });
+  });
+
+  it("User löschen zu vorhandener ID", async () => {
+    return await chai
+      .request(app)
+      .del("/user/" + user_id)
       .set("Authorization", `Bearer ${token}`)
       .then(res => {
         expect(res.status).to.equal(200);

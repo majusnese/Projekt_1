@@ -83,7 +83,7 @@ describe("Mutating stuff", () => {
         }));
     }));
     it("login mit falschen daten", () => __awaiter(this, void 0, void 0, function* () {
-        chai
+        return chai
             .request(App_1.default)
             .post("/user/login")
             .send(login_falsch)
@@ -99,7 +99,7 @@ describe("Mutating stuff", () => {
                 .set("Authorization", `Bearer ${token}`)
                 .send(signup_falsch)
                 .then(res => {
-                expect(res.status).to.equal(500);
+                expect(res.status).to.equal(422);
                 expect(res).to.be.json;
             });
         }
