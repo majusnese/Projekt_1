@@ -15,6 +15,8 @@ const Validator_1 = require("../utils/Validator");
 const checkAuth = require("../utils/check-auth");
 const logger_1 = require("../utils/logger");
 const fast_safe_stringify_1 = require("fast-safe-stringify");
+const Validator_2 = require("../utils/Validator");
+const Validator_3 = require("../utils/Validator");
 class GameRouter {
     constructor() {
         this.router = express_1.Router();
@@ -52,13 +54,10 @@ class GameRouter {
             })
                 .catch(err => {
                 logger_1.logger.error(`Findall game Error: ${fast_safe_stringify_1.default(err)}`);
-                res.status(500).json({
-                    error: err
-                });
             });
         });
     }
-    //422: unprocessable Entity 
+    //422: unprocessable Entity
     create(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
             const game = new games_1.default({
@@ -102,7 +101,6 @@ class GameRouter {
             })
                 .catch(err => {
                 logger_1.logger.error(`Post game Error: ${fast_safe_stringify_1.default(err)}`);
-                res.status(500).json({ error: err });
             });
         });
     }
@@ -114,7 +112,10 @@ class GameRouter {
                 });
             }
             const param = req.params.anything;
-            console.log(param);
+            let isString = false;
+            if (typeof param === "string") {
+                isString = true;
+            }
             let objid = "123456789012";
             let isObjectId = false;
             if (mongoose.Types.ObjectId.isValid(param)) {
@@ -133,7 +134,7 @@ class GameRouter {
                 platform_t = param;
                 isPlatform = true;
             }
-            if (!isNumber && !isObjectId && !isPlatform) {
+            if (!isNumber && !isObjectId && !isPlatform && !isString) {
                 res.status(422).json({
                     message: "Argument could not be processed"
                 });
@@ -174,14 +175,24 @@ class GameRouter {
             })
                 .catch(err => {
                 logger_1.logger.error(`findbyanything game Error: ${fast_safe_stringify_1.default(err)}`);
-                res.status(500).json({ error: err });
             });
         });
     }
     findbyid(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
-            const id = req.params.id;
-            games_1.default.findById(id)
+            let id;
+            try {
+                id = mongoose.Types.ObjectId(req.params.id);
+            }
+            catch (_a) {
+                err => {
+                    res.status(422).json({
+                        message: "Please pass a valid ID"
+                    });
+                    logger_1.logger.error(`Findbyid game Error: ${fast_safe_stringify_1.default(err)}`);
+                };
+            }
+            yield games_1.default.findById(id)
                 .select("name price platforms _id")
                 .exec()
                 .then(doc => {
@@ -204,40 +215,83 @@ class GameRouter {
             })
                 .catch(err => {
                 logger_1.logger.error(`Findbyid game Error: ${fast_safe_stringify_1.default(err)}`);
-                res.status(500).json({ error: err });
             });
         });
     }
     patch(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
-            const id = req.params.id;
-            const updateOperations = {};
-            for (const ops of req.body) {
-                updateOperations[ops.propName] = ops.value;
+            let id;
+            try {
+                id = mongoose.Types.ObjectId(req.params.id);
             }
-            games_1.default.update({ _id: id }, { $set: updateOperations })
+            catch (_a) {
+                err => {
+                    res.status(422).json({
+                        message: "Please pass a valid ID"
+                    });
+                    logger_1.logger.error(`Update game Error: ${fast_safe_stringify_1.default(err)}`);
+                };
+            }
+            console.log(mongoose.Types.ObjectId(id));
+            let game_ins = yield games_1.default.findById(id)
+                .select("name price platforms _id")
                 .exec()
-                .then(result => {
-                res.status(200).json({
-                    message: "Game updated",
-                    request: {
-                        type: "GET",
-                        description: "Link to the updated game",
-                        url: "http://localhost:3000/games/" + result._id
-                    }
-                });
+                .then(doc => {
+                if (doc) {
+                    return true;
+                }
+                else {
+                    return res.status(404).json({
+                        message: "Game not found"
+                    });
+                }
             })
-                .catch(err => {
-                logger_1.logger.error(`Update game Error: ${fast_safe_stringify_1.default(err)}`);
-                res.status(500).json({
-                    error: err
-                });
+                .catch(error => {
+                logger_1.logger.error(`Update that game Error: ${fast_safe_stringify_1.default(error)}`);
             });
+            if (game_ins) {
+                const updateOperations = {};
+                for (const ops of req.body) {
+                    if (!Validator_3.isPropName(ops.propName) ||
+                        !Validator_2.isValidValue(ops.propName, ops.value)) {
+                        res.status(422).json({
+                            message: "Field or Value is not valid"
+                        });
+                    }
+                    updateOperations[ops.propName] = ops.value;
+                }
+                games_1.default.update({ _id: id }, { $set: updateOperations })
+                    .exec()
+                    .then(result => {
+                    res.status(200).json({
+                        message: "Game updated",
+                        request: {
+                            type: "GET",
+                            description: "Link to the updated game",
+                            url: "http://localhost:3000/games/" + id
+                        }
+                    });
+                })
+                    .catch(err => {
+                    logger_1.logger.error(`Update game Error: ${fast_safe_stringify_1.default(err)}`);
+                });
+            }
         });
     }
     del(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
-            const id = req.params.id;
+            let id;
+            try {
+                id = mongoose.Types.ObjectId(req.params.id);
+            }
+            catch (_a) {
+                err => {
+                    res.status(422).json({
+                        message: "Please pass a valid ID"
+                    });
+                    logger_1.logger.error(`Update game Error: ${fast_safe_stringify_1.default(err)}`);
+                };
+            }
             games_1.default.findById(id)
                 .exec()
                 .then(doc => {
@@ -256,7 +310,6 @@ class GameRouter {
             })
                 .catch(err => {
                 logger_1.logger.error(`Delete game Error: ${fast_safe_stringify_1.default(err)}`);
-                res.status(500).json({ error: err });
             });
         });
     }

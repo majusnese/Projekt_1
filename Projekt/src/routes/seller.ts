@@ -46,9 +46,6 @@ export class SellerRouter {
       })
       .catch(err => {
         logger.error(`Findall seller Error: ${stringify(err)}`);
-        res.status(500).json({
-          error: err
-        });
       });
   }
 
@@ -98,12 +95,21 @@ export class SellerRouter {
       })
       .catch(err => {
         logger.error(`Post seller Error: ${stringify(err)}`);
-        res.status(500).json({ error: err });
       });
   }
 
   public async findbyid(req: Request, res: Response, next: NextFunction) {
-    const id = req.params.id;
+    let id;
+    try {
+      id = mongoose.Types.ObjectId(req.params.id);
+    } catch {
+      err => {
+        res.status(422).json({
+          message: "Please pass a valid ID"
+        });
+        logger.error(`Findbyid seller Error: ${stringify(err)}`);
+      };
+    }
     Seller.findById(id)
       .select("label locations headquarter _id game")
       .populate("game")
@@ -127,12 +133,21 @@ export class SellerRouter {
       })
       .catch(err => {
         logger.error(`Findbyid seller Error: ${stringify(err)}`);
-        res.status(500).json({ error: err });
       });
   }
 
   public async patch(req: Request, res: Response, next: NextFunction) {
-    const id = req.params.id;
+    let id;
+    try {
+      id = mongoose.Types.ObjectId(req.params.id);
+    } catch {
+      err => {
+        res.status(422).json({
+          message: "Please pass a valid ID"
+        });
+        logger.error(`Update seller Error: ${stringify(err)}`);
+      };
+    }
     const updateOperations = {};
     for (const ops of req.body) {
       updateOperations[ops.propName] = ops.value;
@@ -151,14 +166,21 @@ export class SellerRouter {
       })
       .catch(err => {
         logger.error(`Update seller Error: ${stringify(err)}`);
-        res.status(500).json({
-          error: err
-        });
       });
   }
 
   public async del(req: Request, res: Response, next: NextFunction) {
-    const id = req.params.id;
+    let id;
+    try {
+      id = mongoose.Types.ObjectId(req.params.id);
+    } catch {
+      err => {
+        res.status(422).json({
+          message: "Please pass a valid ID"
+        });
+        logger.error(`del seller Error: ${stringify(err)}`);
+      };
+    }
     Seller.findById(id)
       .exec()
       .then(doc => {
@@ -176,7 +198,6 @@ export class SellerRouter {
       })
       .catch(err => {
         logger.error(`Del seller Error: ${stringify(err)}`);
-        res.status(500).json({ error: err });
       });
   }
 

@@ -1,14 +1,13 @@
 {
     "name": "League of Legends",
-    "price": "30",
+    "price": 30,
     "platforms": [
         "PC"
-    ],
-    "_id": "5cc5cd827fad48e5efb6d438"
+    ]
 }
 {
     "name": "Overwatch",
-    "price": "0",
+    "price": 0,
     "platforms": [
         "PC",
         "PS4"
@@ -16,7 +15,7 @@
 }
 {
     "name": "Pokémon: Feuerrot",
-    "price": "45",
+    "price": 45,
     "platforms": [
         "Gameboy"
     ]

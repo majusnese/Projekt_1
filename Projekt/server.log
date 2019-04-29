@@ -112,3 +112,542 @@ debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-
 debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:19:56.166Z"}
 debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:19:48.825Z"}
 error: Findbyid test Error: {} {"timestamp":"2019-04-28T21:20:03.844Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:24:41.078Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:24:42.362Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:24:43.664Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:24:36.796Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T21:24:51.427Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:28:44.882Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:28:46.130Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:28:47.490Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:28:40.951Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T21:28:55.139Z"}
+error: findbyanything game Error: {} {"timestamp":"2019-04-28T21:28:55.179Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:30:50.640Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:30:51.903Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:30:53.208Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:30:46.873Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T21:31:01.003Z"}
+error: findbyanything game Error: {} {"timestamp":"2019-04-28T21:31:01.039Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:37:45.411Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:39:13.225Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:42:32.786Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:42:50.876Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:42:52.155Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:42:53.452Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:42:47.078Z"}
+error: Findbyid game Error: {"message":"Cast to ObjectId failed for value \"undefined\" at path \"_id\" for model \"Game\"","name":"CastError","stringValue":"\"undefined\"","kind":"ObjectId","value":"undefined","path":"_id"} {"timestamp":"2019-04-28T21:43:01.193Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T21:43:01.206Z"}
+error: findbyanything game Error: {} {"timestamp":"2019-04-28T21:43:01.226Z"}
+error: findbyanything game Error: {} {"timestamp":"2019-04-28T21:43:01.243Z"}
+error: Delete game Error: {"message":"Cast to ObjectId failed for value \"undefined\" at path \"_id\" for model \"Game\"","name":"CastError","stringValue":"\"undefined\"","kind":"ObjectId","value":"undefined","path":"_id"} {"timestamp":"2019-04-28T21:43:01.550Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:44:13.181Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:44:28.979Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:44:30.148Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:44:31.500Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:44:25.086Z"}
+error: Findbyid game Error: {"message":"Cast to ObjectId failed for value \"undefined\" at path \"_id\" for model \"Game\"","name":"CastError","stringValue":"\"undefined\"","kind":"ObjectId","value":"undefined","path":"_id"} {"timestamp":"2019-04-28T21:44:39.124Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T21:44:39.138Z"}
+error: findbyanything game Error: {} {"timestamp":"2019-04-28T21:44:39.150Z"}
+error: findbyanything game Error: {} {"timestamp":"2019-04-28T21:44:39.167Z"}
+error: Delete game Error: {"message":"Cast to ObjectId failed for value \"undefined\" at path \"_id\" for model \"Game\"","name":"CastError","stringValue":"\"undefined\"","kind":"ObjectId","value":"undefined","path":"_id"} {"timestamp":"2019-04-28T21:44:39.470Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:45:59.524Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:46:13.576Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:46:14.847Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:46:16.105Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:46:09.790Z"}
+error: Findbyid game Error: {"message":"Cast to ObjectId failed for value \"undefined\" at path \"_id\" for model \"Game\"","name":"CastError","stringValue":"\"undefined\"","kind":"ObjectId","value":"undefined","path":"_id"} {"timestamp":"2019-04-28T21:46:23.912Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T21:46:23.929Z"}
+error: findbyanything game Error: {} {"timestamp":"2019-04-28T21:46:23.952Z"}
+error: findbyanything game Error: {} {"timestamp":"2019-04-28T21:46:23.971Z"}
+error: Delete game Error: {"message":"Cast to ObjectId failed for value \"undefined\" at path \"_id\" for model \"Game\"","name":"CastError","stringValue":"\"undefined\"","kind":"ObjectId","value":"undefined","path":"_id"} {"timestamp":"2019-04-28T21:46:24.268Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:47:02.020Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:47:25.817Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:47:27.168Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:47:28.461Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:47:21.868Z"}
+error: Findbyid game Error: {"message":"Cast to ObjectId failed for value \"undefined\" at path \"_id\" for model \"Game\"","name":"CastError","stringValue":"\"undefined\"","kind":"ObjectId","value":"undefined","path":"_id"} {"timestamp":"2019-04-28T21:47:36.195Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:48:56.290Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:49:13.157Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:49:14.422Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:49:15.823Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:49:09.389Z"}
+error: Findbyid game Error: {"message":"Cast to ObjectId failed for value \"undefined\" at path \"_id\" for model \"Game\"","name":"CastError","stringValue":"\"undefined\"","kind":"ObjectId","value":"undefined","path":"_id"} {"timestamp":"2019-04-28T21:49:23.539Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:50:40.829Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:50:42.100Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:50:43.444Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:50:37.022Z"}
+error: Findbyid game Error: {"message":"Cast to ObjectId failed for value \"undefined\" at path \"_id\" for model \"Game\"","name":"CastError","stringValue":"\"undefined\"","kind":"ObjectId","value":"undefined","path":"_id"} {"timestamp":"2019-04-28T21:50:51.090Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:51:11.184Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:51:12.502Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:51:13.831Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:51:07.389Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T21:51:21.516Z"}
+error: findbyanything game Error: {} {"timestamp":"2019-04-28T21:51:21.552Z"}
+error: findbyanything game Error: {} {"timestamp":"2019-04-28T21:54:35.018Z"}
+error: findbyanything game Error: {} {"timestamp":"2019-04-28T21:54:39.215Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:56:21.064Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:56:22.298Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:56:23.634Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:56:17.213Z"}
+debug: 
+ {"timestamp":"2019-04-28T21:56:31.337Z"}
+debug: Test-Id: 5cc6218a4715726fb3f69181 {"timestamp":"2019-04-28T21:56:31.338Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T21:56:31.368Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:57:33.689Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:57:34.977Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:57:36.328Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:57:29.914Z"}
+debug: 
+ {"timestamp":"2019-04-28T21:57:43.968Z"}
+debug: Test-Id: 5cc621d34715726fb3f691dd {"timestamp":"2019-04-28T21:57:43.968Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T21:57:43.998Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:58:20.370Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:58:21.685Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:58:23.019Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:58:16.555Z"}
+debug: 
+ {"timestamp":"2019-04-28T21:58:30.721Z"}
+debug: Test-Id: 5cc622024715726fb3f6922f {"timestamp":"2019-04-28T21:58:30.721Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T21:58:30.760Z"}
+error: findbyanything game Error: {} {"timestamp":"2019-04-28T21:58:30.778Z"}
+error: findbyanything game Error: {} {"timestamp":"2019-04-28T21:58:30.817Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:59:19.732Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:59:21.062Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:59:22.465Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T21:59:15.911Z"}
+debug: 
+ {"timestamp":"2019-04-28T21:59:30.070Z"}
+debug: Test-Id: 5cc6223d4715726fb3f6928b {"timestamp":"2019-04-28T21:59:30.071Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T21:59:30.098Z"}
+error: findbyanything game Error: {} {"timestamp":"2019-04-28T21:59:30.111Z"}
+error: findbyanything game Error: {} {"timestamp":"2019-04-28T21:59:30.145Z"}
+error: findbyanything game Error: {} {"timestamp":"2019-04-28T21:59:52.240Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:02:21.038Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:03:09.128Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:03:24.397Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:03:25.650Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:03:27.049Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:03:20.605Z"}
+debug: 
+ {"timestamp":"2019-04-28T22:03:34.673Z"}
+debug: Test-Id: 5cc623324715726fb3f69333 {"timestamp":"2019-04-28T22:03:34.674Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T22:03:34.702Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:06:20.174Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:06:35.695Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:06:36.977Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:06:38.218Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:06:31.881Z"}
+debug: 
+ {"timestamp":"2019-04-28T22:06:45.894Z"}
+debug: Test-Id: 5cc623f14715726fb3f693cf {"timestamp":"2019-04-28T22:06:45.894Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T22:06:45.915Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:08:43.397Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:09:24.323Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:09:25.621Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:09:26.896Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:09:20.516Z"}
+debug: 
+ {"timestamp":"2019-04-28T22:09:34.696Z"}
+debug: Test-Id: 5cc6249a4715726fb3f69457 {"timestamp":"2019-04-28T22:09:34.696Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T22:09:34.721Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:10:43.084Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:10:55.072Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:10:56.368Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:10:57.893Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:10:51.340Z"}
+debug: 
+ {"timestamp":"2019-04-28T22:11:05.587Z"}
+debug: Test-Id: 5cc624f54715726fb3f694c2 {"timestamp":"2019-04-28T22:11:05.587Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T22:11:05.617Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:11:38.301Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:11:39.621Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:11:40.905Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:11:34.549Z"}
+debug: 
+ {"timestamp":"2019-04-28T22:11:48.592Z"}
+debug: Test-Id: 5cc625204715726fb3f69517 {"timestamp":"2019-04-28T22:11:48.592Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T22:11:48.616Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:17:01.398Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:17:31.636Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:17:45.017Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:39:04.349Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:43:46.318Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:45:13.054Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:45:14.262Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:45:15.579Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:45:07.187Z"}
+debug: 
+ {"timestamp":"2019-04-28T22:45:23.685Z"}
+debug: Test-Id: 5cc62cffda72fac486b80452 {"timestamp":"2019-04-28T22:45:23.685Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T22:45:23.705Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T22:45:24.050Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:48:28.661Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:48:47.307Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:48:48.586Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:48:49.895Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:48:41.655Z"}
+debug: 
+ {"timestamp":"2019-04-28T22:48:57.554Z"}
+debug: Test-Id: 5cc62dd5da72fac486b804c6 {"timestamp":"2019-04-28T22:48:57.554Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T22:48:57.574Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T22:48:57.922Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:52:01.713Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:52:16.446Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:52:17.709Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:52:19.058Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:52:12.662Z"}
+debug: 
+ {"timestamp":"2019-04-28T22:52:26.666Z"}
+debug: Test-Id: 5cc62ea6da72fac486b80537 {"timestamp":"2019-04-28T22:52:26.666Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T22:52:26.695Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T22:52:27.053Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T22:52:27.072Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:55:01.955Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T22:55:10.066Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:55:26.865Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:55:28.202Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:55:29.515Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:55:22.125Z"}
+debug: 
+ {"timestamp":"2019-04-28T22:55:37.675Z"}
+debug: Test-Id: 5cc62f64da72fac486b805ac {"timestamp":"2019-04-28T22:55:37.676Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T22:55:37.699Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T22:55:38.055Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T22:55:38.079Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T22:57:38.090Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:57:48.325Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:57:49.630Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:57:50.931Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T22:57:44.520Z"}
+debug: 
+ {"timestamp":"2019-04-28T22:57:58.603Z"}
+debug: Test-Id: 5cc62ff2da72fac486b80617 {"timestamp":"2019-04-28T22:57:58.603Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T22:57:58.967Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T22:57:58.986Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:02:42.558Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:02:43.622Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:02:57.281Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:02:58.555Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:02:59.882Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:02:53.476Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:03:07.847Z"}
+debug: Test-Id: 5cc63126da72fac486b806a8 {"timestamp":"2019-04-28T23:03:07.848Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:03:07.872Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:03:08.207Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:03:08.231Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:03:56.705Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:03:57.988Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:03:59.314Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:03:52.937Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:04:06.955Z"}
+debug: Test-Id: 5cc63162da72fac486b806f1 {"timestamp":"2019-04-28T23:04:06.955Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:04:06.980Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:04:07.315Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:04:07.333Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:05:28.940Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:05:38.329Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:05:39.612Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:05:40.965Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:05:34.632Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:05:48.607Z"}
+debug: Test-Id: 5cc631c8da72fac486b80749 {"timestamp":"2019-04-28T23:05:48.607Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:05:48.634Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:05:48.986Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-28T23:05:49.000Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:07:43.910Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:07:55.960Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:07:57.252Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:07:58.535Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:07:52.178Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:08:06.166Z"}
+debug: Test-Id: 5cc63251da72fac486b807b3 {"timestamp":"2019-04-28T23:08:06.166Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:08:06.191Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:08:06.543Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-28T23:08:06.555Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-28T23:10:06.566Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:11:15.914Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:11:25.151Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:11:26.390Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:11:27.703Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:11:21.244Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:11:43.436Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:11:53.316Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:11:54.629Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:11:55.962Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:11:49.579Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:12:03.601Z"}
+debug: Test-Id: 5cc6333fda72fac486b8085e {"timestamp":"2019-04-28T23:12:03.601Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:12:03.627Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:12:03.994Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:13:45.087Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:13:55.598Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:13:56.844Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:13:58.184Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:13:51.792Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:14:05.878Z"}
+debug: Test-Id: 5cc633b9da72fac486b808bf {"timestamp":"2019-04-28T23:14:05.879Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:14:05.905Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:14:06.253Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:15:27.427Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:15:33.920Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:15:35.177Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:15:36.498Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:15:30.159Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:15:44.120Z"}
+debug: Test-Id: 5cc6341bda72fac486b80919 {"timestamp":"2019-04-28T23:15:44.120Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:15:44.145Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:15:44.478Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:17:12.290Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:17:23.070Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:17:24.274Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:17:25.585Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:17:19.278Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:17:33.221Z"}
+debug: Test-Id: 5cc63488da72fac486b80975 {"timestamp":"2019-04-28T23:17:33.221Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:17:33.245Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:17:33.588Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:22:01.897Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:22:07.574Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:22:46.632Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:22:50.003Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:24:12.770Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:24:16.420Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:24:45.017Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:24:46.444Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:25:35.124Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:26:15.502Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:26:27.800Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:26:29.077Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:26:30.356Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:26:24.010Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:26:38.040Z"}
+debug: Test-Id: 5cc636a9da72fac486b80aae {"timestamp":"2019-04-28T23:26:38.041Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:26:38.067Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:26:38.418Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:28:04.493Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:28:13.962Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:28:15.128Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:28:16.464Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:28:10.034Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:28:24.096Z"}
+debug: Test-Id: 5cc63713da72fac486b80b23 {"timestamp":"2019-04-28T23:28:24.097Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:28:24.133Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:28:24.501Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:29:01.652Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:29:10.917Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:29:12.201Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:29:13.484Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:29:07.121Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:29:21.214Z"}
+debug: Test-Id: 5cc6374cda72fac486b80b80 {"timestamp":"2019-04-28T23:29:21.214Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:29:21.240Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:29:21.595Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:31:00.196Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:31:14.147Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:31:15.460Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:31:16.757Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:31:10.350Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:31:24.484Z"}
+debug: Test-Id: 5cc637c7da72fac486b80bfb {"timestamp":"2019-04-28T23:31:24.484Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:31:24.510Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:31:24.857Z"}
+error: Findbyid game Error: {"message":"Cast to ObjectId failed for value \"5cc63322da72fac486b8083\" at path \"_id\" for model \"Game\"","name":"CastError","stringValue":"\"5cc63322da72fac486b8083\"","kind":"ObjectId","value":"5cc63322da72fac486b8083","path":"_id"} {"timestamp":"2019-04-28T23:34:15.491Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:34:30.575Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:39:42.924Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:39:44.170Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:39:45.463Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:39:39.071Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:39:53.107Z"}
+debug: Test-Id: 5cc639c4da72fac486b80d17 {"timestamp":"2019-04-28T23:39:53.107Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:39:53.132Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:39:53.476Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:43:59.063Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:44:16.739Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:44:28.089Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:44:29.385Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:44:30.698Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:44:24.275Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:44:38.322Z"}
+debug: Test-Id: 5cc63ae1da72fac486b80dd2 {"timestamp":"2019-04-28T23:44:38.322Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:44:38.346Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:44:38.690Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-28T23:44:38.714Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-28T23:44:38.729Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:44:38.737Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-28T23:44:38.739Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:44:55.201Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:45:09.985Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:45:11.308Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:45:12.558Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:45:06.259Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:45:20.302Z"}
+debug: Test-Id: 5cc63b0bda72fac486b80e2b {"timestamp":"2019-04-28T23:45:20.302Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:45:20.338Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:45:20.717Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:45:20.775Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:45:20.800Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:46:36.734Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:46:46.028Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:46:47.234Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:46:48.508Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:46:42.194Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:46:56.267Z"}
+debug: Test-Id: 5cc63b6bda72fac486b80e9b {"timestamp":"2019-04-28T23:46:56.267Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:46:56.288Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:46:56.627Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:46:56.673Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:46:56.696Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:48:18.598Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:48:41.505Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:48:42.801Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:48:44.072Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:48:37.771Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:48:51.819Z"}
+debug: Test-Id: 5cc63bdfda72fac486b80f15 {"timestamp":"2019-04-28T23:48:51.819Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:48:51.840Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:48:52.176Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:48:52.224Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:48:52.244Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:50:41.145Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:50:51.121Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:50:52.360Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:50:53.806Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:50:47.378Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:51:01.423Z"}
+debug: Test-Id: 5cc63c60da72fac486b80f91 {"timestamp":"2019-04-28T23:51:01.423Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:51:01.446Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:51:01.807Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:51:01.825Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:51:01.831Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:51:57.914Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:52:06.620Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:52:07.939Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:52:09.196Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:52:02.825Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:52:16.891Z"}
+debug: Test-Id: 5cc63cacda72fac486b80ff8 {"timestamp":"2019-04-28T23:52:16.891Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:52:16.922Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:52:17.283Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:52:17.338Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:52:17.359Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:53:54.642Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:54:05.411Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:54:06.677Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:54:07.996Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:54:01.655Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:54:15.639Z"}
+debug: Test-Id: 5cc63d23da72fac486b81071 {"timestamp":"2019-04-28T23:54:15.640Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:54:15.660Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:54:16.011Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:54:16.058Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:54:16.081Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:57:45.096Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:58:19.217Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:58:35.080Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:58:36.344Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:58:37.677Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-28T23:58:31.237Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:58:45.293Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-28T23:58:45.293Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-28T23:58:45.314Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-28T23:58:45.673Z"}
+debug: 
+ {"timestamp":"2019-04-28T23:58:45.685Z"}
+debug: Test-Id: 5cc63e30da72fac486b81120 {"timestamp":"2019-04-28T23:58:45.685Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-28T23:58:45.689Z"}
+error: Update game Error: {} {"timestamp":"2019-04-28T23:58:45.700Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-28T23:58:45.703Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:00:40.101Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:01:21.388Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:01:22.630Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:01:24.033Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:01:17.578Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:01:31.720Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T00:01:31.720Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T00:01:31.750Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T00:01:32.099Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:01:32.111Z"}
+debug: Test-Id: 5cc63ed7da72fac486b811ac {"timestamp":"2019-04-29T00:01:32.111Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-29T00:01:32.115Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T00:01:32.126Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-29T00:01:32.129Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:03:43.593Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:03:49.807Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:03:51.099Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:03:52.399Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:03:46.041Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:03:59.991Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T00:03:59.991Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T00:04:00.018Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T00:04:00.368Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:04:00.380Z"}
+debug: Test-Id: 5cc63f6bda72fac486b81231 {"timestamp":"2019-04-29T00:04:00.380Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-29T00:04:00.385Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T00:04:00.400Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-29T00:04:00.404Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-29T00:05:38.058Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:06:49.129Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-29T00:06:53.264Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-29T00:07:06.541Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:09:05.031Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-29T00:09:09.109Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:11:26.156Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-29T00:11:49.765Z"}
+error: Update that game Error: {} {"timestamp":"2019-04-29T00:12:35.597Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:15:00.231Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:18:03.454Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:18:23.496Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:18:24.758Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:18:26.069Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:18:19.668Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:18:33.767Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T00:18:33.767Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T00:18:33.793Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T00:18:34.120Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:18:34.133Z"}
+debug: Test-Id: 5cc642d5da72fac486b813ef {"timestamp":"2019-04-29T00:18:34.133Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T00:18:34.148Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T00:18:34.154Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:21:55.944Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:22:20.964Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:22:22.204Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:22:23.525Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-29T00:22:17.172Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:22:31.161Z"}
+debug: Test-Id: undefined {"timestamp":"2019-04-29T00:22:31.161Z"}
+error: Findbyid test Error: {} {"timestamp":"2019-04-29T00:22:31.187Z"}
+error: Post game Error: {"errors":{"price":{"message":"Cast to Number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"Number","value":"Thirty","path":"price","reason":{"message":"Cast to number failed for value \"Thirty\" at path \"price\"","name":"CastError","stringValue":"\"Thirty\"","kind":"number","value":"Thirty","path":"price"}}},"_message":"Game validation failed","message":"Game validation failed: price: Cast to Number failed for value \"Thirty\" at path \"price\"","name":"ValidationError"} {"timestamp":"2019-04-29T00:22:31.538Z"}
+debug: 
+ {"timestamp":"2019-04-29T00:22:31.553Z"}
+debug: Test-Id: 5cc643c2da72fac486b81497 {"timestamp":"2019-04-29T00:22:31.553Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T00:22:31.571Z"}
+error: Update game Error: {} {"timestamp":"2019-04-29T00:22:31.578Z"}

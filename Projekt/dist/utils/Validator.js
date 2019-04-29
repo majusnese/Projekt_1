@@ -20,7 +20,10 @@ function isGame(game) {
 }
 exports.isGame = isGame;
 function isSeller(seller) {
-    if (!util_1.isString(seller.label) || !util_1.isNumber(seller.locations) || !util_1.isString(seller.headquarter) || isGame(seller.game)) {
+    if (!util_1.isString(seller.label) ||
+        !util_1.isNumber(seller.locations) ||
+        !util_1.isString(seller.headquarter) ||
+        isGame(seller.game)) {
         return false;
     }
     if (seller.locations < 1) {
@@ -29,3 +32,27 @@ function isSeller(seller) {
     return true;
 }
 exports.isSeller = isSeller;
+function isValidValue(prop, value) {
+    if (prop == "_id") {
+        return false;
+    }
+    let typeValue = typeof value;
+    if (prop === "name" && typeValue === "string") {
+        return true;
+    }
+    if (prop === "platforms" && util_1.isArray(value)) {
+        return true;
+    }
+    if (prop === "price" && typeValue == "number") {
+        return true;
+    }
+    return false;
+}
+exports.isValidValue = isValidValue;
+function isPropName(prop) {
+    if (["name", "platforms", "price"].includes(prop)) {
+        return true;
+    }
+    return false;
+}
+exports.isPropName = isPropName;

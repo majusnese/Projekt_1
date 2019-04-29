@@ -56,11 +56,7 @@ export class UserRouter {
         }
       })
       .catch(err => {
-        console.log(err);
-        res.status(500).json({
-          error: err,
-          mesage: "An error occurred while searching for a duplicate email"
-        });
+        logger.error(`user signup Error: ${stringify(err)}`);
       });
   }
 
@@ -102,10 +98,7 @@ export class UserRouter {
         });
       })
       .catch(err => {
-        console.log(err);
-        res.status(500).json({
-          error: err
-        });
+        logger.error(`user login Error: ${stringify(err)}`);
       });
   }
 
@@ -118,11 +111,7 @@ export class UserRouter {
         });
       })
       .catch(err => {
-        console.log(err);
-        res.status(500).json({
-          error: err,
-          message: "Delete was not succesful"
-        });
+        logger.error(`user delete Error: ${stringify(err)}`);
       });
   }
 

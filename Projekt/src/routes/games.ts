@@ -5,6 +5,8 @@ import { isGame } from "../utils/Validator";
 const checkAuth = require("../utils/check-auth");
 import { logger } from "../utils/logger";
 import stringify from "fast-safe-stringify";
+import { isValidValue } from "../utils/Validator";
+import { isPropName } from "../utils/Validator";
 
 export class GameRouter {
   router: Router;
@@ -44,13 +46,10 @@ export class GameRouter {
       })
       .catch(err => {
         logger.error(`Findall game Error: ${stringify(err)}`);
-        res.status(500).json({
-          error: err
-        });
       });
   }
 
-  //422: unprocessable Entity 
+  //422: unprocessable Entity
   public async create(req: Request, res: Response, next: NextFunction) {
     const game = new Game({
       id: new mongoose.Types.ObjectId(),
@@ -93,7 +92,6 @@ export class GameRouter {
       })
       .catch(err => {
         logger.error(`Post game Error: ${stringify(err)}`);
-        res.status(500).json({ error: err });
       });
   }
 
@@ -104,8 +102,11 @@ export class GameRouter {
       });
     }
     const param = req.params.anything;
-    console.log(param);
 
+    let isString = false;
+    if (typeof param === "string") {
+      isString = true;
+    }
     let objid = "123456789012";
     let isObjectId = false;
     if (mongoose.Types.ObjectId.isValid(param)) {
@@ -127,7 +128,7 @@ export class GameRouter {
       isPlatform = true;
     }
 
-    if(!isNumber && !isObjectId && !isPlatform){
+    if (!isNumber && !isObjectId && !isPlatform && !isString) {
       res.status(422).json({
         message: "Argument could not be processed"
       });
@@ -167,13 +168,23 @@ export class GameRouter {
       })
       .catch(err => {
         logger.error(`findbyanything game Error: ${stringify(err)}`);
-        res.status(500).json({ error: err });
       });
   }
 
   public async findbyid(req: Request, res: Response, next: NextFunction) {
-    const id = req.params.id;
-    Game.findById(id)
+    let id;
+    try {
+      id = mongoose.Types.ObjectId(req.params.id);
+    } catch {
+      err => {
+        res.status(422).json({
+          message: "Please pass a valid ID"
+        });
+        logger.error(`Findbyid game Error: ${stringify(err)}`);
+      };
+    }
+
+    await Game.findById(id)
       .select("name price platforms _id")
       .exec()
       .then(doc => {
@@ -195,38 +206,80 @@ export class GameRouter {
       })
       .catch(err => {
         logger.error(`Findbyid game Error: ${stringify(err)}`);
-        res.status(500).json({ error: err });
       });
   }
 
   public async patch(req: Request, res: Response, next: NextFunction) {
-    const id = req.params.id;
-    const updateOperations = {};
-    for (const ops of req.body) {
-      updateOperations[ops.propName] = ops.value;
-    }
-    Game.update({ _id: id }, { $set: updateOperations })
-      .exec()
-      .then(result => {
-        res.status(200).json({
-          message: "Game updated",
-          request: {
-            type: "GET",
-            description: "Link to the updated game",
-            url: "http://localhost:3000/games/" + result._id
-          }
+    let id;
+    try {
+      id = mongoose.Types.ObjectId(req.params.id);
+    } catch {
+      err => {
+        res.status(422).json({
+          message: "Please pass a valid ID"
         });
-      })
-      .catch(err => {
         logger.error(`Update game Error: ${stringify(err)}`);
-        res.status(500).json({
-          error: err
-        });
+      };
+    }
+    let game_ins = await Game.findById(id)
+      .select("name price platforms _id")
+      .exec()
+      .then(doc => {
+        if (doc) {
+          return true;
+        } else {
+          return res.status(404).json({
+            message: "Game not found"
+          });
+        }
+      })
+      .catch(error => {
+        logger.error(`Update that game Error: ${stringify(error)}`);
       });
+
+    if (game_ins) {
+      const updateOperations = {};
+      for (const ops of req.body) {
+        if (
+          !isPropName(ops.propName) ||
+          !isValidValue(ops.propName, ops.value)
+        ) {
+          res.status(422).json({
+            message: "Field or Value is not valid"
+          });
+        }
+        updateOperations[ops.propName] = ops.value;
+      }
+      Game.update({ _id: id }, { $set: updateOperations })
+        .exec()
+        .then(result => {
+          res.status(200).json({
+            message: "Game updated",
+            request: {
+              type: "GET",
+              description: "Link to the updated game",
+              url: "http://localhost:3000/games/" + id
+            }
+          });
+        })
+        .catch(err => {
+          logger.error(`Update game Error: ${stringify(err)}`);
+        });
+    }
   }
 
   public async del(req: Request, res: Response, next: NextFunction) {
-    const id = req.params.id;
+    let id;
+    try {
+      id = mongoose.Types.ObjectId(req.params.id);
+    } catch {
+      err => {
+        res.status(422).json({
+          message: "Please pass a valid ID"
+        });
+        logger.error(`Update game Error: ${stringify(err)}`);
+      };
+    }
     Game.findById(id)
       .exec()
       .then(doc => {
@@ -244,7 +297,6 @@ export class GameRouter {
       })
       .catch(err => {
         logger.error(`Delete game Error: ${stringify(err)}`);
-        res.status(500).json({ error: err });
       });
   }
 

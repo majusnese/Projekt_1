@@ -13,6 +13,8 @@ const mongoose = require("mongoose");
 const user_1 = require("../models/user");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const logger_1 = require("../utils/logger");
+const fast_safe_stringify_1 = require("fast-safe-stringify");
 class UserRouter {
     constructor() {
         this.router = express_1.Router();
@@ -63,11 +65,7 @@ class UserRouter {
                 }
             })
                 .catch(err => {
-                console.log(err);
-                res.status(500).json({
-                    error: err,
-                    mesage: "An error occurred while searching for a duplicate email"
-                });
+                logger_1.logger.error(`user signup Error: ${fast_safe_stringify_1.default(err)}`);
             });
         });
     }
@@ -106,10 +104,7 @@ class UserRouter {
                 });
             })
                 .catch(err => {
-                console.log(err);
-                res.status(500).json({
-                    error: err
-                });
+                logger_1.logger.error(`user login Error: ${fast_safe_stringify_1.default(err)}`);
             });
         });
     }
@@ -123,11 +118,7 @@ class UserRouter {
                 });
             })
                 .catch(err => {
-                console.log(err);
-                res.status(500).json({
-                    error: err,
-                    message: "Delete was not succesful"
-                });
+                logger_1.logger.error(`user delete Error: ${fast_safe_stringify_1.default(err)}`);
             });
         });
     }

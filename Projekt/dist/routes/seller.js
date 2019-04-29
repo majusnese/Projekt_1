@@ -54,9 +54,6 @@ class SellerRouter {
             })
                 .catch(err => {
                 logger_1.logger.error(`Findall seller Error: ${fast_safe_stringify_1.default(err)}`);
-                res.status(500).json({
-                    error: err
-                });
             });
         });
     }
@@ -107,13 +104,23 @@ class SellerRouter {
             })
                 .catch(err => {
                 logger_1.logger.error(`Post seller Error: ${fast_safe_stringify_1.default(err)}`);
-                res.status(500).json({ error: err });
             });
         });
     }
     findbyid(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
-            const id = req.params.id;
+            let id;
+            try {
+                id = mongoose.Types.ObjectId(req.params.id);
+            }
+            catch (_a) {
+                err => {
+                    res.status(422).json({
+                        message: "Please pass a valid ID"
+                    });
+                    logger_1.logger.error(`Findbyid seller Error: ${fast_safe_stringify_1.default(err)}`);
+                };
+            }
             seller_1.default.findById(id)
                 .select("label locations headquarter _id game")
                 .populate("game")
@@ -138,13 +145,23 @@ class SellerRouter {
             })
                 .catch(err => {
                 logger_1.logger.error(`Findbyid seller Error: ${fast_safe_stringify_1.default(err)}`);
-                res.status(500).json({ error: err });
             });
         });
     }
     patch(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
-            const id = req.params.id;
+            let id;
+            try {
+                id = mongoose.Types.ObjectId(req.params.id);
+            }
+            catch (_a) {
+                err => {
+                    res.status(422).json({
+                        message: "Please pass a valid ID"
+                    });
+                    logger_1.logger.error(`Update seller Error: ${fast_safe_stringify_1.default(err)}`);
+                };
+            }
             const updateOperations = {};
             for (const ops of req.body) {
                 updateOperations[ops.propName] = ops.value;
@@ -163,15 +180,23 @@ class SellerRouter {
             })
                 .catch(err => {
                 logger_1.logger.error(`Update seller Error: ${fast_safe_stringify_1.default(err)}`);
-                res.status(500).json({
-                    error: err
-                });
             });
         });
     }
     del(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
-            const id = req.params.id;
+            let id;
+            try {
+                id = mongoose.Types.ObjectId(req.params.id);
+            }
+            catch (_a) {
+                err => {
+                    res.status(422).json({
+                        message: "Please pass a valid ID"
+                    });
+                    logger_1.logger.error(`del seller Error: ${fast_safe_stringify_1.default(err)}`);
+                };
+            }
             seller_1.default.findById(id)
                 .exec()
                 .then(doc => {
@@ -190,7 +215,6 @@ class SellerRouter {
             })
                 .catch(err => {
                 logger_1.logger.error(`Del seller Error: ${fast_safe_stringify_1.default(err)}`);
-                res.status(500).json({ error: err });
             });
         });
     }
