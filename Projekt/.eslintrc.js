@@ -10,7 +10,6 @@ module.exports =  {
       sourceType:  'module',
     },
     rules:  {
-        allowExpressions = true, 
-        allowTypedFunctionExpressions = true 
+      "@typescript-eslint/explicit-function-return-type": false
     },
   };

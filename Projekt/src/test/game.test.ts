@@ -1,4 +1,3 @@
-import * as mocha from 'mocha';
 import * as chai from 'chai';
 import chaiHttp = require('chai-http');
 import app from '../App';
@@ -46,7 +45,7 @@ import * as SignupFalsch from './signup_falsch.json';
 
 before(async () => {
     await init();
-    return await chai
+    await chai
         .request(app)
         .post('/user/signup')
         .send(login)
