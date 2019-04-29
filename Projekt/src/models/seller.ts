@@ -4,22 +4,21 @@ const sellerSchema = new mongoose.Schema({
     label: {
         type: String,
         required: true,
-    }, 
+    },
     locations: {
         type: Number,
         min: [0, 'At least one salespoint'],
-        required: true
+        required: true,
     },
     headquarter: {
         type: String,
-        required: true
+        required: true,
     },
     game: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Game'
-    }            
-    }
-);
+        ref: 'Game',
+    },
+});
 
 const seller = mongoose.model('Seller', sellerSchema);
 

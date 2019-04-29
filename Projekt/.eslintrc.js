@@ -10,6 +10,8 @@ module.exports =  {
       sourceType:  'module',
     },
     rules:  {
-      "@typescript-eslint/explicit-function-return-type": false
+      "@typescript-eslint/explicit-function-return-type": false,
+      "@typescript-eslint/no-var-requires": false,
+      "@typescript-eslint/explicit-member-accessibility": false
     },
   };

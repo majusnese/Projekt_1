@@ -70,7 +70,7 @@ before(async () => {
         });
 });
 
-describe('Mutating stuff', () => {
+describe('Mutating games', () => {
     it('login', async () => {
         return await chai
             .request(app)
@@ -205,22 +205,6 @@ describe('Getting stuff for sellers', () => {
             });
     });
 
-    it('Alle Seller', () => {
-        return chai
-            .request(app)
-            .get('/sellers/')
-            .then(res => {
-                expect(res.status).to.equal(200);
-                expect(res).to.be.json;
-                expect(res.body).to.have.keys('count', 'sellers');
-                let ArrayBody = res.body.sellers;
-                expect(ArrayBody).to.be.array();
-                expect(ArrayBody).to.have.lengthOf.at.least(2);
-                let count = res.body.count;
-                expect(ArrayBody).to.have.lengthOf(count);
-            });
-    });
-
     it('Findbyid', async () => {
         return chai
             .request(app)
@@ -249,7 +233,7 @@ describe('Getting stuff for sellers', () => {
     });
 });
 
-describe('Mutating stuff', () => {
+describe('Mutating seller', () => {
     it('login', async () => {
         return (token = await chai
             .request(app)
@@ -297,6 +281,30 @@ describe('Mutating stuff', () => {
                     expect(res.status).to.equal(422);
                     expect(res).to.be.json;
                     expect(res.body).to.contain.keys('message');
+                });
+        } catch (err) {
+            logger.error(`New Seller test Error: ${stringify(err)}`);
+        }
+    });
+
+    it('Neues Seller mít nicht existentem game', async () => {
+        const SellerNeuFalsch = {
+            label: 'Mediamarkt',
+            locations: 300,
+            headquarter: 'Suedsee',
+            game: WrongGameId,
+        };
+        try {
+            return await chai
+                .request(app)
+                .post('/sellers/')
+                .set('Authorization', `Bearer ${token}`)
+                .send(SellerNeuFalsch)
+                .then(res => {
+                    expect(res.status).to.equal(404);
+                    expect(res).to.be.json;
+                    expect(res.body).to.contain.keys('message');
+                    expect(res.body.message).to.be.equal('You provided unprocessable Data');
                 });
         } catch (err) {
             logger.error(`New Seller test Error: ${stringify(err)}`);

@@ -5,14 +5,13 @@ const spielSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    platforms: [String],   
+    platforms: [String],
     price: {
         type: Number,
         min: [0, 'Man bekommt für den Kauf eines Spiels kein Geld'],
-        required: true
-    }            
-    }
-);
+        required: true,
+    },
+});
 
 const spiel = mongoose.model('Game', spielSchema);
 

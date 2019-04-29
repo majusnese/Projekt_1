@@ -1,5 +1,5 @@
 import mongoose = require('mongoose');
-import {regex} from '../utils/Validator'
+import { regex } from '../utils/Validator';
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -8,11 +8,12 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: true,
-        match: regex
+        match: regex,
     },
-    password: { 
-        type: String, required: true            
-    }
+    password: {
+        type: String,
+        required: true,
+    },
 });
 
 const user = mongoose.model('User', userSchema);
