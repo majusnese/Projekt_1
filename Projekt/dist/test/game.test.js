@@ -29,6 +29,10 @@ const login = {
     email: "test@rest.de",
     password: "qwerty"
 };
+const login_falsch = {
+    email: "test@rest.de",
+    password: "abcde"
+};
 let token = "";
 let seller_id;
 const wrong_seller_id = "7cc5cd827fad48e5efb6d432";
@@ -39,6 +43,7 @@ const spiel_neu = require("./spiel_neu.json");
 const spiel_neu_falsch = require("./spiel_neu_falsch.json");
 const update_game = require("./update_game.json");
 const update_game_wrong = require("./update_game_wrong.json");
+const signup_falsch = require("./signup_falsch.json");
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 before(() => __awaiter(this, void 0, void 0, function* () {
     init_1.init();
@@ -76,6 +81,31 @@ describe("Mutating stuff", () => {
             expect([422, 201].includes(result.status));
             return result.body.token;
         }));
+    }));
+    it("login mit falschen daten", () => __awaiter(this, void 0, void 0, function* () {
+        chai
+            .request(App_1.default)
+            .post("/user/login")
+            .send(login_falsch)
+            .then(result => {
+            expect(result.status).to.be.equal(401);
+        });
+    }));
+    it("signup mit falschen daten", () => __awaiter(this, void 0, void 0, function* () {
+        try {
+            return yield chai
+                .request(App_1.default)
+                .post("/user/signup")
+                .set("Authorization", `Bearer ${token}`)
+                .send(signup_falsch)
+                .then(res => {
+                expect(res.status).to.equal(500);
+                expect(res).to.be.json;
+            });
+        }
+        catch (err) {
+            logger_1.logger.error(`Signup falsch test Error: ${fast_safe_stringify_1.default(err)}`);
+        }
     }));
     it("Neues Game", () => __awaiter(this, void 0, void 0, function* () {
         return yield chai
@@ -155,6 +185,21 @@ describe("Mutating stuff", () => {
 });
 //Suite fuer Gets
 describe("Getting stuff for sellers", () => {
+    it("Alle Seller", () => {
+        return chai
+            .request(App_1.default)
+            .get("/sellers/")
+            .then(res => {
+            expect(res.status).to.equal(200);
+            expect(res).to.be.json;
+            expect(res.body).to.have.keys("count", "sellers");
+            let array_body = res.body.sellers;
+            expect(array_body).to.be.array();
+            expect(array_body).to.have.lengthOf.at.least(2);
+            let count = res.body.count;
+            expect(array_body).to.have.lengthOf(count);
+        });
+    });
     it("Alle Seller", () => {
         return chai
             .request(App_1.default)
