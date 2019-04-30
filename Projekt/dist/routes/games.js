@@ -266,7 +266,7 @@ class GameRouter {
                     }
                     updateOperations[ops.propName] = ops.value;
                 }
-                games_1.default.update({ _id: id }, { $set: updateOperations })
+                games_1.default.updateOne({ _id: id }, { $set: updateOperations })
                     .exec()
                     .then(result => {
                     res.status(200).json({

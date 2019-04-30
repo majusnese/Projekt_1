@@ -136,7 +136,7 @@ class SellerRouter {
                 }
             }
             else {
-                logger_1.logger.error(`Update seller failed due to wrong data for the seller!)}`);
+                logger_1.logger.error(`Update seller failed due to wrong data for the game!)}`);
                 res.status(404).json({
                     message: "Game not found"
                 });

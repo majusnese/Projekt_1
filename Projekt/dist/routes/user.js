@@ -129,7 +129,7 @@ class UserRouter {
                     });
                 };
             }
-            user_1.default.remove({ _id: id })
+            user_1.default.deleteOne({ _id: id })
                 .exec()
                 .then(result => {
                 res.status(200).json({

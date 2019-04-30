@@ -213,19 +213,13 @@ describe("Getting stuff for sellers", () => {
         });
     }));
     it("Findbyid mit falscher id", () => __awaiter(this, void 0, void 0, function* () {
-        try {
-            return yield chai
-                .request(App_1.default)
-                .get("/sellers/" + WrongSellerId)
-                .then(res => {
-                expect(res.status).to.equal(404);
-                expect(res.body).to.contain.keys("message");
-                return Promise.reject(new Error("404 not found"));
-            });
-        }
-        catch (err) {
-            logger_1.logger.error(`Findbyid test Error: ${fast_safe_stringify_1.default(err)}`);
-        }
+        return yield chai
+            .request(App_1.default)
+            .get("/sellers/" + WrongSellerId)
+            .then(res => {
+            expect(res.status).to.equal(404);
+            expect(res.body).to.contain.keys("message");
+        });
     }));
 });
 describe("Mutating seller", () => {
@@ -297,7 +291,7 @@ describe("Mutating seller", () => {
                 expect(res.status).to.equal(404);
                 expect(res).to.be.json;
                 expect(res.body).to.contain.keys("message");
-                expect(res.body.message).to.be.equal("You provided unprocessable Data");
+                expect(res.body.message).to.be.equal("Game not found");
             });
         }
         catch (err) {

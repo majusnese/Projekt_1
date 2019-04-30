@@ -998,3 +998,9 @@ error: Update seller Error while trying to update: {} {"timestamp":"2019-04-30T0
 error: No Game found {"timestamp":"2019-04-30T06:25:50.142Z"}
 error: Findbyid test Error: {} {"timestamp":"2019-04-30T06:25:50.145Z"}
 error: findbyanything did not find entries: {"timestamp":"2019-04-30T06:25:50.183Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-30T07:42:48.359Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-30T07:43:19.492Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-30T08:10:19.885Z"}
+debug: Findall did not find entries {"timestamp":"2019-04-30T08:11:30.300Z"}
+error: user signup Error because of duplicate email {"timestamp":"2019-04-30T08:12:59.938Z"}
+debug: Logging durch Winston ist konfiguriert: Level Info {"timestamp":"2019-04-30T08:18:45.511Z"}
