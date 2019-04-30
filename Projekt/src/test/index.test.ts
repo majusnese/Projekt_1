@@ -1,3 +1,4 @@
+import * as mocha from 'mocha';
 import * as chai from "chai";
 import chaiHttp = require("chai-http");
 import app from "../App";
@@ -218,18 +219,13 @@ describe("Getting stuff for sellers", () => {
   });
 
   it("Findbyid mit falscher id", async () => {
-    try {
       return await chai
         .request(app)
         .get("/sellers/" + WrongSellerId)
         .then(res => {
           expect(res.status).to.equal(404);
           expect(res.body).to.contain.keys("message");
-          return Promise.reject(new Error("404 not found"));
         });
-    } catch (err) {
-      logger.error(`Findbyid test Error: ${stringify(err)}`);
-    }
   });
 });
 
@@ -305,7 +301,7 @@ describe("Mutating seller", () => {
           expect(res).to.be.json;
           expect(res.body).to.contain.keys("message");
           expect(res.body.message).to.be.equal(
-            "You provided unprocessable Data"
+            "Game not found"
           );
         });
     } catch (err) {

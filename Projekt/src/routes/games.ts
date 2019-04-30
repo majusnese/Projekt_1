@@ -284,7 +284,7 @@ export class GameRouter {
         }
         updateOperations[ops.propName] = ops.value;
       }
-      Game.update({ _id: id }, { $set: updateOperations })
+      Game.updateOne({ _id: id }, { $set: updateOperations })
         .exec()
         .then(result => {
           res.status(200).json({
